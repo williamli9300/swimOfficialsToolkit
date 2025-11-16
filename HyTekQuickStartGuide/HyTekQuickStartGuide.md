@@ -10,7 +10,7 @@ In Github and some viewers, you can click an image to enlarge it.
 - **Running a Meet**
   - [Pulling Times](#pullingtimes)
   - ["Adjust": Scratches & Changes (incl. Deck Entries & Name Changes)](#adjust)
-  - ["Calc": Adjusting Times](#calc)
+  - [Colours & "Calc": Adjusting Times](#calc)
   - Processing DQs
   - Relay Names
   - Official Splits
@@ -107,17 +107,40 @@ There are two ways to move a swimmer around, similarly to adding a swimmer to an
 1. Double click an empty lane, then begin typing the swimmer's last name. The swimmer will be moved into the new lane.
 2. Drag and drop the swimmer into the new lane. If there's already a swimmer entered into the new lane, the two swimmers will be swapped.
 
-### The `Calc` Menu: Adjusting Times
+### Lane Colours & The`Calc` Menu: Adjusting Times <a name="calc"></a>
 
-Click the `Calc : Ctrl-K` button, or the right-most column of a 
+<img title="" src="./img/run_calc.jpg" alt="" data-align="center" style="zoom:35%;">
+
+To open the `Calc` menu, click the `Calc : Ctrl-K` button, or click the right-most column of the lane viewer on the bottom part of the window.
+
+*Some quick definitions: "
+- "Prelims Time"/"Finals Time" is the final time assigned to the swimmer, and can be changed by using the `Calc` menu, or by overwriting the number manually.. By default, this is the Primary Time from the timing system (i.e., the touchpad time, or a Calculated Backup time determined by the timing system.)
+- "Backup 1", "Backup 2", and "Backup 3" correspond to the the backups recorded by the timing system. 
+- "Calculated Backup" is the backup, the arithmetic mean of two backups, or the median of three backups, if there are one, two, or three backup times available.
+
+*Notes on Backups*
+- Never take the average of two different kinds of sources (e.g. never average a plunger time with a stopwatch time). Go in descending order based on availability and reliability: automatic (touchpad), semi-automatic (plunger), manual (stopwatch).
+- Ensure that two backup times agree with each other before taking the average. Always check your numbers to make sure they make sense with respect to the event (e.g. no 12-second 100 FR's) and the order of finish.
+
+In our example above, we can see three colours:
+- Lane 3 appears white, with Button 2 highlighted in RED. This means that Button 2 is ≥0.30s different from the Primary time.
+- Lane 4 appears YELLOW. This means the Calculated Backup is ≥0.30s faster than the Primary time. Here, it is likely that there was a touchpad malfunction, and **we decide to fall back onto the backup times.**
+- Lane 5 appears GREEN. This means the calculated backup is ≥0.30s different from the Primary time, __but one backup agrees with the touchpad time.__ It is likely that one Timer pushed a plunger early, and **we decide to stay with the touchpad time.**
+- Lane 6 appears BLUE. This means we have a Touchpad time but no backups. Unless the touch was judged to be good by a CJE, we would need more information.
+
+When we go into the `Calc`  menu, we see the Primary time, the Button (i.e. Backup) times, Button Calc (i.e. Calculated Backup) time, and Difference. We also see an "Adjusted" column:
+- If the row is white (Calculated Average is ≤0.30s different from Primary Time), the Adjusted time will be the same as the Primary Time, regardless of if "Use" is checked.
+- If the row is YELLOW, the Adjusted time will be the Calculated Backup if "Use" is **checked** (default), or will fall back to the Primary time if "Use" is unchecked.
+- If the row is GREEN, the Adjusted time will be the Primary Time if "Use" is ***un*checked** (default), or will be the Calculated Backup if "Use" is checked.
+- If the row is BLUE (no backups), the Adjusted time will be the same as the Primary Time, regardless of if "Use" is checked.
+
+Check and uncheck the "Use" rows as desired. Verify that backup times agree and make sense. When you click "Accept Adjusted", whatever is in the Adjusted column will be assigned to the Prelims Time/Finals Time field.
 
 ##### Colour Coding:
 
 | Colour                                                | Touchpad Time                                          | Backup 1                                                   | Backup 2                                                   | Colour Meaning                                                                                               |
 | ----------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| <span style="background-color: #ffc0c0">Red</span>    | 1:29.67                                                | 1:29.55                                                    | <span style="background-color: #ffc0c0">1:29.98</span>     | Backup Time is more than 0.30s away from Touchpad Time                                                       |
-| <span style="background-color: #f7f700">Yellow</span> | <span style="background-color: #f7f700">1:21.56</span> | <span style="background-color: #ffc0c0">1:19.20</span>     | <span style="background-color: #ffc0c0">1:19.17</span>     | Average of two backups is more than 0.30s *faster* than Plunger time                                         |
-| <span style="background-color: #c0ffc0">Green</span>  | <span style="background-color: #c0ffc0">1:35.55</span> | <span style="background-color: #c0ffc0">1:35.54</span>     | <span style="background-color: #ffc0c0">1:10.67</span>     | Average of two backups is more than 0.30s away from touchpad time, but one backup agrees with touchpad time. |
-| <span style="background-color: #c0ffff">Blue</span>   | <span style="background-color: #c0ffff">1:21.56</span> | <span style="background-color: #c0ffff">-----------</span> | <span style="background-color: #c0ffff">-----------</span> | No backup times.                                                                                             |
-
-
+| $${\color{ffc0c0}Red}$$    | 1:29.67                                                | 1:29.55                                                    | <span style="background-color: #ffc0c0">1:29.98</span>     | Backup Time is more than 0.30s away from Touchpad Time                                                       |
+| <span style="background-color: #f7f700">Yellow (y)</span> | <span style="background-color: #f7f700">1:21.56</span> | <span style="background-color: #ffc0c0">1:19.20</span>     | <span style="background-color: #ffc0c0">1:19.17</span>     | Average of two backups is more than 0.30s *faster* than Plunger time                                         |
+| <span style="background-color: #c0ffc0">Green (g)</span>  | <span style="background-color: #c0ffc0">1:35.55</span> | <span style="background-color: #c0ffc0">1:35.54</span>     | <span style="background-color: #ffc0c0">1:10.67</span>     | Average of two backups is more than 0.30s away from touchpad time, but one backup agrees with touchpad time. |
+| <span style="background-color: #c0ffff">Blue (b)</span>   | <span style="background-color: #c0ffff">1:21.56</span> | <span style="background-color: #c0ffff">-----------</span> | <span style="background-color: #c0ffff">-----------</span> | No backup times.                                                                                             |
