@@ -5,9 +5,9 @@
 <blockquote>
   <b>&#x1f6c8; In Github and some other viewers, you can click an image below to enlarge it.</b>
 </blockquote>
+<br>
 
-
-## Contents <a name="contents"></a>
+# Contents <a name="contents"></a>
 
 - **Getting Started**
   - [Setting Up Timing Interfaces](#timing)
@@ -32,9 +32,11 @@
   - No results found matching this Event and Heat for current QAQF meet selected!
   - Error when installing an update
 
-## Getting Started
+<br>
 
-### Setting Up Timing Interfaces <a name="timing"></a>
+# Getting Started
+
+## Setting Up Timing Interfaces <a name="timing"></a>
 
 <sup>*([Jump to Contents](#contents))*</sup>
 
@@ -83,12 +85,13 @@
 **7. In order to get relay names to show up properly, you may need to use an additional tool. See [https://github.com/williamli9300/SwMM8RelayFix](https://github.com/williamli9300/SwMM8RelayFix) for more details.**
 
 </details>
+<br>
 
-## Running a Meet
+# Running a Meet
 
 **Always ensure that you are in the correct session by using the `Session : F7` button (or the corresponding hotkey).**
 
-### Pulling Times <a name="pullingtimes"></a>
+## Pulling Times <a name="pullingtimes"></a>
 <sup>*([Jump to Contents](#contents))*</sup>
 
 From the Run screen, select your desired Event from the Event List, then select your desired Heat from the Heats bar.
@@ -98,7 +101,7 @@ Click the orange button labelled `[Name] : F3` or the blue button labelled `[Nam
 
 *The `Run` Screen. The Event List is the window in the top left, indicating event numbers, status, and name. The Heats bar is vertically below center, aligned to the right side of the screen.*
 
-### The `Adjust` Menu: Scratches & Changes (including Deck Entries & Name Changes) <a name="adjust"></a>
+## The `Adjust` Menu: Scratches & Changes (including Deck Entries & Name Changes) <a name="adjust"></a>
 
 <sup>*([Jump to Contents](#contents))*</sup>
 
@@ -110,13 +113,53 @@ The Adjust menu is organized by heat and lane. You can click "Show Eligible Athl
 
 <img title="" src="./img/adjust.jpg" alt="" data-align="center" style="zoom:35%;">
 
-#### Scratches
+<br>
+<blockquote>
+<details>
+<summary><b>&#x1f6c8; Pulling Times from Quantum-AQ: The <code>.qaq</code> file.</b> <i>(click to expand)</i></summary>
+Each time a race is completed and saved in the Quantum-AQ, it creates a result file in the shared data folder. This file has the extension .qaq, and the following file name format:
+
+<br>
+
+> `DDD-EEE-HHXRRRR.qaq`, e.g., `001-001-01F0001.qaq`
+
+- The first 3 characters of the file name (`DDD`) are numbers from 001 to 999. These characters define the Data Set number. For most meets you will work, you will only use Data Set 001.
+- The next 3 characters of the file name (`EEE`) are numbers from 001 to 999. These characters represent the Event Number of the race.
+- The next 2 characters of the file name (`HH`) are numbers from 01 to 99. These characters represent the Heat Number of the race.
+- The next 1 character of the file name (`X`) is a letter (e.g. T, P, S, F) representing the type of race that is swum, e.g. Timed Finals, Prelims, Semifinals, Finals).
+- The last 4 characters of the file name (`RRRR`)  are numbers from 0001 to 9999. These characters represent the Race Number, and can be used to manually pull the file to any heat using the Race Number button.
+
+Each `.qaq` file is actually a Semicolon-Separated Values file. Here's an example of what that might look like for an individual event:
+```
+101;1;4;F;100;QuantumAQ;6.1.21.0
+0; ;     ;     ;      ;      ;      ;      ; ;    ;
+0; ;     ;     ;      ;      ;      ;      ; ;    ;
+0; ;     ;     ;      ;      ;      ;      ; ;    ;
+1; ;34.54;71.86;111.78;145.96;145.90;145.80; ;0.66;
+2; ;33.86;73.78;110.84;146.09;146.11;145.99; ;0.51;
+0; ;     ;     ;      ;      ;      ;      ; ;    ;
+0; ;     ;     ;      ;      ;      ;      ; ;    ;
+0; ;     ;     ;      ;      ;      ;      ; ;    ;
+```
+- The first line contains the `Event`, `Heat`, and `Number of Touches` (`N`) values, followed by `Race Type` (equivalent to `X` above), and some information about the Quantum version that the file was created by.
+- The next `n` lines correspond to the `n` lanes in the pool: typically either `1-6`, `1-8`, or `0-9`.
+  - The first column of each line corresponds to the `Rank` of the lane (i.e., what place the swimmer came in the heat)
+  - The second column is empty.
+  - The next `N` columns correspond with the **cumulative split time**, in seconds, at the `N`th touch. Since this is a 200m event, we are expecting 4 touches: the times thus correspond to the 50m, 100m, 150m, and 200m split times, in seconds.
+  - The next 3 columns correspond with Backups 1, 2, and 3, as recorded by Quantum. Here, we only have two plungers in each lane, so the third column is empty.
+  - The last column contains the reaction time of the swimmer off the start.
+
+</details>
+</blockquote>
+<br>
+
+### Scratches
 
 To scratch a swimmer, double-click their name to bring up the "Scratch [swimmer] from heat *X*, lane *Y*?" popup, then click "Yes".
 
-#### Adding a Swimmer & Moving a Swimmer Around (Deck Entries & Name Changes)
+### Adding a Swimmer & Moving a Swimmer Around (Deck Entries & Name Changes)
 
-##### Adding a Swimmer to an Empty Lane
+**Adding a Swimmer to an Empty Lane**
 
 Swimmers can only be added to an empty lane. You may need to remove (scratch) a swimmer in order to add a swimmer to that lane.
 There are two ways to add a swimmer into an empty lane:
@@ -124,7 +167,7 @@ There are two ways to add a swimmer into an empty lane:
 1. Double click an empty lane, then begin typing the swimmer's last name. Hit "Enter" on your keyboard to accept the change (sometimes clicking "OK" with your mouse will make the menu move around unexpectedly).
 2. Click "Show Eligible Athletes" (or "Show Eligible Athletes + Swim-ups" if the swimmer is from a younger age group). Find the athlete's name in the bottom window (sorted by last name), then drag-and-drop the name into place.
 
-##### Moving a Swimmer Around
+**Moving a Swimmer Around**
 
 There are two ways to move a swimmer around, similarly to adding a swimmer to an empty lane:
 
@@ -137,7 +180,7 @@ There are two ways to move a swimmer around, similarly to adding a swimmer to an
 <img title="" src="./img/adjust_dragndrop.gif" alt="" data-align="center" style="zoom:50%;">
 </blockquote>
 
-### Lane Colours & The `Calc` Menu: Adjusting Times <a name="calc"></a>
+## Lane Colours & The `Calc` Menu: Adjusting Times <a name="calc"></a>
 
 <img title="" src="./img/run_calc.jpg" alt="" data-align="center" style="zoom:35%;">
 
