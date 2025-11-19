@@ -1,6 +1,7 @@
 # Hy-Tek Swim Meet Manager 8: Quick Start Guide
 
-**By Will Li | Version 0.1.0 [DRAFT IN PROGRESS] | 28 July 2025 | Access at** [**https://github.com/williamli9300/swimOfficialsToolkit**](https://github.com/williamli9300/swimOfficialsToolkit)
+**By Will Li | Version 0.1.0 [DRAFT IN PROGRESS] | 19 November 2025 | Access at** [**https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickStartGuide**](https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickStartGuide)
+
 In Github and some viewers, you can click an image to enlarge it.
 
 ## Contents <a name="contents"></a>
@@ -17,8 +18,9 @@ In Github and some viewers, you can click an image to enlarge it.
   - Swim Offs
   - Combined Heats
 - **Paperwork**
-  - Results & DQ Reports
   - Session Reports
+  - Heet Sheets/Meet Program
+  - Results & DQ Reports
   - Score Reports
 - **Other Features**
   - Web Live Results
@@ -33,35 +35,46 @@ In Github and some viewers, you can click an image to enlarge it.
 
 <sup>*([Jump to Contents](#contents))*</sup>
 
-**Ensure Timing Systems are set up \& named.**
+<details>
+  <summary>**Ensure Timing Systems are set up \& named.** *(click to expand)*</summary>
 
 1. From the Home screen, navigate to `Set-up` > `Meet Set-up`, then adjust the number of timing interfaces \& names as needed.
 
 <img title="" src="./img/timinginterfaces.jpg" alt="" data-align="center" style="zoom:25%;">
 
-2. From the Run screen, navigate to `Interfaces` > `Set-up` to set up the Timing Console and Scoreboard as necessary. For meets running on Quantum, select `Omega Quantum-AQ File Sharing` as the Timing System and `Network File Sharing IST or Quantum-AQ` as the Scoreboard.
+2. From the Run screen, navigate to `Interfaces` > `Set-up` to set up the `Timing Consoles` and `Scoreboard` as necessary, according to the pictures below. For meets running on Quantum, select `Omega Quantum-AQ File Sharing` as the Timing System and `Network File Sharing IST or Quantum-AQ` as the Scoreboard.
 
 <img title="" src="./img/timinginterface_scoreboard.jpg" alt="" data-align="center" style="zoom:25%;">
+</details>
 
-**[Quantum Specific] Select Session \& Download Events to Session**
+#### [Quantum Specific] Select Session \& Download Events to Session
 
 1. From the Run screen, navigate to `Interfaces` > `Timer (QAQF) [Name]` > `Select Data Set stored from QAQF`. Click `Update Data Location` to select your Quantum data folder, and use the `Previous Meet` button to ensure that "Meet 1" is selected.
 
 <img title="" src="./img/timingconsoleselection.jpg" alt="" data-align="center" style="zoom:25%;">
 
 2. From the Run screen, navigate to `Interfaces` > `Timer (QAQF) [Name]` > `Download events to QAQF`.
+
+<img title="" src="./img/pushschedule.jpg" alt="" data-align="center" style="zoom:25%;">
+
 3. If using two timing consoles, repeat steps 1 and 2 for the second timing console.
-   If you are using a scoreboard with names:
+
+<details>
+  <summary>**If you are using a scoreboard with names:** *(click to expand)*</summary>
+
 4. From the Run screen, navigate to `Interfaces` > `Scoreboard (GENNET) [Name]` > `Customize`. Ensure the settings are set to the same ones as below:
 
 <img title="" src="./img/scoreboardsettings.jpg" alt="" data-align="center" style="zoom:25%;">
 
 5. from the Run screen, navigate to `Interfaces` > `Scoreboard (GENNET) [Name]` > `Create Start List File`.
+
 6. If using two timing consoles, repeat step 5 for the second scoreboard.
+   
+   </details>
 
 ## Running a Meet
 
-**Always ensure that you have navigated to the correct session, by using the `Session : F7` button (or the corresponding hotkey).**
+**Always ensure that you are in the correct session by using the `Session : F7` button (or the corresponding hotkey).**
 
 ### Pulling Times <a name="pullingtimes"></a>
 
@@ -114,21 +127,25 @@ There are two ways to move a swimmer around, similarly to adding a swimmer to an
 To open the `Calc` menu, click the `Calc : Ctrl-K` button, or click the right-most column of the lane viewer on the bottom part of the window.
 
 *Some quick definitions: "
+
 - "Prelims Time"/"Finals Time" is the final time assigned to the swimmer, and can be changed by using the `Calc` menu, or by overwriting the number manually.. By default, this is the Primary Time from the timing system (i.e., the touchpad time, or a Calculated Backup time determined by the timing system.)
 - "Backup 1", "Backup 2", and "Backup 3" correspond to the the backups recorded by the timing system. 
 - "Calculated Backup" is the backup, the arithmetic mean of two backups, or the median of three backups, if there are one, two, or three backup times available.
 
 *Notes on Backups*
+
 - Never take the average of two different kinds of sources (e.g. never average a plunger time with a stopwatch time). Go in descending order based on availability and reliability: automatic (touchpad), semi-automatic (plunger), manual (stopwatch).
 - Ensure that two backup times agree with each other before taking the average. Always check your numbers to make sure they make sense with respect to the event (e.g. no 12-second 100 FR's) and the order of finish.
 
 In our example above, we can see three colours:
+
 - Lane 3 appears white, with Button 2 highlighted in RED. This means that Button 2 is ≥0.30s different from the Primary time.
 - Lane 4 appears YELLOW. This means the Calculated Backup is ≥0.30s faster than the Primary time. Here, it is likely that there was a touchpad malfunction, and **we decide to fall back onto the backup times.**
 - Lane 5 appears GREEN. This means the calculated backup is ≥0.30s different from the Primary time, __but one backup agrees with the touchpad time.__ It is likely that one Timer pushed a plunger early, and **we decide to stay with the touchpad time.**
 - Lane 6 appears BLUE. This means we have a Touchpad time but no backups. Unless the touch was judged to be good by a CJE, we would need more information.
 
 When we go into the `Calc`  menu, we see the Primary time, the Button (i.e. Backup) times, Button Calc (i.e. Calculated Backup) time, and Difference. We also see an "Adjusted" column:
+
 - If the row is white (Calculated Average is ≤0.30s different from Primary Time), the Adjusted time will be the same as the Primary Time, regardless of if "Use" is checked.
 - If the row is YELLOW, the Adjusted time will be the Calculated Backup if "Use" is **checked** (default), or will fall back to the Primary time if "Use" is unchecked.
 - If the row is GREEN, the Adjusted time will be the Primary Time if "Use" is ***un*checked** (default), or will be the Calculated Backup if "Use" is checked.
@@ -138,9 +155,16 @@ Check and uncheck the "Use" rows as desired. Verify that backup times agree and 
 
 ##### Colour Coding:
 
-| Colour                                                | Touchpad Time                                          | Backup 1                                                   | Backup 2                                                   | Colour Meaning                                                                                               |
-| ----------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| $${\color{ffc0c0}Red}$$    | 1:29.67                                                | 1:29.55                                                    | <span style="background-color: #ffc0c0">1:29.98</span>     | Backup Time is more than 0.30s away from Touchpad Time                                                       |
-| <span style="background-color: #f7f700">Yellow (y)</span> | <span style="background-color: #f7f700">1:21.56</span> | <span style="background-color: #ffc0c0">1:19.20</span>     | <span style="background-color: #ffc0c0">1:19.17</span>     | Average of two backups is more than 0.30s *faster* than Plunger time                                         |
-| <span style="background-color: #c0ffc0">Green (g)</span>  | <span style="background-color: #c0ffc0">1:35.55</span> | <span style="background-color: #c0ffc0">1:35.54</span>     | <span style="background-color: #ffc0c0">1:10.67</span>     | Average of two backups is more than 0.30s away from touchpad time, but one backup agrees with touchpad time. |
-| <span style="background-color: #c0ffff">Blue (b)</span>   | <span style="background-color: #c0ffff">1:21.56</span> | <span style="background-color: #c0ffff">-----------</span> | <span style="background-color: #c0ffff">-----------</span> | No backup times.                                                                                             |
+<style>
+r {background-color: #ffc0c0}
+y {background-color: #f7f700}
+g {background-color: #c0ffc0}
+b {background-color: #c0ffff}
+</style>
+
+| Colour                                | Touchpad Time     | Backup 1                                                                              | Backup 2                                                                    | Colour Meaning                                                                                               | Likely Explanation |
+| ------------------------------------- | ----------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---- |
+| <r>&#x1f7e5; Red &#x1f7e5;</r>        | 1:29.67           | 1:29.55                                                                               | <r>1:29.98 &#x1f7e5;</r>                                                    | Backup Time is more than 0.30s away from Touchpad Time                                                       | If only 1 red: one plunger was off, Pad and other plunger were OK. \\ If 2 red: two plungers were very different, and "Pad" time was actually average of two plungers. Need to find a third backup time to decide what time to assign swimmer. |
+| <y>&#x1f7e8; Yellow &#x1f7e8; (y)</y> | 1:21.56 &#x1f7e8; | <y> &nbsp; &#x1f7e8; <r>&#x1f7e5; 1:19.20 &#x1f7e5;</r> &#x1f7e8; &nbsp;</y> | <y>&nbsp; &#x1f7e8;<r>&#x1f7e5; 1:19.17 &#x1f7e5; </r> &#x1f7e8; &nbsp;</y> | Average of two backups is more than 0.30s *faster* than Touchpad time                                         | "Soft Touch" -- plungers are OK, Touchpad time was late. |
+| <g>&#x1f7e9; Green (g) &#x1f7e9;</g>  | 1:35.55           | <g>&#x1f7e9; 1:35.54 &#x1f7e9; </g>                                                   | <g> &nbsp; &#x1f7e9; <r>&#x1f7e5; 1:10.67 &#x1f7e5;</r> &#x1f7e9; &nbsp;</g>                                          | Average of two backups is more than 0.30s away from touchpad time, but one backup agrees with touchpad time. | One Plunger went early or late, Pad and other plunger were OK. |
+| <b>&#x1f7e6; Blue (b) &#x1f7e6;</b>                       | 1:21.56           | <b>&#x1f7e6;-----------&#x1f7e6;</b>                                                                    | <b>&#x1f7e6;-----------&#x1f7e6;</b>                                                          | Average of backups is more than 0.30s *slower* than Touchpad time | Either: 1) someone stepped on the touchpad before the swimmer touched the wall; 2) both Timekeepers fell asleep and forgot to hit the Plungers until it was too late; or, 3) No backup times were recorded.        |
