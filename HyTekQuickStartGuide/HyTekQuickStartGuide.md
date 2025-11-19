@@ -9,17 +9,22 @@
 
 # Contents <a name="contents"></a>
 
-- **Getting Started**
+- [**Getting Started**](#gettingstarted)
   - [Setting Up Timing Interfaces](#timing)
+    - [&#127902; GIF: Pushing Event Schedule to Quantum](#gif_pushingtoqaq)
 - **Running a Meet**
   - [Pulling Times](#pullingtimes)
-  - ["Adjust": Scratches & Changes (incl. Deck Entries & Name Changes)](#adjust)
-  - [Colours & "Calc": Adjusting Times](#calc)
+    - [&#x1f6c8; Pulling Times from Quantum-AQ: The <code>.qaq</code> file.](#qaq_file)
+  - [**Adjust**: Scratches & Changes (incl. Deck Entries & Name Changes)](#adjust)
+    - [Scratches](#scratches)
+    - [Moving Swimmers Around](#changes)
+    - [&#127902; GIF: Drag & Drop](#gif_dragndrop)
+  - [Colours & **Calc**: Adjusting Times](#calc)
   - Processing DQs
   - Relay Names
   - Official Splits
   - Swim-Offs
-  - Combined Heats
+  - Combined Heats & Pulling by Race Number (#racenumber)
 - **Paperwork**
   - Session Reports
   - Heet Sheets/Meet Program
@@ -34,14 +39,15 @@
 
 <br>
 
-# Getting Started
+# Getting Started <a name="gettingstarted"></a>
 
 ## Setting Up Timing Interfaces <a name="timing"></a>
 
 <sup>*([Jump to Contents](#contents))*</sup>
 
+**Ensure Timing Systems and Scoreboards are set up and named.**
 <details>
-  <summary><b>Ensure Timing Systems are set up and named.</b> <i>(click to expand)</i></summary>
+  <summary><i>(click to expand section)</i></summary>
 
 1. From the Home screen, navigate to `Set-up` > `Meet Set-up`, then adjust the number of timing interfaces \& names as needed.
 
@@ -65,14 +71,16 @@
 3. If using two timing consoles, repeat steps 1 and 2 for the second timing console.
 
 <blockquote>
-&#127902; <b>GIF: Pushing Event Schedule to Quantum</b>
+&#127902; <b>GIF: Pushing Event Schedule to Quantum</b> <a name="gif_pushingtoqaq"></a>
 
 <img title="" src="./img/push_schedule.gif" alt="" data-align="center" style="zoom:50%;">
 </blockquote>
 
 <br>
+
+**If you are using a scoreboard with names:**
 <details>
-  <summary><b>If you are using a scoreboard with names:</b> <i>(click to expand)</i></summary>
+  <summary><i>(click to expand section)</i></summary>
 
 1. From the Run screen, navigate to `Interfaces` > `Scoreboard (GENNET) [Name]` > `Customize`. Ensure the settings are set to the same ones as below:
 
@@ -91,33 +99,10 @@
 
 **Always ensure that you are in the correct session by using the `Session : F7` button (or the corresponding hotkey).**
 
-## Pulling Times <a name="pullingtimes"></a>
-<sup>*([Jump to Contents](#contents))*</sup>
-
-From the Run screen, select your desired Event from the Event List, then select your desired Heat from the Heats bar.
-Click the orange button labelled `[Name] : F3` or the blue button labelled `[Name] : Ctrl-F3` (or use the corresponding hotkeys) to pull times from the corresponding timing system.
-
-<img title="" src="./img/run.jpg" alt="" data-align="center" style="zoom:25%;">
-
-*The `Run` Screen. The Event List is the window in the top left, indicating event numbers, status, and name. The Heats bar is vertically below center, aligned to the right side of the screen.*
-
-## The `Adjust` Menu: Scratches & Changes (including Deck Entries & Name Changes) <a name="adjust"></a>
-
-<sup>*([Jump to Contents](#contents))*</sup>
-
-From the Run screen, click the `Adjust : F8` button to bring up the Adjust menu. 
-
-<img title="" src="./img/run_adjust.jpg" alt="" data-align="center" style="zoom:25%;">
-
-The Adjust menu is organized by heat and lane. You can click "Show Eligible Athletes" or "Eligible Athletes + Swim-ups" to bring up a list of athletes at the bottom of the window. The Adjust menu is one of the few places in HyTek Meet Manager with a `Save` button. If you mess up, just click "Close" and "Don't Save", and try again!
-
-<img title="" src="./img/adjust.jpg" alt="" data-align="center" style="zoom:35%;">
-
-<br>
 <blockquote>
 <details>
-<summary><b>&#x1f6c8; Pulling Times from Quantum-AQ: The <code>.qaq</code> file.</b> <i>(click to expand)</i></summary>
-Each time a race is completed and saved in the Quantum-AQ, it creates a result file in the shared data folder. This file has the extension .qaq, and the following file name format:
+<summary><b>&#x1f6c8; Pulling Times from Quantum-AQ: The <code>.qaq</code> file.</b> <i>(click to expand)</i></summary><a name="qaq_file"></a>
+Each time a race is completed and saved in the Quantum-AQ, it creates a result file in the shared data folder. This file has the extension <code>.qaq</code>, and the following file name format:
 
 <br>
 
@@ -151,13 +136,41 @@ Each `.qaq` file is actually a Semicolon-Separated Values file. Here's an exampl
 
 </details>
 </blockquote>
+
+## Pulling Times <a name="pullingtimes"></a>
+<sup>*([Jump to Contents](#contents))*</sup>
+
+From the Run screen, select your desired Event from the Events list, then select your desired Heat from the Heats bar.
+Click the orange button labelled `[Name] : F3` or the blue button labelled `[Name] : Ctrl-F3` (or use the corresponding hotkeys) to pull times from the corresponding timing system. (Note: the directory each button pulls times from is set up in the [Setting Up Timing Interfaces](#timing) section.)
+
+<img title="" src="./img/run.jpg" alt="" data-align="center" style="zoom:25%;">
+
+*The `Run` Screen. The Event List is the window in the top left, indicating event numbers, status, and name. The Heats bar is vertically below center, aligned to the right side of the screen.*
+
+Alternatively, if you know the Race Number, you can click the corresponding orange `Race # : F2` or blue `Race # : Ctrl+F2` buttons, then enter the race number, to pull the times in the `.qaq` file with the corresponding race number, into the currently selected heat. (*See [Combined Heats](#racenumber) or [About <code>.qaq</code> Files](#qaq_file) for more information.*)
+
+
+## The `Adjust` Menu: Scratches & Changes (including Deck Entries & Name Changes) <a name="adjust"></a>
+
+<sup>*([Jump to Contents](#contents))*</sup>
+
+From the Run screen, click the `Adjust : F8` button to bring up the Adjust menu. 
+
+<img title="" src="./img/run_adjust.jpg" alt="" data-align="center" style="zoom:25%;">
+
+The Adjust menu is organized by heat and lane. You can click "Show Eligible Athletes" or "Eligible Athletes + Swim-ups" to bring up a list of athletes at the bottom of the window. The Adjust menu is one of the few places in HyTek Meet Manager with a `Save` button. If you mess up, just click "Close" and "Don't Save", and try again!
+
+<img title="" src="./img/adjust.jpg" alt="" data-align="center" style="zoom:35%;">
+
 <br>
 
-### Scratches
+<br>
+
+### Scratches <a name="scratches"></a>
 
 To scratch a swimmer, double-click their name to bring up the "Scratch [swimmer] from heat *X*, lane *Y*?" popup, then click "Yes".
 
-### Adding a Swimmer & Moving a Swimmer Around (Deck Entries & Name Changes)
+### Adding a Swimmer & Moving a Swimmer Around (Deck Entries & Name Changes) <a name="adding_moving"></a>
 
 **Adding a Swimmer to an Empty Lane**
 
@@ -175,7 +188,7 @@ There are two ways to move a swimmer around, similarly to adding a swimmer to an
 2. Drag and drop the swimmer into the new lane. If there's already a swimmer entered into the new lane, the two swimmers will be swapped.
 
 <blockquote>
-&#127902; <b>GIF: Drag-And-Drop in the Adjust Menu</b>
+&#127902; <b>GIF: Drag-And-Drop in the Adjust Menu</b> <a name="gif_dragndrop"></a>
 
 <img title="" src="./img/adjust_dragndrop.gif" alt="" data-align="center" style="zoom:50%;">
 </blockquote>
@@ -186,8 +199,9 @@ There are two ways to move a swimmer around, similarly to adding a swimmer to an
 
 To open the `Calc` menu, click the `Calc : Ctrl-K` button, or click the right-most column of the lane viewer on the bottom part of the window.
 
+**A Few Quick Definitions About Times & Backups**
 <details>
-  <summary><b>Some quick definitions</b> <i>(click to expand)</i></summary>
+  <summary><i>(click to expand section)</i></summary>
 
 - **Prelims Time**/**Finals Time** is the final time assigned to the swimmer, and can be changed by using the `Calc` menu, or by overwriting the number manually.. By default, this is the Primary Time from the timing system (i.e., the touchpad time, or a Calculated Backup time determined by the timing system.)
 
@@ -221,8 +235,9 @@ When we go into the `Calc`  menu, we see the Primary time, the Button (i.e. Back
 
 Check and uncheck the "Use" rows as desired. Verify that backup times agree and make sense. When you click "Accept Adjusted", whatever is in the Adjusted column will be assigned to the Prelims Time/Finals Time field.
 
+**Colour Coding for Lanes & Backups**
 <details>
-<summary><b>Colour Coding:</b> <i>(click to expand)</i></summary>
+<summary><i>(click to expand section)</i></summary>
 
 | Colour                        | Touchpad Time | Backup 1                              | Backup 2                              | Colour Meaning                                                                                           | Likely Explanation                                                                                                                                                                                                                               |
 | ----------------------------- | ------------- | ------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
