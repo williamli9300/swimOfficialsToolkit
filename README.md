@@ -4,8 +4,8 @@ Reference resources and instructions for Hy-Tek Swim Meet Manager. <br>
 **Draft Guide Link:** [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.md](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.md)
 
 ## DQ Wordings & Hy-Tek DQ Codes [Work In Progress]
-**DQ Wordings Spreadsheet [DRAFT]**: [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/DQwording.xlsx](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/DQwording.xlsx) <br>
-**HyTek Custom DQ Codes**: [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickStartGuide/dqcodesCustom.txt](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickStartGuide/dqcodesCustom.txt) <br>
+**DQ Wordings Spreadsheet [DRAFT]**: [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/dqQuickReference.docx](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/dqQuickReference.docx) <br>
+**HyTek Custom DQ Codes**: [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekFiles/dqcodesCustom.txt](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekFiles/dqcodesCustom.txt) <br>
 <blockquote>
   <b>Instructions for Installing HyTek Custom DQ Codes:</b><br>
     • Copy <code>dqcodesCustom.txt</code> to your <code>C:\Hy-Sport\SwMM7</code> or <code>C:\Hy-Sport\SwMM8</code> folder.<br>
