@@ -1,7 +1,7 @@
 # swimOfficialsToolkit | Resources for Canadian Swimming Officials.
 ## Hy-Tek Quick Start Guide [Draft / Work In Progress]
 Reference resources and instructions for Hy-Tek Swim Meet Manager. <br>
-**Draft Guide Link:** [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickStartGuide/HyTekQuickStartGuide.md](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickStartGuide/HyTekQuickStartGuide.md)
+**Draft Guide Link:** [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.md](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.md)
 
 ## DQ Wordings & Hy-Tek DQ Codes [Work In Progress]
 **DQ Wordings Spreadsheet [DRAFT]**: [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/DQwording.xlsx](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/DQwording.xlsx) <br>
