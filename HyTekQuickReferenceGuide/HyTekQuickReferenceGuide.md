@@ -1,6 +1,6 @@
 # Hy-Tek Swim Meet Manager 8: Quick Reference Guide
 
-**By Will Li | Version 0.1.0 [DRAFT] | 18 November 2025 | Access at** [**https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickStartGuide**](https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickStartGuide)
+**By Will Li | Version 0.1.0 [DRAFT] | 17 January  2026 | Access at** [**https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickReferenceGuide**](https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickReferenceGuide)
 
 This guide is meant as a quick reference guide for the software operation of Hy-Tek Swim Meet Manager 8. This guide is not a replacement for the thorough knowledge of the rules and roles of the Recorder and Chief Recorder.
 
@@ -302,7 +302,7 @@ There are two ways to add a swimmer into an empty lane:
 
 <br>
 <blockquote>
-&#127902; <b>GIF: Double Click to Add Swimmer in the Adjust Menu</b> <a name="gif_dragndrop"></a>
+&#127902; <b>GIF: Double Click to Scratch Swimmer in the Adjust Menu</b> <a name="gif_dragndrop"></a>
 <span align="center">
 <img title="" src="./img/adjust_doubleclick_scr.gif" alt="" data-align="center" style="zoom:50%;">
 </span>
