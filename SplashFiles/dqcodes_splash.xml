@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SPLASH application="Meet Manager 11" version="11.83565" created="2026-01-27T23:47:59">
+  <DSQITEMS>
+    <DSQITEM code="4.1" name="[START] Did not have at least one foot at the front of the starting platform." options="FREESTYLE,BREASTSTROKE,BUTTERFLY,INDIVIDUAL,RELAY,MEDLEY" order="1"/>
+    <DSQITEM code="2.3.2" name="[START] Delaying the start, wilfully disobeying an order, or misconduct at start" options="ALL,INDIVIDUAL,RELAY" order="2"/>
+    <DSQITEM code="4.4" name="[START] Initiated start before starting signal was given." options="ALL,INDIVIDUAL,RELAY" order="3"/>
+    <DSQITEM code="10.2" name="[DNF] Did not complete the entire distance of race" options="ALL,INDIVIDUAL,RELAY" order="4"/>
+    <DSQITEM code="10.4" name="[RACE] Did not remain in the same lane in which they started" options="ALL,INDIVIDUAL,RELAY" order="5"/>
+    <DSQITEM code="10.5" name="[RACE] Did not make contact with wall while turning" options="ALL,INDIVIDUAL,RELAY" order="6"/>
+    <DSQITEM code="10.6" name="[RACE] Took a step or stride from, or walked along the bottom of the pool." options="ALL,INDIVIDUAL,RELAY" order="7"/>
+    <DSQITEM code="10.7" name="[RACE] Pulled on the lane rope." options="ALL,INDIVIDUAL,RELAY" order="8"/>
+    <DSQITEM code="10.8" name="[RACE] Obstructed another swimmer or otherwise interfered with another swimmer's race." options="ALL,INDIVIDUAL,RELAY" order="9"/>
+    <DSQITEM code="10.9" name="[RACE] Entered the water of a race in which they were not entered, before all swimmers had finished." options="ALL,INDIVIDUAL,RELAY" order="10"/>
+    <DSQITEM code="10.15" name="[RACE] Failed to leave the pool in a timely manner." options="ALL,INDIVIDUAL,RELAY" order="11"/>
+    <DSQITEM code="10.17" name="[EQUIP] Pace-making, use of a pace-making device, or plan adopted for the effect of pace-making." options="ALL,INDIVIDUAL,RELAY" order="12"/>
+    <DSQITEM code="15.1" name="[EQUIP] Swimsuit more than two pieces." options="ALL,INDIVIDUAL,RELAY" order="13"/>
+    <DSQITEM code="15.2" name="[EQUIP] Swimsuit extends above the navel and/or past the shoulders and/or below the knees, and/or not made from textile material." options="ALL,INDIVIDUAL,RELAY" order="14"/>
+    <DSQITEM code="15.3" name="[EQUIP] Device or swimsuit that aids in speed, buoyancy, and/or endurance" options="ALL,INDIVIDUAL,RELAY" order="15"/>
+    <DSQITEM code="15.3" name="[EQUIP] Use of device transmits data, sounds, or signals to the swimmer and/or aids their speed." options="ALL,INDIVIDUAL,RELAY" order="16"/>
+    <DSQITEM code="15.3" name="[EQUIP] Unapproved or non-permitted taping." options="ALL,INDIVIDUAL,RELAY" order="17"/>
+    <DSQITEM code="5.2" name="[FR] Did not touch the wall at a turn." options="FREESTYLE,INDIVIDUAL,MEDLEY,RELAY" order="18"/>
+    <DSQITEM code="5.3" name="[FR] Head did not break the surface at or before the 15m mark." options="FREESTYLE,INDIVIDUAL,MEDLEY,RELAY" order="19"/>
+    <DSQITEM code="5.3" name="[FR] Swimmer became fully submerged during the stroke." options="FREESTYLE,INDIVIDUAL,MEDLEY,RELAY" order="20"/>
+    <DSQITEM code="6.1" name="[BK] Did not have both hands on the starting grips at the start." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="21"/>
+    <DSQITEM code="6.1" name="[BK] Did not have at least one toe from each foot in contact with the starting wall or touchpad." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="22"/>
+    <DSQITEM code="6.1" name="[BK] Toes bent over the gutter." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="23"/>
+    <DSQITEM code="6.2" name="[BK] Left position on the back during the stroke." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="24"/>
+    <DSQITEM code="6.3" name="[BK] Head did not break the surface at or before the 15m mark." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="25"/>
+    <DSQITEM code="6.3" name="[BK] Swimmer became fully submerged during the stroke." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="26"/>
+    <DSQITEM code="6.4" name="[BK] Failed to initiated turn immediately after turning onto breast." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="27"/>
+    <DSQITEM code="6.4" name="[BK] Non-continuous turn after turning onto breast." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="28"/>
+    <DSQITEM code="6.4" name="[BK] More than one single-arm or simultaneous two-arm pulls after turning onto the breast." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="29"/>
+    <DSQITEM code="6.4" name="[BK] Failed to leave the wall on the back after a turn." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="30"/>
+    <DSQITEM code="6.5" name="[BK] Did not finish race on back." options="BACKSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="31"/>
+    <DSQITEM code="7.1" name="[BR] More than one butterfly kick prior to the first breaststroke kick after a start or turn." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="32"/>
+    <DSQITEM code="7.1" name="[BR] More than one arm stroke back to the legs after a start or turn." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="33"/>
+    <DSQITEM code="7.1" name="[BR] Head did not break the surface before the hands turned inward at the widest part of the second stroke following a start or turn." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="34"/>
+    <DSQITEM code="7.2" name="[BR] Left the position on the breast during the stroke." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="35"/>
+    <DSQITEM code="7.2" name="[BR] Did not leave the wall on the breast following a turn." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="36"/>
+    <DSQITEM code="7.2" name="[BR] Broke stroke cycle of one arm stroke to one leg kick, in that order." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="37"/>
+    <DSQITEM code="7.2" name="[BR] Non-simultaneous movement of the arms." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="38"/>
+    <DSQITEM code="7.3" name="[BR] Elbows brought out of water during the stroke." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="39"/>
+    <DSQITEM code="7.3" name="[BR] Hands brought back beyond the hipline during the stroke." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="40"/>
+    <DSQITEM code="7.4" name="[BR] Head failed to break the surface of the water during each stroke cycle." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="41"/>
+    <DSQITEM code="7.4" name="[BR] Non-simultaneous or alternating movement of the legs." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="42"/>
+    <DSQITEM code="7.5" name="[BR] Feet not turned outward during the propulsive part of the kick." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="43"/>
+    <DSQITEM code="7.5" name="[BR] Executed a downward butterfly kick during the stroke." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="44"/>
+    <DSQITEM code="7.6" name="[BR] Did not touch with two hands simultaneously and separatedly at a turn or finish." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="45"/>
+    <DSQITEM code="8.1" name="[BR] Left the position on the breast during the stroke." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="46"/>
+    <DSQITEM code="8.1" name="[BR] Did not leave the wall on the breast following a turn." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="47"/>
+    <DSQITEM code="8.2" name="[BR] Non-simultaneous movement of the arms." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="48"/>
+    <DSQITEM code="8.2" name="[BR] Arms not brought forward over the surface of the water." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="49"/>
+    <DSQITEM code="8.2" name="[BR] Arms not brought backward under the surface of the water." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="50"/>
+    <DSQITEM code="8.3" name="[BR] Non-simultaneous or alternating movement of the legs." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="51"/>
+    <DSQITEM code="8.3" name="[BR] Breaststroke kicking movement." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="52"/>
+    <DSQITEM code="8.4" name="[BR] Did not touch with two hands simultaneously and separatedly at a turn or finish." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="53"/>
+    <DSQITEM code="8.5" name="[BR] Head did not break the surface at or before the 15m mark." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="54"/>
+    <DSQITEM code="8.5" name="[BR] Failed to remain on the surface of the water during the stroke." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="55"/>
+    <DSQITEM code="8.5" name="[BR] More than one arm pull under the water following a start or turn." options="BREASTSTROKE,INDIVIDUAL,MEDLEY,RELAY" order="56"/>
+    <DSQITEM code="9.1" name="[IM] Failed to follow the stroke order of Butterfly, Backstroke, Breaststroke, Freestyle." options="MEDLEY,INDIVIDUAL" order="57"/>
+    <DSQITEM code="9.1" name="[IM] Each stroke did not cover 1/4 of the distance of the race." options="MEDLEY,INDIVIDUAL" order="58"/>
+    <DSQITEM code="9.1" name="[IM] Swam butterfly, backstroke, or breaststroke during the Freestyle section." options="MEDLEY,INDIVIDUAL" order="59"/>
+    <DSQITEM code="9.2" name="[ME] Not on the breast during the Freestyle stroke." options="MEDLEY,INDIVIDUAL,RELAY" order="60"/>
+    <DSQITEM code="9.2" name="[ME] Did not return to the breast before executing any propulsive pull or kick." options="MEDLEY,INDIVIDUAL,RELAY" order="61"/>
+    <DSQITEM code="9.3" name="[MR] Failed to follow the stroke order of Backstroke, Breaststroke, Butterfly, Freestyle." options="MEDLEY,RELAY" order="62"/>
+    <DSQITEM code="9.3" name="[MR] Each stroke did not cover 1/4 of the distance of the race." options="MEDLEY,RELAY" order="63"/>
+    <DSQITEM code="9.3" name="[MR] Swam backstroke, breaststroke, or butterfly during the Freestyle section." options="MEDLEY,RELAY" order="64"/>
+    <DSQITEM code="10.12" name="[RELAY] Swimmer 2 left platform before Swimmer 1 touched the wall." options="RELAY,ALL" order="69"/>
+    <DSQITEM code="10.12" name="[RELAY] Swimmer 3 left platform before Swimmer 2 touched the wall." options="RELAY,ALL" order="70"/>
+    <DSQITEM code="10.12" name="[RELAY] Swimmer 4 left platform before Swimmer 3 touched the wall." options="RELAY,ALL" order="71"/>
+    <DSQITEM code="10.13" name="[RELAY] Relay team failed to swim in the order listed." options="RELAY,ALL" order="72"/>
+    <DSQITEM code="10.14" name="[RELAY] Swimmer competed as a member of more than one relay team in a single event." options="RELAY,ALL" order="73"/>
+    <DSQITEM code="10.12" name="[RELAY] Relay team member entered the water before all swimmers of all teams have finished." options="RELAY,ALL" order="74"/>
+  </DSQITEMS>
+</SPLASH>

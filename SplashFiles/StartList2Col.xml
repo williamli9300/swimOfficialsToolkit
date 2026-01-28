@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SPLASH application="Meet Manager 11" version="11.83565" created="2026-01-27T23:41:28">
+  <REPORTDEFINITION>
+    <LAYOUTS>
+      <LAYOUT layoutid="1" type="STARTLIST" name="Start list (2 col w/ Para Exceptions)" fontsize="80" legendsize="80" splitofs="60" listcols="2" lineheight="1">
+        <COLUMNS>
+          <COLUMN type="EMPTY" width="10" />
+          <COLUMN type="LANE" width="15" />
+          <COLUMN type="EMPTY" width="10" />
+          <COLUMN type="FULLNAME" width="190" />
+          <COLUMN type="AGEINFO" width="30" />
+          <COLUMN type="CLUBCODE" width="55" />
+          <COLUMN type="HANDICAP" width="38" />
+          <COLUMN type="HANDICAPEXCEPTION" width="80" />
+          <COLUMN type="ENTRYTIME" width="55" />
+          <COLUMN type="EMPTY" width="2" />
+          <COLUMN type="ENTRYSTATUSCODE" width="5" />
+        </COLUMNS>
+      </LAYOUT>
+    </LAYOUTS>
+  </REPORTDEFINITION>
+</SPLASH>
