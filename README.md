@@ -17,3 +17,7 @@ Reference resources and instructions for Hy-Tek Swim Meet Manager. <br>
 A simple executable script to fix the Relay Team Names issue when using Hy-Tek Swim Meet Manager 8.0 with Quantum and name-displaying scoreboards. <br>
 **Repository Link:** https://github.com/williamli9300/SwMM8RelayFix <br>
 **Download Latest:** Download `SwMM8RelayFix.zip` from the [latest release here](https://github.com/williamli9300/SwMM8RelayFix/releases/latest).
+
+## Splash Meet Manager Resources [Work in Progress]
+**Splash Custom Olympic Program DQ Codes**: [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/SplashFiles/dqcodes_splash.xml](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/SplashFiles/dqcodes_splash.xml)
+**Splash Custom 2-Column Start List (w/ Para Codes)**: [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/SplashFiles/StartList2Col.xml](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/SplashFiles/StartList2Col.xml)
