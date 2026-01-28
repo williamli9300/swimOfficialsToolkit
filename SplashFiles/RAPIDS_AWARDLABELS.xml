@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<SPLASH application="Meet Manager 11" version="11.83565" created="2026-01-27T23:10:20">
+  <CERTIFICATE certificateid="7" name="FASTSWIM_IND_2025" type="LABEL" left="3.5" top="1.4" height="2.6" width="7.1">
+    <COUNT x="3" y="10" />
+    <ELEMENTS>
+      <ELEMENT text="#@EVENT_NUMB@ @GENDER_TEXT@ @EVENT_TEXT@" top="0.6" align="2" fontcolor="black" fontname="Arial" fontsize="9" bold="F" italic="F" underline="F" />
+      <ELEMENT text="@NAME@ (@AGE@) | @CLUB_CODE@" top="1.1" align="2" fontcolor="black" fontname="Arial" fontsize="9" bold="F" italic="F" underline="F" />
+      <ELEMENT text="@MEET_NAME@, @MEET_CITY@" top="1.6" align="2" fontcolor="black" fontname="Arial" fontsize="8" bold="F" italic="T" underline="F" />
+      <ELEMENT text="#@RANK@ @RANK_TEXT@ Place    |    @TIME@ SCM" top="0.1" align="2" fontcolor="black" fontname="Arial" fontsize="9" bold="T" italic="F" underline="F" />
+      <ELEMENT align="2" fontcolor="black" fontname="Arial" fontsize="10" bold="F" italic="F" underline="F" />
+    </ELEMENTS>
+  </CERTIFICATE>
+</SPLASH>
