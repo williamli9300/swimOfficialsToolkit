@@ -164,7 +164,7 @@ This guide is meant as a quick reference guide for the software operation of Hy-
 ----
 # Running a Meet
 
-**Always ensure that you are in the correct session by using the `Session : F7` button (or the corresponding hotkey).**
+**&#x1f6c8; Always ensure that you are in the correct session by using the `Session : F7` button (or the corresponding hotkey).**
 
 <blockquote>
 <details>
