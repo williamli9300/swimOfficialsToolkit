@@ -22,6 +22,7 @@
             <li><b><a href="#gettingstarted">Getting Started</a></b></li>
             <ul>
                 <li><a href="#mm-intro">Introduction to Hy-Tek Swim Meet Manager</a></li>
+                <li><a href="#dqcodes">Setting Up Custom DQ Codes</a></li>
                 <li><a href="#timing">Setting Up Timing Interfaces</a></li>
                 <li><a href="#pushtoqaq">Pushing Events & Names to Quantum-AQ</a></li>
                 <ul>
@@ -47,6 +48,10 @@
                     <li><i><a href="#colours">Colour Coding in the <men>Run</men> Screen</a></i></li>
                 </ul>
                 <li><a href="#dq">Processing DQs</a></li>
+                <ul>
+                    <li><i><a href="#gif_dq">&#127902; GIF: Processing a DQ</a></i></li>
+                    <li><i><a href="#gif_dq_relay">&#127902; GIF: Processing a Relay Stroke & Turn Infraction DQ</a></i></li>
+                </ul>
                 <li><a href="">Official Splits</a></li>
                 <li><a href="">Relay Names</a></li>
                 <li><a href="">Swim-offs</a></li>
@@ -86,8 +91,9 @@
         <!-- #region Head --->
         <h0>Hy-Tek Swim Meet Manager 8.0 Quick Reference Guide</h0>
         <hr />
-        <p><b>By Will Li | Version 0.1.0 [DRAFT] | 02 February 2026 | Access at <a
-                    href="https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickReferenceGuide">https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickReferenceGuide</a></b>
+        <p><b>By Will Li | Version 0.1.0 [DRAFT] | 03 February 2026 <br>
+            Access at <a href="https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html">https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html</a><br>
+        Find more resources at: <a href="https://github.com/williamli9300/swimOfficialsToolkit/">https://github.com/williamli9300/swimOfficialsToolkit/</a></b>
         </p>
         <p>This guide is meant as a quick reference guide for the software operation of Hy-Tek Swim Meet Manager 8. This
             guide is not a replacement for the thorough knowledge of the rules and roles of the Admin Desk and/or
@@ -102,10 +108,9 @@
         <hr />
         <h1>Getting Started<a name="gettingstarted"></a></h1>
         <hr />
-        <!-- #endregion Getting Started --->
 
         <!-- #region Intro to MM --->
-        <h2>Intro to Hy-Tek Meet Manager <jump><a href="#contents">Contents</a></jump><a name="mm-intro"></a></h2>
+        <h2>Intro to Hy-Tek Meet Manager<a name="mm-intro"></a></h2>
         <details>
             <summary><b><i>Click to expand section.</i></b></summary>
             <br>
@@ -117,8 +122,62 @@
         <br>
         <!-- #endregion Intro to MM --->
 
+        <!-- #region Setting Up DQ Codes -->
+        
+        <h2>Setting Up Custom DQ Codes<a name="dqcodes"></a></h2>
+        <p>DQ codes are useful for administrative uses. They allow DQ reasons to be (optionally) printed in Results (or DQ only results, also known as DQ Reports), and can help quickly find DQ reasons if, for example, a previous session's DQ slips have already been filed away in the Meet Office. See <a href="#results">Paperwork: Results</a> for more information.</p>
+        <ol>
+            <li>Add a Custom DQ Codes file (<code>dqcodesCustom.txt</code>) to the Meet Manager directory (<code>C:\Hy-Sport\SwMM8</code>).</li>
+            <ul>
+                <li>You can find a Custom DQ code file at <a href="https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekFiles/dqcodesCustom.txt">https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekFiles/dqcodesCustom.txt</a>.</li>
+                <li>Copy the contents of that file, then open <code>C:\Hy-Sport\SwMM8</code> using a text editor, then paste the contents into the text file.</li>
+            </ul>
+            <li>From the <b>Home</b> screen, navigate to <men>Set-up</men> > <men>Meet Set-up</men>. Select Custom DQ Codes.</li>
+        </ol>
+        <br>
+
+        <blockquote>
+            <details>
+                <summary><b>&#x1f6c8; About the <code>dqcodesCustom.txt</code> file.</b> <i>(click to expand)</i>
+                </summary>
+                <p>The <code>dqcodesCustom.txt</code> Custom DQ Codes file is formatted as follows:</p>
+                <pre><code class="nohighlight">"[CODE]","[DESCRIPTION]","[STROKE]"</code></pre>
+                <p>The following <code>CODE</code> values are reserved:</p>
+                <ul>
+                    <li><code>7Q</code>: Did Not Finish (DNF)</li>
+                    <li><code>7P</code>: Declared False Start (DFS)</li>
+                    <ul>
+                        <li>Note: DFS is not the same as Initiated Start Before Starting Signal (SW 4.4). DFS is not counted in disqualification tallies and is not reported as a disqualification.</li>
+                    </ul>
+                    <li><code>6A</code>: [Relay] Stroke infraction by Swimmer 1</li>
+                    <li><code>6B</code>: [Relay] Stroke infraction by Swimmer 2</li>
+                    <li><code>6C</code>: [Relay] Stroke infraction by Swimmer 3</li>
+                    <li><code>6D</code>: [Relay] Stroke infraction by Swimmer 4</li>
+                    <ul>
+                        <li>Note: These DQ codes will let you select the type of infraction committed by the swimmer.</li>
+                    </ul>
+                </ul>
+            </details>
+        </blockquote>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Selecting Custom DQ Codes.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/dqcodes.jpg" style="height: 18em;" />
+                    <div class="desc">Selecting Custom DQ Codes.</div>
+                </div>
+            </details>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- #endregion Setting Up DQ Codes -->
+
         <!-- #region Setting Up Timing Interfaces --->
-        <h2>Setting Up Timing Interfaces <jump><a href="#contents">Contents</a></jump><a name="timing"></a></h2>
+        <h2>Setting Up Timing Interfaces <a name="timing"></a></h2>
         <ol>
             <li>From the <b>Home</b> screen, navigate to <men>Set-up</men> > <men>Meet Set-up</men>. Adjust the number
                 of
@@ -217,7 +276,7 @@
         <!-- #endregion Setting Up Timing Interfaces --->
 
         <!-- #region Pushing Schedule & Start List --->
-        <h2>[Quantum-AQ Specific] Pushing Events & Names to Quantum <jump><a href="#contents">Contents</a></jump><a
+        <h2>[Quantum-AQ Specific] Pushing Events & Names to Quantum <a
                 name="pushtoqaq"></a></h2>
 
         <h3>Selecting your Quantum-AQ Folder</h3>
@@ -343,6 +402,8 @@
         <br>
         <!-- #endregion Pushing Schedule & Start List --->
 
+        <!-- #endregion Getting Started --->
+
         <!-- #region Running a Meet --->
         <hr />
         <h1>Running a Meet<a name="running-a-meet"></a></h1>
@@ -356,7 +417,7 @@
         </info>
 
         <!-- #region Pulling Times --->
-        <h2>Pulling Times <jump><a href="#contents">Contents</a></jump><a name="pullingtimes"></a></h2>
+        <h2>Pulling Times <a name="pullingtimes"></a></h2>
 
         <ul>
             <li>From the <men>Run</men> screen, select your desired Event from the Events list, then select your desired
@@ -527,7 +588,7 @@
         <!-- #endregion Pulling Times -->
 
         <!-- #region Adjust --->
-        <h2>The <but>Adjust</but> Menu: Scratches, Deck Entries, & Changes <jump><a href="#contents">Contents</a></jump>
+        <h2>The <but>Adjust</but> Menu: Scratches, Deck Entries, & Changes 
             <a name="adjust"></a>
         </h2>
 
@@ -656,7 +717,7 @@
 
         <!-- #region Calc --->
         <h2>Lanes, Colours, & The `Calc` Menu: Adjusting Times <a name="calc"></a>
-            <jump><a href="#contents">Contents</a></jump>
+            
             <a name="adjust"></a>
         </h2>
 
@@ -720,7 +781,7 @@
 
         <br>
 
-        <p>In our example above, we can see three colours:</p>
+        <p>In our example above, we can see four colours:</p>
 
         <ul>
             <li>Lane 3 appears white, with Button 2 highlighted in <span
@@ -732,6 +793,9 @@
                 <b>in the absence of a CJE's instruction otherwise</b>, we decide to <b>fall back onto the backup
                     times.</b>
             </li>
+            <li>Lane 5 appears <span style="background-color:#c0ffc0;"><b>GREEN</b></span>. We can see that one plunger 
+                agrees with the touchpad, but the average of the two plungers ismore than 0.3s off, because one plunger is 25
+                seconds faster. In the absence of more information from a CJE, we can assume that one plunger was triggered early. <br><b>Click the <men style="background-color:#c0ffc0;">?</men> in the <men>AdjStat</men> column</b> to change it to a <men style="background-color:#c0ffc0;">k</men>, which will remove warnings from the Event Viewer (the <men>?</men> column) and Heats browser (red highlighted heat number).</li>
             <li>Lane 6 appears <span style="background-color:#c0ffff;"><b>BLUE</b></span>. We can see that we have a
                 Touchpad time
                 but no backups. Unless the touch was judged to be good by a CJE, we would need more information (e.g. a
@@ -861,7 +925,54 @@
         <br>
         <!-- #endregion Calc --->
 
-        <h2>Processing DQs<a name="calc"></a> <jump><a href="#contents">Contents</a></jump><a name="dq"></a></h2>
+        <h2>Processing DQs<a name="calc"></a> <a name="dq"></a></h2>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Processing a DQ.</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/dq.png" style="height: 18em;" />
+                    <div class="desc">Processing a DQ.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+
+        <ol>
+            <li>First, verify that the DQ slip has been processed correctly: all necessary fields have been completed, and informed information is completed (Announced/Coach Told).</li>
+            <li>In the Events Viewer, click your Event, then go to the correct heat.</li>
+            <li>Check that the <b>name, club, event, heat, and lane</b> of the swimmer in the software matches the information on the DQ slip.</li>
+            <li>Check the checkbox <men style="background-color: white;">&#x2610;</men> under the <men>DQ</men> column, corresponding to the correct swimmer.</li>
+            <li>If desired, enter a DQ code by clicking the box under the <men>DQcode</men> column, then selecting corresponding code from the dropdown list.</li>
+            <ul>
+                <li>More information about setting up DQ codes can be found in the <a href="#dqcodes">Setting Up DQ Codes</a> section.</li>
+                <li>For Relay DQs involving a non-takeover infraction committed by a swimmer (i.e. a Stroke or Turn infraction), select one of <code>6A</code>, <code>6B</code>, <code>6C</code>, or <code>6D</code>, as appropriate. Click to the side to complete the selection, then when the popup appears, select the code corresponding to the infraction the swimmer committed.</li>
+            </ul>
+            <li>Move to the next heat (or click the Next Heat arrow). In the Events viewer, the number under the <men>DQ</men> column for the event should increment by 1.</li>
+        </ol>
+
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Processing a DQ.</b> <a name="gif_dq"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/dq.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Processing a DQ.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Processing a Relay Stroke & Turn Infraction DQ.</b> <a name="gif_dq_relay"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/dq_relay.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Processing a Relay Stroke & Turn Infraction DQ.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        
+
     </main>
 
 
