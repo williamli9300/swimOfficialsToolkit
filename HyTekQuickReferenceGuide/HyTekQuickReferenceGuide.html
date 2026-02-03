@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HyTek Swim Meet Manager 8.0 Quick Reference Guide</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script>
+    <!-- -->
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <hr />
+        <toc>Contents <a name="contents"></a></toc>
+        <hr />
+        <ul>
+            <li><b><a href="#gettingstarted">Getting Started</a></b></li>
+            <ul>
+                <li><a href="#mm-intro">Introduction to Hy-Tek Swim Meet Manager</a></li>
+                <li><a href="#timing">Setting Up Timing Interfaces</a></li>
+                <li><a href="#pushtoqaq">Pushing Events & Names to Quantum-AQ</a></li>
+                <ul>
+                    <li><i><a href="#gif_pushingtoqaq">&#127902; GIF: Pushing Event Schedule to Quantum</a></i></li>
+                </ul>
+            </ul>
+            <li><b><a href="#running-a-meet">Running a Meet: The <men>Run</men> Screen</a></b></li>
+            <ul>
+                <li><a href="#pullingtimes">Pulling Times</a></li>
+                <ul>
+                    <li><a href="#qaq">About <code>*.qaq</code> Files</a></li>
+                </ul>
+                <li><a href="#adjust">The <but>Adjust</but> Menu: Scratches, Deck Entries, & Changes</a></li>
+                <ul>
+                    <li><i><a href="#scratches">Scratches</a></i></li>
+                    <li><i><a href="#changes">Adding & Moving Swimmers</a></i></li>
+                    <li><i><a href="#gif_dc_scr">&#127902; GIF: Scratching a Swimmer: Double Click</a></i></li>
+                    <li><i><a href="#gif_dc_add">&#127902; GIF: Adding a Swimmer: Double Click</a></i></li>
+                    <li><i><a href="#gif_dragndrop">&#127902; GIF: Adding a Swimmer: Drag & Drop</a></i></li>
+                </ul>
+                <li><a href="#calc">The <i>Calc</i> Menu: Seeing Colours & Adjusting Times</a></li>
+                <ul>
+                    <li><i><a href="#colours">Colour Coding in the <men>Run</men> Screen</a></i></li>
+                </ul>
+                <li><a href="#dq">Processing DQs</a></li>
+                <li><a href="">Official Splits</a></li>
+                <li><a href="">Relay Names</a></li>
+                <li><a href="">Swim-offs</a></li>
+                <li><a href="">Finals Scratches</a></li>
+                <li><a href="">Reseeding & Finals Seeding</a></li>
+                <li><a href="#racenumber">Moved Swimmers & Combined Heats: Pulling By Race Number</a></li>
+            </ul>
+            <li><b><a href="">Paperwork</a></b></li>
+            <ul>
+                <li><a href="">Preferences for List & Score</a></li>
+                <li><a href="">Session Report</a></li>
+                <li><a href="">Heat Sheet ("Meet Program")</a></li>
+                <li><a href="">Results: List & Score</a></li>
+                <li><a href="">DQ Report</a></li>
+                <li><a href="">Score Report</a></li>
+            </ul>
+            <li><b><a href="">Other Features</a></b></li>
+            <ul>
+                <li><a href="">Web Live Results</a></li>
+                <li><a href="">Meet Mobile</a></li>
+                <li><a href="">Para Points</a></li>
+            </ul>
+            <li><b><a href="">Troubleshooting Common Issues</a></b></li>
+            <ul>
+                <li><a href="">"No results found matching this Event and Heat for current QAQF meet selected!"</a></li>
+            </ul>
+            <li><b><a href="">Setting Up a Meet from Scratch</a></b></li>
+            /*
+            <li><b><a href=""></a></b></li>
+            <li><a href=""></a></li>
+            <li><i><a href=""></a></i></li>
+            */
+        </ul>
+    </div>
+
+    <main>
+        <!-- #region Head --->
+        <h0>Hy-Tek Swim Meet Manager 8.0 Quick Reference Guide</h0>
+        <hr />
+        <p><b>By Will Li | Version 0.1.0 [DRAFT] | 02 February 2026 | Access at <a
+                    href="https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickReferenceGuide">https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/HyTekQuickReferenceGuide</a></b>
+        </p>
+        <p>This guide is meant as a quick reference guide for the software operation of Hy-Tek Swim Meet Manager 8. This
+            guide is not a replacement for the thorough knowledge of the rules and roles of the Admin Desk and/or
+            Recorder/Chief Recorder.</p>
+        <info>
+            <b>&#x1f6c8;INFO:</b> You can click on any image to enlarge it.
+        </info>
+        <br>
+        <!-- #endregion Head --->
+
+        <!-- #region Getting Started --->
+        <hr />
+        <h1>Getting Started<a name="gettingstarted"></a></h1>
+        <hr />
+        <!-- #endregion Getting Started --->
+
+        <!-- #region Intro to MM --->
+        <h2>Intro to Hy-Tek Meet Manager <jump><a href="#contents">Contents</a></jump><a name="mm-intro"></a></h2>
+        <details>
+            <summary><b><i>Click to expand section.</i></b></summary>
+            <br>
+
+            <b>Navigating HyTek: The `Home` and `Run` Screens</b>
+
+            <b>Best Practices</b>
+        </details>
+        <br>
+        <!-- #endregion Intro to MM --->
+
+        <!-- #region Setting Up Timing Interfaces --->
+        <h2>Setting Up Timing Interfaces <jump><a href="#contents">Contents</a></jump><a name="timing"></a></h2>
+        <ol>
+            <li>From the <b>Home</b> screen, navigate to <men>Set-up</men> > <men>Meet Set-up</men>. Adjust the number
+                of
+                Timing Interfaces (and their names) as needed. Each Quantum Computer is one Timing Interface ("Timer").
+            </li>
+        </ol>
+        <br>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Selecting number of Timing Interfaces & setting up names.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/timinginterfaces.jpg" style="height: 18em;" />
+                    <div class="desc">Setting up Timing Interface quantity & names.</div>
+                </div>
+            </details>
+        </div>
+
+        <blockquote>
+            <details>
+                <summary><b>&#x1f6c8; Common HyTek & Quantum Connection Configurations.</b> <i>(click to expand)</i>
+                </summary>
+                <ol>
+                    <li>Single-ended, one HyTek computer and one Quantum computer:</li>
+                    <ul>
+                        <li><i>One Timer connected.</i></li>
+                    </ul>
+                    <li>Single-ended, one HyTek computer and two Quantum computers (Primary & Secondary):</li>
+                    <ul>
+                        <li><i>Two Timers connected, named <txt>Primary</txt> and <txt>Secondary</txt>.</i></li>
+                    </ul>
+                    <li>Double-ended, one HyTek computer, and one Quantum computer <u>at each end</u> (Deep End &
+                        Shallow
+                        End):
+                        <ul>
+                            <li><i>Two Timers connected, named <txt>Deep</txt> and <txt>Shallow</txt>.</i></li>
+                        </ul>
+                    <li>Double-ended, two HyTek computers (<u>one at each end</u>) and two Quantum
+                        computers (<txt>Primary</txt> & </txt>Secondary<txt>) <u>at each end</u>:</li>
+                    <ul>
+                        <li><i>Deep End HyTek Computer: Two Timers connected, named <txt>Primary-D</txt> and <txt>
+                                    Secondary-D</txt>.</i></li>
+                        <li><i>Shallow End HyTek Computer: Two Timers connected, named <txt>Primary-S</txt> and <txt>
+                                    Secondary-S</txt>.</i></li>
+                    </ul>
+                </ol>
+            </details>
+        </blockquote>
+        <br>
+
+        <ol start="2">
+            <li>From the <men>Run</men> screen, navigate to <men>Interfaces</men> > <men>Set-up</men> to set up the
+                <men>
+                    Timing Consoles</men> and <men>Scoreboards</men> as necessary, according to the pictures below.
+            </li>
+            <ul>
+                <li>For meets running on Quantum, set your Timing System to <bmen>Omega Quantum-AQ File Sharing<bmen>,
+                            and
+                            your Scoreboard as <bmen>Network File Sharing IST or Quantum-AQ<bmen>.</li>
+            </ul>
+        </ol>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Selecting your Timing Console & Scoreboard.</b> (<i>Click to
+                        collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/timinginterface_scoreboard.jpg" style="height: 18em;" />
+                    <div class="desc">Selecting your Timing Console & Scoreboard.</div>
+                </div>
+            </details>
+        </div>
+
+        <info>
+            <b>&#x1f6c8; INFO:</b> Your HyTek Meet Manager license must include the <bmen>Alpha Scoreboard Interface
+            </bmen>
+            option to set up a Scoreboard. To check if you have this license option:
+            <ul>
+                <li>From the Home screen, navigate to <men>Help</men> > <men>About</men>.</li>
+                <li>Check which License Options are checked.</li>
+            </ul>
+            If you do not have the <bmen>Alpha Scoreboard Interface</bmen> license option, you can still run the
+            meet
+            as normal from a HyTek perspective; you will not be able to push Start Lists to Quantum, or
+            have
+            names show up on an alphanumeric scoreboard. <br> <br>
+            <i>Note: without the <bmen>Alpha Scoreboard Interface</bmen> license option, the Quantum
+                Operator
+                can ingest Event Schedules, but not Start Lists; they will have to add every
+                heat
+                manually.</i>
+        </info>
+
+        <br>
+        <!-- #endregion Setting Up Timing Interfaces --->
+
+        <!-- #region Pushing Schedule & Start List --->
+        <h2>[Quantum-AQ Specific] Pushing Events & Names to Quantum <jump><a href="#contents">Contents</a></jump><a
+                name="pushtoqaq"></a></h2>
+
+        <h3>Selecting your Quantum-AQ Folder</h3>
+
+        <ol start="1">
+            <li>From the <men>Run</men> screen, click <but>Session : F7</but>. Select your current session, then click
+                <but>
+                    OK</but>.
+            </li>
+            <li>From the <men>Run</men> screen, navigate to <men>Interfaces</men> > <men>Timer (QAQF) [Name]</men> >
+                <men>
+                    Select Data Set stored from QAQF</men>.
+            </li>
+            <li>Click <bbut>Update Data Location</bbut> to select your Quantum data folder.</li>
+            <li>Use the <bbut>Previous Meet</bbut> button to ensure that "Current Meet #" shows "Meet #1".</li>
+        </ol>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Configuring Quantum-AQ Timing Console communication.</b>
+                    (<i>Click
+                        to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/timingconsoleselection.jpg" style="height: 18em;" />
+                    <div class="desc">Configuring Quantum-AQ Timing Console communication..</div>
+                </div>
+            </details>
+        </div>
+
+        <h3>Pushing Events (Schedule) to Quantum-AQ</h3>
+
+        <ol start="5">
+            <li>From the <men>Run</men> screen, navigate to <men>Interfaces</men> > <men>Timer (QAQF) [Name]</men> >
+                <men>
+                    Download events to QAQF</men>.
+            </li>
+        </ol>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Pushing Event Schedule to Quantum-AQ.</b> (<i>Click to collapse
+                        image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/push_schedule.jpg" style="height: 18em;" />
+                    <div class="desc">Pushing Event Schedule to Quantum-AQ.</div>
+                </div>
+            </details>
+        </div>
+
+        <ul>
+            <li>If using two timing interfaces, repeat steps 2-5 for the second timing console.</men>.</li>
+        </ul>
+
+        <div class="gif"><a name="gif_pushingtoqaq"></a>
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Pushing Event Schedule to Quantum-AQ.</b>
+                    (<i>Click
+                        to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/push_schedule.gif" style="height: 18em;" />
+                    <div class="desc">&#127902; GIF: Pushing Event Schedule to Quantum-AQ.</div>
+                </div>
+            </details>
+        </div>
+
+        <h3>Pushing Names (Start List) to Quantum-AQ</h3>
+
+        <info>
+            <b>&#x1f6c8; INFO:</b> If you are using an Alphanumeric Scoreboard with names, it is good practice to
+            <b>re-push
+                the Start List</b> (Step 2 below) and <b>inform your Electronics Operator</b> after you have made any
+            changes <u>affecting races not yet swum</u>, especially Relay Names.
+        </info>
+
+        <ol>
+            <li>From the <men>Run</men> screen, navigate to <men>Interfaces</men> > <men>Scoreboard (GENNET) [Name]
+                </men> >
+                <men>Customize</men>. Ensure the
+                settings are set to the same ones as below, then click <but>OK</but>:
+            </li>
+            <ul>
+                <li><b>Punctuation:</b>
+                    <men>Upper/Lower Case</men>
+                </li>
+                <li><b>Athlete Names:</b>
+                    <men>Lastname, Firstname</men>
+                </li>
+                <li><b>Relay Names:</b>
+                    <men>Upper/Lower Case</men>
+                </li>
+            </ul>
+        </ol>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Start List Customization Settings.</b> (<i>Click to collapse
+                        image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/scoreboardsettings.jpg" style="height: 18em;" />
+                    <div class="desc">Start List Customization Settings.</div>
+                </div>
+            </details>
+        </div>
+
+        <ol start="2">
+            <li>From the <men>Run</men> screen, navigate to <men>Interfaces</men> > <men>Scoreboard (GENNET) [Name]
+                </men> >
+                <men>Create Start List File</men>.
+            </li>
+            <li>If using two <u>Timing Interfaces</u>, repeat Step 2 for the Scoreboard under the second Timing Console.
+            </li>
+        </ol>
+
+        <info>
+            <b>&#x1f6c8; INFO:</b> If <u>Team Name / abbreviations for individual events</u> are showing up on your
+            scoreboard as <u>Relay Names</u> (e.g. <code>XXXX-A</code> or <code>TEAM-B</code>) see <a
+                href="https://github.com/williamli9300/SwMM8RelayFix">https://github.com/williamli9300/SwMM8RelayFix</a>
+            for
+            more information and a fix.
+        </info>
+
+        <br>
+        <br>
+        <!-- #endregion Pushing Schedule & Start List --->
+
+        <!-- #region Running a Meet --->
+        <hr />
+        <h1>Running a Meet<a name="running-a-meet"></a></h1>
+        <hr>
+
+        <info>
+            <b>&#x1f6c8; INFO:</b> Always ensure that you are in the correct session by using the <but>Session : F7
+            </but>
+            button (or the
+            corresponding hotkey).
+        </info>
+
+        <!-- #region Pulling Times --->
+        <h2>Pulling Times <jump><a href="#contents">Contents</a></jump><a name="pullingtimes"></a></h2>
+
+        <ul>
+            <li>From the <men>Run</men> screen, select your desired Event from the Events list, then select your desired
+                Heat from the
+                Heats bar.</li>
+            <li>Click the orange button labelled <bbut style="background-color: #ffe0c0">[Name] : F3</bbut> or the blue
+                button labelled <bbut style="background-color: #c0c0ff">[Name] : Ctrl-F3</bbut> (or the corresponding
+                hotkeys) to pull times from the corresponding timing system.</li>
+            <ul>
+                <li><b>Note:</b> the directory that each button pulls times from is configured in the <a
+                        href="#timing">Setting Up Timing Interfaces</a> section.</li>
+            </ul>
+        </ul>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Pushing Event Schedule to Quantum-AQ.</b> (<i>Click to collapse
+                        image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/push_schedule.jpg" style="height: 18em;" />
+                    <div class="desc">Pushing Event Schedule to Quantum-AQ.</div>
+                </div>
+            </details>
+        </div>
+
+        <ul>
+            <li>Alternatively, if you know the Race Number, you can click the corresponding orange <bbut
+                    style="background-color: #ffe0c0">Race # : F2</bbut> or blue <bbut
+                    style="background-color: #c0c0ff">
+                    Race # : Ctrl-F2</bbut> buttons, then enter the race number, to pull the times in the `.qaq` file
+                with
+                the corresponding race number, into the currently selected heat. (<i>See <a href="#racenumber">Combined
+                        Heats</a> or <a href="#qaq">About <code>.qaq</code> Files</a> for more
+                    information.</i>)</li>
+        </ul>
+
+        <blockquote>
+            <details>
+                <summary><b>&#x1f6c8; Understanding <code>.qaq</code> files.</b> <i>(click to expand)</i><a
+                        name="qaq"></a>
+                </summary>
+                Each time a race is completed and saved in the Quantum-AQ, it creates a result file in the shared data
+                folder. This file has the extension <code>.qaq</code>, and when using HyTek, will have the following
+                file
+                name format:
+
+                <br>
+
+                <pre><code class="nohighlight">DDD-EEE-HHXRRRR.qaq</code></pre>
+
+                For example, <code>001-001-01F0001.qaq</code>:
+
+                <ul>
+                    <li>The first 3 characters of the file name (<code>DDD</code>) is a three-digit number from 001 to
+                        999.
+                        These characters
+                        define the Data Set number. For most meets you will work, you will only use Data Set 001.</li>
+                    <li>The next 3 characters of the file name (<code>EEE</code>) is a three-digit number from 001 to
+                        999.
+                        These characters
+                        represent the Event Number of the race.</li>
+                    <li>The next 2 characters of the file name (<code>HH</code>) is a two-digit number from 01 to 99.
+                        These
+                        characters
+                        represent the Heat Number of the race.</li>
+                    <li>The next 1 character of the file name (<code>X</code>) is a letter (T, P, S, F) representing the
+                        type of race that is
+                        swum (i.e. Timed Finals, Prelims, Semifinals, Finals.)</li>
+                    <li>The last 4 characters of the file name (<code>RRRR</code>) is a four-digit number from 0001 to
+                        9999.
+                        These characters
+                        represent the Race Number, and can be used to manually pull the file to any heat using the Race
+                        Number
+                        button.</li>
+                </ul>
+
+                Each <code>*.qaq</code> file is actually a Semicolon-Separated Values file. Here's an example of what
+                that
+                might look like for an individual 200m event in a 25m, 8-lane pool:
+
+                <pre><code class="nohighlight">101;1;4;F;100;QuantumAQ;6.1.21.0
+0;;;;;;;;
+0;;;;;;;;
+0;;;;;;;;
+1; ;71.86;145.96;145.90;145.80;;0.66;
+2; ;73.78;146.09;146.11;145.99;;0.59;
+0;;;;;;;;
+0;;;;;;;;
+0;;;;;;;;</code></pre>
+
+                <ul>
+                    <li>The first line contains the <code>Event</code>, <code>Heat</code>, and
+                        <code>Number of Touches</code> (<code>N</code>) values,
+                        followed by <code>Race Type</code>
+                        (equivalent to <code>X</code> above), and some information about the Quantum version that the
+                        file
+                        was created
+                        by.
+                    </li>
+                    <li>The next <code>n</code> lines correspond to the <code>n</code> lanes in the pool, with the
+                        lowest
+                        number at the top,
+                        typically <code>1-6</code>, <code>1-8</code>, or <code>0-9</code>:</li>
+                    <ul>
+                        <li>The first column of each line corresponds to the <code>Rank</code> of the lane (i.e., what
+                            place
+                            the swimmer came in the heat)</li>
+                        <li>The second column is empty.</li>
+                        <li>The next <code>N</code> columns correspond with the <b>cumulative split time</b>, in
+                            seconds, at
+                            the <code>N</code>th touch. Since this is a 200m event, we are expecting 4 touches: the
+                            times
+                            thus correspond to the 50m, 100m, 150m, and 200m split times, in seconds.</li>
+                        <li>The next 3 columns correspond with Backups 1, 2, and 3, as recorded by Quantum. Here, we
+                            only
+                            have two plungers in each lane, so the third column is empty.</li>
+                        <li>The last column contains the reaction time of the swimmer off the start.</li>
+                    </ul>
+                    <li>Note 1: When a lane is unused, all the semicolons are collapsed (i.e. no spaces between them).
+                    </li>
+                    <li>Note 2: Newer versions of the Quantum software will always write 12 lanes, regardless of how
+                        many
+                        lanes are used.
+                        HyTek will always ingest the <code>*.qaq</code> file with the lowest lane number at the top, and
+                        extra lines at the
+                        bottom are ignored.</li>
+                </ul>
+
+                To summarize, based on Lane 4:
+
+                <pre><code class="nohighlight">RANK ; empty ; SPLIT;  FINAL;     B1;     B2; B3;   RT;
+1    ;       ; 71.86; 145.96; 145.90; 145.80;   ; 0.66;</code></pre>
+
+
+                Here's an example of what a <code>.qaq</code> might look like for a 4x50m relay event in a 50m, 10-lane
+                pool:
+
+                <pre><code class="nohighlight">121;1;4;F;100;QuantumAQ;6.1.23.0
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;
+1; ;31.27;66.68;97.78;136.99;136.91;136.02; ;0.66;-0.10;0.24;0.33;
+2; ;33.19;67.26;97.74;136.59;136.57;136.68; ;0.59;0.21;0.57;0.12;
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;
+0;;;;;;;;;;;;;</code></pre>
+
+                <ul>
+                    <li>The first line header is formatted the same as above.</li>
+                    <li>The first few columns are the same as above, but three extra columns are added at the end of
+                        each
+                        line for
+                        the second, third, and fourth swimmer's takeover reaction time.</li>
+                </ul>
+
+                To summarize, based on Lane 4 in the above example:
+
+                <pre><code class="nohighlight">RANK ; empty ; --------------- SPLITS;  FINAL;     B1;     B2; B3;   RT1;   RT2;   RT3;   RT4;
+1    ;       ;  31.27;  66.68;  97.78; 136.99; 136.91; 136.02;   ;  0.66; -0.10;  0.24;  0.33;</code></pre>
+            </details>
+        </blockquote>
+        <br>
+        <br>
+        <!-- #endregion Pulling Times -->
+
+        <!-- #region Adjust --->
+        <h2>The <but>Adjust</but> Menu: Scratches, Deck Entries, & Changes <jump><a href="#contents">Contents</a></jump>
+            <a name="adjust"></a>
+        </h2>
+
+        <p>From the <men>Run</men> screen, click the <but>Adjust : F8</but> button to bring up the <but>Adjust</but>
+            menu.</p>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Locating the <but>Adjust</but> menu in the <men>Run</men>
+                        screen.</b> (<i>Click to collapse
+                        image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/run_adjust.jpg" style="height: 18em;" />
+                    <div class="desc">Locating the Adjust menu in the Run screen.</div>
+                </div>
+            </details>
+        </div>
+
+        <br>
+
+        <p>The Adjust menu is organized by heat and lane. You can click <men>Show Eligible Athletes</men> or <men>
+                Eligible Athletes +
+                Swim-ups</men> to bring up a list of athletes at the bottom of the window.</p>
+
+        <info>
+            <b>&#x1f6c8; INFO:</b> The <but>Adjust</but> menu is one of the few places in HyTek Meet Manager with a
+            <men>Save</men> button. If you mess up, just click the <code>X</code> in the top right corner of the popup
+            window to close,
+            then click <but>No</but> when the "Save Now?" popup appears, and try again!
+        </info>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Making changes in the <but>Adjust</but> menu</b> (<i>Click to
+                        collapse
+                        image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/adjust.jpg" style="height: 18em;" />
+                    <div class="desc">Making changes in the Adjust menu.</div>
+                </div>
+            </details>
+        </div>
+
+        <br>
+
+        <h3>Scratches<a name="scratches"></a></h3>
+
+        <p>To scratch a swimmer, double-click their name. When the popup <men>Scratch [swimmer] from heat X, lane Y?
+            </men>
+            appears, click <but>Yes</but>>.</p>
+
+        <br>
+
+        <h3>Adding a Swimmer & Moving a Swimmer Around (Deck Entries & Name Changes)<a name="adding_moving"></a></h3>
+
+        <h4>Adding a Swimmer to an Empty Lane</h4>
+
+        <p>Swimmers not already entered in an event can only be added to an empty lane. You may need to remove (scratch)
+            a
+            swimmer previously entered into a particular lane (by double-clicking their name) in order to add a new
+            swimmer
+            to that lane. There are two ways to add a swimmer into an empty lane:</p>
+
+        <ol>
+            <li>Double click an empty lane, then begin typing the swimmer's last name. Then, use your
+                <code> &uarr; &darr; </code> arrow keys to find the swimmer, then hit <code>Enter</code> on your
+                keyboard to accept the change. (Sometimes using your mouse here will make the list options to move
+                around unexpectedly). <b>OR:</b>
+            </li>
+            <li>
+                Click <men>Show Eligible Athletes</men> (or <men>Show Eligible Athletes + Swim-ups</men> if the swimmer
+                is from a younger age group). Find the athlete's name in the bottom window (sorted by last name), then
+                drag-and-drop the name into place.
+            </li>
+        </ol>
+
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Double Click to Scratch Swimmer in the <but>
+                            Adjust</but> Menu</b> <a name="gif_dc_scr"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/adjust_doubleclick_scr.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Double Click to Scratch Swimmer in the Adjust Menu.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+
+        <h4>Moving a Swimmer Around</h4>
+
+        <p>There are two ways to move a swimmer around, similarly to adding a swimmer to an empty lane:</p>
+
+        <ol>
+            <li>Double click an empty lane, then begin typing the swimmer's last name. The swimmer will be moved into
+                the new lane.</li>
+            <li>Drag and drop the swimmer into the new lane. If there's already a swimmer entered in the new lane, the
+                two swimmers will be <b>swapped</b>.</li>
+        </ol>
+
+        <br>
+
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Double Click to Add Swimmer in the <but>Adjust
+                        </but> Menu</b> <a name="gif_dc_add"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/adjust_doubleclick_add.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Double Click to Add Swimmer in the Adjust Menu.</div>
+                </div>
+            </details>
+        </div>
+
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Drag-And-Drop to Add Swimmer in the <but>Adjust
+                        </but> Menu</b> <a name="gif_dragndrop"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/adjust_dragndrop.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Drag-And-Drop to Add Swimmer in the Adjust Menu.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        <br>
+        <!-- #endregion Adjust --->
+
+        <!-- #region Calc --->
+        <h2>Lanes, Colours, & The `Calc` Menu: Adjusting Times <a name="calc"></a>
+            <jump><a href="#contents">Contents</a></jump>
+            <a name="adjust"></a>
+        </h2>
+
+        <info>
+            <details>
+                <summary><b>&#x1f6c8; INFO:</b> A few quick definitions on Backup Times in HyTek MM and this guide.
+                    <i>(click to expand
+                        section)</i>
+                </summary>
+                <ul>
+                    <li><b>Prelims Time</b>/<b>Finals Time</b> is the final time assigned to the swimmer, and can be
+                        changed by
+                        using the <but>Calc</but> menu, or by overwriting the number manually. By default, this is the
+                        Primary Time from the
+                        timing system (i.e., the touchpad time, or a Calculated Backup time determined by the timing
+                        system.)</li>
+                    <li><b>Backup 1</b>, <b>Backup 2</b>, and <b>Backup 3</b> correspond to the the backups recorded by
+                        the timing
+                        system.</li>
+                    <li><b>Calculated Backup</b> is the single backup time, the arithmetic mean of two backups, or the
+                        median of three
+                        backups, if there are one, two, or three backup times available.</li>
+                </ul>
+            </details>
+        </info>
+
+        <warning>
+            <b>&#9888; Taking Backup Times</b>
+            <ul>
+                <li>Never take the average of two different kinds of sources (e.g. never average a plunger time with a
+                    stopwatch time). Go in descending order based on availability and reliability: automatic (touchpad),
+                    semi-automatic
+                    (plunger), manual (stopwatch).</li>
+                <li>Ensure that two backup times agree with each other before taking the average. Always check your
+                    numbers to
+                    make sure they make sense with respect to the event (e.g. no 12-second 1500 FR's) and the order of
+                    finish.</li>
+                <li><b>If there is a Chief Judge Electronics (CJE), never make a decision without consulting the
+                        CJE.</b> If
+                    there is no CJE <i>and</i> you are working in the capacity of the <u>Chief Recorder</u>, <b>make
+                        decisions in accordance with
+                        World Aquatic Rules</b> SW II-2.11 (Chief Recorder) and SW II-11 (Timing).</li>
+            </ul>
+        </warning>
+
+        <br>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>To open the <but>Calc</but> menu, click the <but>Calc : Ctrl-K
+                        </but> button, or click the right-most column of the lane viewer on the bottom part of the <men>
+                            Run</men> screen.</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/run_calc.jpg" style="height: 18em;" />
+                    <div class="desc">To open the <but>Calc</but> menu, click the <but>Calc : Ctrl-K</but> button, or
+                        click the right-most column of the lane viewer on the bottom part of the <men>Run</men> screen.
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <br>
+
+        <p>In our example above, we can see three colours:</p>
+
+        <ul>
+            <li>Lane 3 appears white, with Button 2 highlighted in <span
+                    style="background-color:#ffc0c0;"><b>RED</b></span>.
+                This means that Button 2 is ≥0.30s different from the Primary time.</li>
+            <li>Lane 4 appears <span style="background-color:#ffff00;"><b>YELLOW</b></span>. This means the Calculated
+                Backup
+                is ≥0.30s faster than the Primary time. Here, it is likely that there was a touchpad malfunction, and
+                <b>in the absence of a CJE's instruction otherwise</b>, we decide to <b>fall back onto the backup
+                    times.</b>
+            </li>
+            <li>Lane 6 appears <span style="background-color:#c0ffff;"><b>BLUE</b></span>. We can see that we have a
+                Touchpad time
+                but no backups. Unless the touch was judged to be good by a CJE, we would need more information (e.g. a
+                manual stopwatch time).</li>
+        </ul>
+
+        <info>
+            <b>&#x1f6c8; INFO:</b> Most pools will only have 1 or 2 plungers active. If you are recording a manual (e.g.
+            stopwatch) time for any reason (e.g. to back up a plungerless touchpad time, it is <b>best practice</b> to
+            record that time into the <u>unused</u> Backup field. Note that the unused field may be different between
+            each lane, depending on your pool setup.)
+        </info>
+
+        <p>When we go into the <but>Calc</but> menu, we see the Primary time, the Button (i.e. Backup) times, Button
+            Calc (i.e.
+            Calculated Backup) time, and Difference. We also see an "Adjusted" column:</p>
+
+        <ul>
+            <li>If the row is white (Calculated Average is ≤0.30s different from Primary Time), the Adjusted time will
+                be the
+                same as the Primary Time, regardless of if "Use" is checked.</li>
+            <li>If the row is <span style="background-color:#ffff00;"><b>YELLOW</b></span>, the Adjusted time will be
+                the
+                Calculated Backup if "Use" is **checked** (default), or will fall back to the Primary time if "Use" is
+                unchecked.</li>
+            <li>If the row is <span style="background-color:#c0ffc0;"><b>GREEN</b></span>, the Adjusted time will be the
+                Primary Time if "Use" is <b><u>un</u>checked</b> (default), or will be the Calculated Backup if "Use" is
+                checked.</li>
+            <li>If the row is <span style="background-color:#c0ffff;"><b>BLUE</b></span> (no backups), the Adjusted time
+                will
+                be the same as the Primary Time, regardless of if "Use" is checked.</li>
+        </ul>
+
+        <p>Check and uncheck the "Use" rows as desired. Verify that backup times agree and make sense. When you click
+            <but>Accept Adjusted</but>, whatever is in the Adjusted column will be assigned to the Prelims Time/Finals
+            Time field.
+        </p>
+
+        <br>
+
+        <h3>Colour Coding for Lanes & Backups<a name="colours"></a></h3>
+        <table>
+            <tr>
+                <th>Colour</th>
+                <th>Touchpad Time</th>
+                <th style="font-size: 0.75em;">DQ/ Exh</th>
+                <th>Backup 1</th>
+                <th>Backup 2</th>
+                <th>Backup 3</th>
+                <th>Colour Meaning</th>
+                <th>Likely Explanations</th>
+            </tr>
+            <tr>
+                <td><b>White Row with 1 Red Cell</b></td>
+                <td style="text-align: right;">1:29.67</td>
+                <td style="text-align:right;"></td>
+                <td style="text-align: right;">1:29.55</td>
+                <td style="background-color:#ffc0c0; text-align: right;">1:29.98</td>
+                <td style="text-align:right;">----</td>
+                <td>Backup Time is more than 0.30s away from Touchpad Time</td>
+                <td>One plunger was off, Pad and other plunger were OK. <br></td>
+            </tr>
+            <tr>
+                <td><b>White Row with 2 Red Cells</b></td>
+                <td style="text-align: right;">1:30.78</td>
+                <td style="text-align:right;"></td>
+                <td style="background-color:#ffc0c0; text-align: right;">1:25.20</td>
+                <td style="background-color:#ffc0c0; text-align: right;">1:36.36</td>
+                <td style="text-align:right;">----</td>
+                <td>Backup Time is more than 0.30s away from Touchpad Time</td>
+                <td><b>If 2 Red Cells:</b> two plungers
+                    were very different from each other AND Pad, and "Pad" time was likely the average of two plungers. Need to find a third
+                    backup time to decide what time to assign swimmer.</td>
+            </tr>
+            <tr>
+                <td style="background-color:#ffff00;"><b>Yellow&nbsp;(y)&nbsp;Row</b></td>
+                <td style="background-color:#ffff00; text-align: right;">1:21.56</td>
+                <td style="background-color:#ffff00; text-align:right;"></td>
+                <td style="background-color:#ffc0c0; text-align: right;">1:19.20</td>
+                <td style="background-color:#ffc0c0; text-align: right;">1:19.17</td>
+                <td style="background-color:#ffff00; text-align:right;">----</td>
+                <td style="background-color:#ffff00;">Average of backups is more than 0.30s *faster* than Touchpad time</td>
+                <td style="background-color:#ffff00;">"Soft Touch": plungers are OK, Touchpad time was late.</td>
+            </tr>
+            <tr>
+                <td style="background-color:#c0ffc0;"><b>Green&nbsp;(g)&nbsp;Row</b></td>
+                <td style="background-color:#c0ffc0; text-align: right;">1:35.55</td>
+                <td style="background-color:#c0ffc0; text-align:right;"></td>
+                <td style="background-color:#c0ffc0; text-align: right;">1:35.54</td>
+                <td style="background-color:#ffc0c0; text-align: right;">1:10.67</td>
+                <td style="background-color:#c0ffc0; text-align:right;">----</td>
+                <td style="background-color:#c0ffc0;">Average of backups is more than 0.30s away from touchpad time, but one backup agrees with
+                    touchpad time.</td>
+                <td style="background-color:#c0ffc0;">One Plunger went early or late; Pad and other plunger were OK.</td>
+            </tr>
+            <tr>
+                <td style="background-color:#c0ffff;"><b>Blue&nbsp;(b)&nbsp;Row</b></td>
+                <td style="background-color:#c0ffff; text-align: right;">1:21.56</td>
+                <td style="background-color:#c0ffff; text-align:right;"></td>
+                <td style="background-color:#c0ffff; text-align: right;">----</td>
+                <td style="background-color:#c0ffff; text-align: right;">----</td>
+                <td style="background-color:#c0ffff; text-align:right;">----</td>
+                <td style="background-color:#c0ffff;"> Average of backups is more than 0.30s *slower* than Touchpad time</td>
+                <td style="background-color:#c0ffff;">Either: (1) someone triggered the touchpad before the swimmer touched the wall; <b> <br> (2) both
+                        Timekeepers fell asleep and forgot to hit the Plungers until it was too late; or, <br> (3)
+                        No backup times were recorded. </b></td>
+            </tr>
+        </table>
+
+        <warning>
+            <b>&#9888; Note:</b> These are some <i>likely</i> explanations for colours appearing on your HyTek
+            screen. <b>Do not make decisions based on colours alone.</b> If a CJE is present, defer all final decisions
+            to
+            the CJE. If you are acting in the capacity of a Chief Recorder, assign times based on World Aquatics Rules
+            II-11. When uncertain, always sanity check to ensure times make sense. In accordance with Swimming
+            Canada Rules SW II-C2.11.2, use data from all available timing systems and order of finish information, as
+            necessary, to identify possible equipment malfunction, and assign times based on valid/functional watch
+            times.
+        </warning>
+
+        <div id="myModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <br>
+        <br>
+        <!-- #endregion Calc --->
+
+        <h2>Processing DQs<a name="calc"></a> <jump><a href="#contents">Contents</a></jump><a name="dq"></a></h2>
+    </main>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        var modalcontent = document.getElementsByClassName("modal-content");
+
+        modal.onclick = function (e) {
+            if (e.target.tagName != 'IMG' && window.getComputedStyle(e.target).cursor != 'text') {
+                modal.style.display = "none";
+            }
+        }
+
+        document.onkeydown = function (e) {
+            e = e || window.event;
+            var escape = false;
+            if ("key" in e) {
+                escape = (e.key === "Escape" || e.key === "Esc");
+            } else {
+                escape = (e.keyCode == 27);
+            }
+            if (escape) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Get all images and insert the clicked image inside the modal
+        // Get the content of the image description and insert it inside the modal image caption
+        var images = document.getElementsByTagName('img');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var i;
+        for (i = 0; i < images.length; i++) {
+            images[i].onclick = function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                captionText.innerHTML = this.nextElementSibling.innerHTML;
+            }
+        }
+    </script>
+</body>
+
+</html>

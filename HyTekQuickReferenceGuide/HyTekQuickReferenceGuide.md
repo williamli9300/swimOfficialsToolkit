@@ -11,9 +11,6 @@ This guide is meant as a quick reference guide for the software operation of Hy-
 
 ----
 # Contents <a name="contents"></a>
-<details>
-<summary><b><i>Click to expand the Table of Contents.</i></b></summary>
-<br>
 
 - [**Getting Started**](#gettingstarted)
   - [Introduction to Hy-Tek Swim Meet Manager](#mm-intro)
@@ -45,7 +42,7 @@ This guide is meant as a quick reference guide for the software operation of Hy-
   - No results found matching this Event and Heat for current QAQF meet selected!
   - Error when installing an update
 - **Creating a Meet From Scratch**
-</details>
+
 <br>
 
 

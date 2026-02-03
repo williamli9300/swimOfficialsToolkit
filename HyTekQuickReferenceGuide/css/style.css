@@ -1,0 +1,389 @@
+body {
+  background-color: white;
+  margin: 2em 250px;
+  font-family: "Segoe UI", "San Francisco", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+}
+
+main {
+  margin-left: 25%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 25%;
+  left: 0; 
+  top: 0;
+  padding: 0em 2em 0em 2em;
+  background-color:#f8f8f8;
+  position:fixed!important;
+  z-index: 1;
+  overflow: auto;
+}
+
+code, pre, samp {
+  font-family: "Consolas", "SFMono-Regular", "Courier", monospace;
+}
+
+pre {
+  display: block;
+  background-color: #f0f0f0;
+  padding: 1em 2em 1em 2em;
+  border-radius: 0.5em;
+}
+
+code {
+  border-radius: 0.5em;
+  background-color: #f0f0f0;
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 0.9em;
+}
+
+pre > code {
+    display: block;
+    font-size: 1.0rem;
+    text-indent: 0;
+    padding: 0;
+    color: #111;
+    white-space: pre;
+    font-size: 0.9em;
+}
+
+h0 {
+  font-size: 2.25em;
+  font-weight: bold;
+  line-height: 1.5;
+  padding-bottom: 1em;
+}
+
+toc {
+font-size: 2em;
+  font-weight: bold;
+  line-height: 0.5;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h2{
+  font-size: 1.7em;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: underline solid 0.5px #9a9a9a;
+   text-underline-offset: 0.1em;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+p {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0.25em;
+}
+
+blockquote {
+  display: block;
+  font-weight: normal;
+  line-height: 1.5;
+  background-color: #f8fafc;
+  padding: 1em;
+  border-radius: 0.25em;  
+  border-left: 4px solid #aaacaf;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+info {
+  display: block;
+  font-weight: normal;
+  color: #2a5062;
+  line-height: 1.5;
+  background-color: #d9f3fb;
+  padding: 1em;
+  border-radius: 0.25em;  
+  border-left: 4px solid #4a8eae;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+warning {
+  display: block;
+  font-weight: normal;
+  color: #604d17;
+  line-height: 1.5;
+  background-color: #fffce6;
+  padding: 1em;
+  border-radius: 0.25em;  
+  border-left: 4px solid #eed202;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+error {
+  display: block;
+  font-weight: normal;
+  color: #752a2d;
+  line-height: 1.5;
+  background-color: #f0d8da;
+  padding: 1em;
+  border-radius: 0.25em;  
+  border-left: 4px solid #da6462;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+success {
+  display: block;
+  font-weight: normal;
+  color: #2a4f36;
+  line-height: 1.5;
+  background-color: #dcf2ea;
+  padding: 1em;
+  border-radius: 0.25em;  
+  border-left: 4px solid #529b6a;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 2em;
+  line-height: 1.65;
+}
+
+ul ul {
+  padding-left: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+ol {
+  padding-left: 2em;
+  line-height: 1.65;
+}
+
+ol ol {
+  padding-left: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+a {
+  color: #3f6bd2;
+  text-decoration: none;
+}
+
+table, td, th {
+  border: 1px solid;
+  padding: 0.5em 0.75em 0.5em 0.75em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+but {
+  border-radius: 0.5em;
+  background-color: #f3f3f3;
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8em;
+  padding: 0.1em 0.5em 0.15em 0.5em;
+  border: solid 0.5px #afafaf;
+}
+
+bbut {
+  border-radius: 0.5em;
+  background-color: #f3f3f3;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.1em 0.5em 0.15em 0.5em;
+  border: solid 0.5px #afafaf;
+}
+
+men {
+  background-color: #f3f3f3;
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8em;
+  padding: 0.02em 0.25em 0.02em 0.25em;
+  border: solid 0.5px #afafaf;
+}
+
+bmen{
+  background-color: #f3f3f3;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 0.02em 0.25em 0.02em 0.25em;
+  border: solid 0.5px #afafaf;
+}
+
+jump {
+  font-size: 0.5em;
+}
+
+txt {
+  font-weight: normal;
+  font-style: normal;
+}
+
+div.img {
+  display: block;
+}
+
+/* The Image */
+div.img img {
+  display: flex;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  cursor: pointer;
+  object-fit: contain;
+  max-width: 95%;
+  justify-items: center;
+  margin: auto;
+}
+
+/* Description of Image */
+div.desc {
+  text-align: center;
+  display: none;
+}
+
+.responsive {
+  border: 1px solid #afafaf;
+  border-radius: 0.25em;
+  padding: 1em;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.gif {
+  display: block;
+  font-weight: normal;
+  color: #2a5062;
+  line-height: 1.5;
+  background-color: #d9f3fb;
+  padding: 1em;
+  border-radius: 0.25em;  
+  border-left: 4px solid #4a8eae;
+  width: 85%;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top:0;
+  padding-bottom: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+  flex-wrap: wrap;
+  gap: 0em;
+  align-content: center;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  flex-basis: 100%;
+  object-fit: contain;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display:inline;
+  max-width: 80%;
+  text-align: center;
+  color: #ccc;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  flex-basis: 100%;
+  cursor: text;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.5s;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0.1)} 
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #f1f1f1;
+  font-size: 3em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
