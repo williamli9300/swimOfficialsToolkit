@@ -2,8 +2,7 @@
 
 ## Hy-Tek Quick Reference Guide [Draft / Work In Progress]
 Reference resources and instructions for Hy-Tek Swim Meet Manager. <br>
-- **Draft Guide Link:** [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.md](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.md)
-
+- **Draft Guide Link:** [https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html](https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html)
 ## Splash Quick Reference Guide [Draft / Work In Progress]
 Reference resources and instructions for Splash Swim Meet Manager. <br>
 - **Draft Guide Link:** [https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/SplashQuickReferenceGuide/SplashQuickReferenceGuide.md](https://github.com/williamli9300/swimOfficialsToolkit/blob/v0.1.0/SplashQuickReferenceGuide/SplashQuickReferenceGuide.md)
