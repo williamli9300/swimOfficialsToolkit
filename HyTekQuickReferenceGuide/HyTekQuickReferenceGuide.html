@@ -50,9 +50,20 @@
                 <li><a href="#dq">Processing DQs</a></li>
                 <ul>
                     <li><i><a href="#gif_dq">&#127902; GIF: Processing a DQ</a></i></li>
-                    <li><i><a href="#gif_dq_relay">&#127902; GIF: Processing a Relay Stroke & Turn Infraction DQ</a></i></li>
+                    <li><i><a href="#gif_dq_relay">&#127902; GIF: Processing a Relay Stroke/Turn DQ</a></i></li>
                 </ul>
-                <li><a href="">Official Splits</a></li>
+                <li><a href="#os">Official Splits</a></li>
+                <ul>
+                    <li><i><a href="#create_os">&#127902; Creating a new Official Split event.</a></i></li>
+                    <li><i><a href="#add_to_session">&#127902; Adding a Official Split event to a Session.</a></i></li>
+                    <li><i><a href="#addswimmer_os">&#127902; Adding a Swimmer to an Official Split event.</a></i></li>
+                    <li><i><a href="#gif_os">&#127902; GIF: Adding a new Official Split event.</a></i></li>
+                </ul>
+            </ul>
+            </ul>
+            <b>The Following Items are Work In Progress:</b>
+            <ul>
+            <ul>
                 <li><a href="">Relay Names</a></li>
                 <li><a href="">Swim-offs</a></li>
                 <li><a href="">Finals Scratches</a></li>
@@ -79,11 +90,12 @@
                 <li><a href="">"No results found matching this Event and Heat for current QAQF meet selected!"</a></li>
             </ul>
             <li><b><a href="">Setting Up a Meet from Scratch</a></b></li>
-            /*
+
+            <!--
             <li><b><a href=""></a></b></li>
             <li><a href=""></a></li>
             <li><i><a href=""></a></i></li>
-            */
+            -->
         </ul>
     </div>
 
@@ -91,7 +103,7 @@
         <!-- #region Head --->
         <h0>Hy-Tek Swim Meet Manager 8.0 Quick Reference Guide</h0>
         <hr />
-        <p><b>By Will Li | Version 0.1.0 [DRAFT] | 03 February 2026 <br>
+        <p><b>By Will Li | Version 0.1.0 [DRAFT] | 04 February 2026 <br>
             Access at <a href="https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html">https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html</a><br>
         Find more resources at: <a href="https://williamli9300.github.io/">https://williamli9300.github.io/</a></b>
         </p>
@@ -592,7 +604,7 @@
             <a name="adjust"></a>
         </h2>
 
-        <p>From the <men>Run</men> screen, click the <but>Adjust : F8</but> button to bring up the <but>Adjust</but>
+        <p>From the <men>Run</men> screen, click your desired Event in the <bmen>EVENT LIST</bmen>, then click the <but>Adjust : F8</but> button to bring up the <but>Adjust</but>
             menu.</p>
 
         <div class="responsive">
@@ -642,7 +654,7 @@
 
         <br>
 
-        <h3>Adding a Swimmer & Moving a Swimmer Around (Deck Entries & Name Changes)<a name="adding_moving"></a></h3>
+        <h3>Adding a Swimmer & Moving a Swimmer Around (Deck Entries & Name Changes)<a name="changes"></a></h3>
 
         <h4>Adding a Swimmer to an Empty Lane</h4>
 
@@ -925,6 +937,7 @@
         <br>
         <!-- #endregion Calc --->
 
+        <!-- #region Processing DQs -->
         <h2>Processing DQs<a name="calc"></a> <a name="dq"></a></h2>
 
         <div class="responsive">
@@ -946,7 +959,7 @@
             <li>If desired, enter a DQ code by clicking the box under the <men>DQcode</men> column, then selecting corresponding code from the dropdown list.</li>
             <ul>
                 <li>More information about setting up DQ codes can be found in the <a href="#dqcodes">Setting Up DQ Codes</a> section.</li>
-                <li>For Relay DQs involving a non-takeover infraction committed by a swimmer (i.e. a Stroke or Turn infraction), select one of <code>6A</code>, <code>6B</code>, <code>6C</code>, or <code>6D</code>, as appropriate. Click to the side to complete the selection, then when the popup appears, select the code corresponding to the infraction the swimmer committed.</li>
+                <li><b>For Relay DQs involving a non-takeover infraction</b> committed by a swimmer (i.e. a Stroke or Turn infraction), select one of <code>6A</code>, <code>6B</code>, <code>6C</code>, or <code>6D</code>, as appropriate. Click to the side to complete the selection, then when the popup appears, select the code corresponding to the infraction the swimmer committed.</li>
             </ul>
             <li>Move to the next heat (or click the Next Heat arrow). In the Events viewer, the number under the <men>DQ</men> column for the event should increment by 1.</li>
         </ol>
@@ -960,7 +973,6 @@
                 </div>
             </details>
         </div>
-        <br>
         <div class="gif">
             <details open>
                 <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Processing a Relay Stroke & Turn Infraction DQ.</b> <a name="gif_dq_relay"></a> (<i>Click to collapse image.</i>)</summary>
@@ -971,7 +983,97 @@
             </details>
         </div>
         <br>
+        <!-- #endregion Processing DQs -->
         
+        <!-- #region Processing OS Requests -->
+        <h2>Processing an Official Split Request<a name="calc"></a> <a name="os"></a></h2>
+        <br>
+        <h3>Creating the Official Split Event<a name="create_os"></a></h3>
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Navigating to the <men>Events</men> Menu.</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/findingevents.jpg" style="height: 18em;" />
+                    <div class="desc">Navigating to the <men>Events</men> Menu.</div>
+                </div>
+            </details>
+        </div>
+        <ol>
+            <li>From the Home screen <i>or</i> the <men>Run</men> screen, click <men>Events</men> in the top bar to open the <men>Events</men> menu.</li>
+            <li>Click <men>Add</men> to create a new event.</li>
+            <li>Enter an <bmen>Event #</bmen>, then set <bmen>Individual / Relay</bmen> to <men>Individual</men>.</li>
+            <li>Select the <bmen>Gender</bmen>, and set the <bmen>Age Group</bmen> to <men>Open/Senior</men>.</li>
+            <li>Choose the <bmen>Distance</bmen> and <bmen>Stroke</bmen> to the distance and stroke of the Official Split request.</li>
+            <ul>
+                <li>Optionally, enter a note in the <men>Note :</men> field. This text will display in the Event Title on Programs and Results.</li>
+            </ul>
+            <li>Set the <bmen>Rounds</bmen> to </li>
+            <li>Ensure <men>Multi-Age Group</men> and <men>Score Event</men> are <u>un</u>checked.</li>
+            <li>Set the <men>Entry Fee</men> to <code>0.00</code>.</li>
+            <li>Set the <bmen>Event Type</bmen> to <men>Time Trial Event</men>.</li>
+            <li>Click <but>OK</but> once (the <bmen>Event #</bmen> should automatically increment by 1), then click <but>Cancel</but>.</li>
+            <li>Before closing the <men>Event</men> menu, follow the steps below to add the Event to a Session.</li>
+        </ol>
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Creating a new Event in the <men>Events</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/events.jpg" style="height: 18em;" />
+                    <div class="desc">Creating a new Event in the <men>Events</men> menu.</div>
+                </div>
+            </details>
+        </div>
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Configuring an Official Split Event.</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/os_event.jpg" style="height: 18em;" />
+                    <div class="desc">Configuring an Official Split Event.</div>
+                </div>
+            </details>
+        </div>
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Creating an Official Split Event.</b> <a name="gif_os"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/officialsplit_event.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Creating an Official Split Event.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+
+        <h3>Adding the Official Split Event to a Session<a name="add_to_session"></a></h3>
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Navigating to the <men>Sessions</men> Menu.</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/events_sessions.jpg" style="height: 18em;" />
+                    <div class="desc">Navigating to the <men>Sessions</men> Menu.</div>
+                </div>
+            </details>
+        </div>
+        <ol>
+            <li>From the <men>Event</men> menu, click <men>Sessions</men> in the top bar to open the <men>Sessions</men> menu.</li>
+            <li>In the Sessions list at the top, click your desired session.</li>
+            <li>Scroll to the bottom of the <bmen>EVENT LIST</bmen>. Find your Official Split event.</li>
+            <li>Double-click the Official Split event to add to the <bmen>SESSION SCHEDULE</bmen>.</li>
+            <li>Close the <men>Sessions</men> menu, then close the <men>Events</men> menu. In the <men>Run</men> screen, you should be able to see your newly-created Official Split event in the Session you just selected.</li>
+        </ol>
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Adding an Event into a Session using the <men>Sessions</men> Menu.</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="./img/addtosession.jpg" style="height: 18em;" />
+                    <div class="desc">Adding an Event into a Session using the <men>Sessions</men> Menu.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+
+        <h3>Adding a Swimmer to an Official Split Event<a name="addswimmer_os"></a></h3>
+        <p>See <a href="#changes">Adding a Swimmer & Moving a Swimmer Around</a>.</p>
+        <!-- #endregion Processing OS Requests -->
 
     </main>
 
