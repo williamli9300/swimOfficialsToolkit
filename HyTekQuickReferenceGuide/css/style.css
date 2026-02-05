@@ -162,7 +162,7 @@ error {
   margin-bottom: 1em;
 }
 
-success {
+tip {
   display: block;
   font-weight: normal;
   color: #2a4f36;
