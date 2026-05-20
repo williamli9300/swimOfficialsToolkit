@@ -24,6 +24,8 @@
                 <li><a href="#mm-intro">Introduction to Hy-Tek Swim Meet Manager</a></li>
                 <ul>
                     <li>Database Management</li>
+                    <li>Taking Backups & Restoring Backups</li>
+                    <li>Repairing/Compacting Database</li>
                     <li>Screens, Menus, & Best Practices</li>
                 </ul>
                 <li><a href="#dqcodes">Setting Up Custom DQ Codes</a></li>
@@ -111,6 +113,8 @@
             <li><b><a href="">Troubleshooting Common Issues</a></b></li>
             <ul>
                 <li><a href="">"No results found matching this Event and Heat for current QAQF meet selected!"</a></li>
+                <li><a href="">[<i>Multi-User/Networked</i>] For the same event(s), I can see results (Done) on one computer, but not (Seeded) on another.</a></li>
+                <li><a href="">[<i>Multi-User/Networked</i>] "Event X is temporarily locked by USER. This event cannot be seeded at this time."</a></li>
             </ul>
             <li><b><a href="">Setting Up a Meet from Scratch</a></b></li>
 
@@ -127,7 +131,7 @@
         <h0><a href="https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html">Hy-Tek Swim Meet Manager 8.0 Quick Reference Guide</a></h0>
         <hr />
         <p>
-        <b>By Will Li | Version 0.1.0 [DRAFT] | 05 February 2026 <br></b>
+        <b>By Will Li | Version 0.1.0 [DRAFT] | 20 May 2026 <br></b>
         <a href="https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/">Repository Link (branch v0.1.0)</a> | <a href="https://github.com/williamli9300/swimOfficialsToolkit/commits/v0.1.0/">Changelog</a><br>
         <b>Find more resources at: <a href="https://williamli9300.github.io/">https://williamli9300.github.io/</a></b>
         </p>
@@ -148,6 +152,14 @@
 
         <!-- #region Intro to MM --->
         <h2>Intro to Hy-Tek Meet Manager<a name="mm-intro"></a></h2>
+
+        <warning>
+            <b>&#9888; Important Information when Running Multi-User/Networked Mode:</b> <br>
+            When running Multi-User/Networked mode, NEVER close your laptop/computer without first EXITING COMPLETELY out of HyTek Meet Manager. Otherwise, you may "lock" the database into Multi-User mode for another user who may want to work in Single-User Mode.
+            <ul>
+                <li>To EXIT COMPLETELY out of HyTek Meet Manager, close all windows, click the <but>X</but> at the top right of the Home screen, and click <but>OK</but> when the <men>Exit MEET MANAGER ?</men> pop-up appears.</li>
+            </ul>
+        </warning>
 
         <details>
             <summary><b><i>Click to expand section.</i></b></summary>
@@ -1109,7 +1121,7 @@
             <li>At the top of the Seeding window, in the <men style="color:#0000ff"><b>SESSION LIST</b></men>, select the session in which the event will be swum.</li>
             <li>In the <men style="color:#0000ff"><b>EVENT LIST</b></men>, Check the <men>&#x2610;</men> checkbox under the <men style="color:#0000ff">Seed</men> column for <b>all</b> and <b>only</b> the events you would like to seed in that session.</li>
             <li>Click <men>Start Seeding</men> in the top-left corner (<i>or</i> click the &#x1F6A6; Traffic Light button) to start seeding.</li>
-            <li>Once the <men>Seeding Completed ! </men> pop-up appears, click <but>OK</but>.</li>
+            <li>Once the <men>Seeding Completed !</men> pop-up appears, click <but>OK</but>.</li>
         </ul>
 
         To re-seed an event that has already been seeded, simply follow the steps above. When the <men>Proceed and re-seed ?</men> pop-up appears, click <but>Yes</but>.
