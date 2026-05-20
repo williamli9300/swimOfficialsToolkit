@@ -22,6 +22,10 @@
             <li><b><a href="#gettingstarted">Getting Started</a></b></li>
             <ul>
                 <li><a href="#mm-intro">Introduction to Hy-Tek Swim Meet Manager</a></li>
+                <ul>
+                    <li>Database Management</li>
+                    <li>Screens, Menus, & Best Practices</li>
+                </ul>
                 <li><a href="#dqcodes">Setting Up Custom DQ Codes</a></li>
                 <li><a href="#timing">Setting Up Timing Interfaces</a></li>
                 <li><a href="#pushtoqaq">Pushing Events & Names to Quantum-AQ</a></li>
@@ -32,7 +36,9 @@
             <li><b><a href="#running-a-meet">Running a Meet: The <men>Run</men> Screen</a></b></li>
             <ul>
                 <li><a href="#pullingtimes">Pulling Times</a></li>
+                <li><a href="#manualtimes">Manually Entering Times</a></li>
                 <ul>
+                    <li><a href="#gif_manualtimes">&#127902; GIF: Manually Entering Times</a></li>
                     <li><a href="#qaq">About <code>*.qaq</code> Files</a></li>
                 </ul>
                 <li><a href="#adjust">The <but>Adjust</but> Menu: Scratches, Deck Entries, & Changes</a></li>
@@ -46,6 +52,7 @@
                 <li><a href="#calc">The <but>Calc</but> Menu: Seeing Colours & Adjusting Times</a></li>
                 <ul>
                     <li><i><a href="#colours">Colour Coding in the <men>Run</men> Screen</a></i></li>
+                    <li><i><a href="#gif_calc">&#127902; GIF: The Calc menu</a></i></li>
                 </ul>
                 <li><a href="#dq">Processing DQs</a></li>
                 <ul>
@@ -74,13 +81,16 @@
                 <ul>
                     <li><i><a href="#gif_finals_scr">&#127902; GIF: Scratching Swimmers from Finals.</a></i></li>
                 </ul>
+                <li><a href="#seeding">Seeding, Re-Seeding, and Finals Seeding</a></li>
+                <ul>
+                    <li><a href="#gif_seeding">&#127902; GIF: Using the <men>Seeding</men> Menu.</a></li>
+                </ul>
             </ul>
             </ul>
 
             <b>The Following Items are Work In Progress:</b>
             <ul>
             <ul>
-                <li><a href="">Reseeding & Finals Seeding</a></li>
                 <li><a href="#racenumber">Moved Swimmers & Combined Heats: Pulling By Race Number</a></li>
             </ul>
             <li><b><a href="">Paperwork</a></b></li>
@@ -413,6 +423,23 @@
             </details>
         </div>
 
+        <h2>Manually Entering Times <a name="manualtimes"></a></h2>
+
+        <ul>
+            <li>From the <men>Run</men> screen, select your desired Event from the Events list, then select your desired Heat from the Heats bar.</li>
+            <li>Click corresponding cell for <bmen style="color:#0000ff">Prelims Time</bmen>/<bmen style="color:#0000ff">Finals Time</bmen>, <men>Backup 1</men>, <men>Backup 2</men>, or <men>Backup 3</men>. Type in the time manually (you don't need to enter any colons ":" or decimal points ".").</li>
+        </ul>
+
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Manually entering times in the <men>Run</men> screen</b> <a name="gif_manualtimes"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/manualtimes.gif" style="height: 18em;" />
+                    <div class="desc">&#127902; GIF: Manually entering times in the <men>Run</men> screen.</div>
+                </div>
+            </details>
+        </div>
+
         <ul>
             <li>Alternatively, if you know the Race Number, you can click the corresponding orange <bbut style="background-color: #ffe0c0">Race # : F2</bbut> or blue <bbut style="background-color: #c0c0ff"> Race # : Ctrl-F2</bbut> buttons, then enter the race number, to pull the times in the <code>*.qaq</code> file with the corresponding race number, into the currently selected heat. (<i>See <a href="#racenumber">Combined Heats</a> or <a href="#qaq">About <code>.qaq</code> Files</a> for more information.</i>)</li>
         </ul>
@@ -721,6 +748,16 @@
             <div id="caption"></div>
         </div>
 
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; Using the <but>Calc</but> menu.</b> <a name="gif_calc"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/calc.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Using the <but>Calc</but> menu.</div>
+                </div>
+            </details>
+        </div>
+
         <br>
         <br>
         <!-- #endregion Calc --->
@@ -961,7 +998,7 @@
             <details open>
                 <summary style="padding-bottom: 1em;"><i>Click to collapse image.</i></summary>
                 <div class="img">
-                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/relnames.jpg" style="height: 18em;" />
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/swimoff-required.jpg" style="height: 18em;" />
                     <div class="desc"><b>&#x1F4A1; Tip:</b> Events with ties requiring Swim-Offs pre-scratch will show up on Results generated using the <but>List</but> button. Keep an eye out for unmarked potential Swim-Offs which may get "scratched into" a swim-off-able spot. </div>
                 </div>
             </details>
@@ -973,6 +1010,7 @@
             <li>When prompted to "Create Swim-Off?", click <but>Yes</but>.</li>
             <li>When prompted to "Change event number?", click <but>No</but>.</li>
             <li>Choose the swimmers involved in the Swim-Off tie.</li>
+            <li>Use the <but>Adjust : F8</but> button to adjust seeding according to given instructions.</li>
         </ul>
 
         <div class="gif">
@@ -1014,7 +1052,7 @@
             <b>&#x1F4A1; Tip:</b> Swimmers in the <but>SCR Sheet</but> window are sorted by <b>Rank</b> and <b>Age Group</b> (e.g. <i>12&U 1-2-3</i>, then <i>13-14 1-2-3</i>, then <i>15&O 1-2-3</i>). To make processing Finals Scratches easier, use a Scratch Form template that includes an <b>Age</b> or <b>Age Group</b> field.
         </tip>
 
-        In the <men>Run</men> screen, navigate to the Session in which the <b>Prelims</b> for your event of interest was swum.
+        In the <men>Run</men> screen, navigate to the Session in which the <b>Prelims</b> for your event of interest was swum using the <but>Session : F7</but> button.
 
         <ul>
             <li>Click the <but>SCR Sheet</but> button to open the <men>Scratch Sheet</men> window.</li>
@@ -1047,6 +1085,62 @@
         </div>
 
         <!-- #endregion Finals Scratches -->
+
+        <!-- #region Seeing -->
+
+        <br>
+        <h2>Seeding, Re-Seeding, and Finals Seeding<a name="seeding"></a></h2>
+
+        The Seeding process is mostly identical for Timed Finals, Prelims, and Finals events, as long as Seeding is correctly set up in the <men>Events</men> menu.
+
+        From the Home screen or the <men>Run</men> screen, click the <men>Seeding</men> button in the top menu. 
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>The <men>Seeding</men> Menu</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/seeding.jpg" style="height: 18em;" />
+                    <div class="desc">The <men>Seeding</men> menu.</div>
+                </div>
+            </details>
+        </div>
+
+        <ul>
+            <li>At the top of the Seeding window, in the <men style="color:#0000ff"><b>SESSION LIST</b></men>, select the session in which the event will be swum.</li>
+            <li>In the <men style="color:#0000ff"><b>EVENT LIST</b></men>, Check the <men>&#x2610;</men> checkbox under the <men style="color:#0000ff">Seed</men> column for <b>all</b> and <b>only</b> the events you would like to seed in that session.</li>
+            <li>Click <men>Start Seeding</men> in the top-left corner (<i>or</i> click the &#x1F6A6; Traffic Light button) to start seeding.</li>
+            <li>Once the <men>Seeding Completed ! </men> pop-up appears, click <but>OK</but>.</li>
+        </ul>
+
+        To re-seed an event that has already been seeded, simply follow the steps above. When the <men>Proceed and re-seed ?</men> pop-up appears, click <but>Yes</but>.
+
+        <tip>
+            <b>&#x1F4A1; Tip:</b> Click the <men>&curarr;</men> or <men>Select All</men> button in the top left to select all events currently visible (i.e., from the selected session) in the <men style="color:#0000ff"><b>EVENT LIST</b></men>, and use the <men>&cularr;</men> or <men>De-Select</men> button to de-select all currently selected events.
+        </tip>
+        
+        <info>
+            <b>&#x1f6c8; INFO:</b> If you are seeding a Finals event, ensure that all outstanding Swim-Offs have been processed. If seeding must be performed, click <but>Yes</but> when the following pop-up appears:
+            <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Attempting Seeding with Outstanding Swim-Offs</b> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/outstanding_swimoff.jpg" style="height: 18em;" />
+                    <div class="desc">Attempting Seeding with Outstanding Swim-Offs.</div>
+                </div>
+            </details>
+        </div>
+        </info>
+
+        <div class="gif">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Using the <men>Seeding</men> Menu.</b> <a name="gif_seeding"></a> (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/seeding.gif" style="height: 18em;" />
+                    <div class="desc">GIF: Using the <men>Seeding</men> Menu.</div>
+                </div>
+            </details>
+        </div>
+        <!-- #endregion Seeding-->
     </main>
 
     <!-- #region Image Click-To-Enlarge Javascript -->
