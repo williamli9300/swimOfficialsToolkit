@@ -68,7 +68,7 @@
                         <li><i><a href="#add_to_session">&#127902; Adding a Official Split Event to a Session.</a></i></li>
                         <li><i><a href="#addswimmer_os">&#127902; Adding Swimmers & Results to an Official Split Event</a></i></li>
                         <li><i><a href="#gif_os">&#127902; GIF: Adding a new Official Split Event.</a></i></li>
-                        <li><i><a href="#gif_os2">&#127902; GIF: Adding Swimmers & Results to an Official Split Event</a></i></li>
+                        <li><i><a href="#gif_os2">&#127902; GIF: Adding Swimmers & Times to an Official Split Event</a></i></li>
                     </ul>
                     <li><a href="#relnames">Relay Names</a></li>
                     <ul>
@@ -88,14 +88,17 @@
                     <ul>
                         <li><a href="#gif_seeding">&#127902; GIF: Using the <men>Seeding</men> Menu.</a></li>
                     </ul>
+                    <li><a href="#racenumber">Moved Swimmers & Combined Heats: Pulling By Race Number</a></li>
+                    <ul>
+                        <li><i><a href="#gif_adjust_newheat">&#127902; GIF: Putting a swimmer into a new, empty heat.</a></i></li>
+                        <li><i><a href="#gif_racenumber">&#127902; GIF: Pulling by Race Number.</a></i></li>
+                        <li><i><a href="#quantum_differentdistances">Combining Events of Different Distances: How-To Using Quantum and HyTek</a></i></li>
+                    </ul>
                 </ul>
                 </ul>
 
                 <b>The Following Items are Work In Progress:</b>
                 <ul>
-                <ul>
-                    <li><a href="#racenumber">Moved Swimmers & Combined Heats: Pulling By Race Number</a></li>
-                </ul>
                 <li><b><a href="">Paperwork</a></b></li>
                 <ul>
                     <li><a href="">Preferences for List & Score</a></li>
@@ -133,6 +136,7 @@
             <h0><a href="https://williamli9300.github.io/swimOfficialsToolkit/HyTekQuickReferenceGuide/HyTekQuickReferenceGuide.html">Hy-Tek Swim Meet Manager 8.0 Quick Reference Guide</a></h0>
             <hr />
             <p>
+            <a name="top"></a>
             <b>By Will Li | Version 0.1.0 [DRAFT] | 21 May 2026 <br></b>
             <a href="https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.1.0/">Repository Link (branch v0.1.0)</a> | <a href="https://github.com/williamli9300/swimOfficialsToolkit/commits/v0.1.0/">Changelog</a><br>
             <b>Find more resources at: <a href="https://williamli9300.github.io/">https://williamli9300.github.io/</a></b>
@@ -144,6 +148,10 @@
             <tip>
                 <b>&#x1F4A1; Tip:</b> Use <code>Ctrl + F</code> or <code>Cmd + F</code> to search for a key word, or use the <b>Contents</b> menu on the left to find what you're looking for.
             </tip>
+            <tip>
+                <b>&#x1F4A1; Tip:</b> A sample HyTek Meet Database and Quantum QAQ files are available for download and practice at the following link: [Coming Soon!]
+            </tip>
+            <a href="#bottom">Jump To Bottom</a>
             <br>
             <!-- #endregion Head --->
 
@@ -424,6 +432,17 @@
                 <li>Click the orange button labelled <bbut style="background-color: #ffe0c0">[Name] : F3</bbut> or the blue button labelled <bbut style="background-color: #c0c0ff">[Name] : Ctrl-F3</bbut> (or the corresponding hotkeys) to pull times from the corresponding timing system.</li>
                 <ul>
                     <li><b>Note:</b> the directory that each button pulls times from is configured in the <a href="#timing">Setting Up Timing Interfaces</a> section.</li>
+                    <li><b>Note:</b> if pulled results and entries do not match (e.g., there were No Shows or Deck Entries that have not yet been processed), you will get a <men>Download Alert</men> pop-up. Sanity-check the times under <men style="color:#0000ff">Pad Time</men> and click <but>Accept</but> or <but>Reject</but> as appropriate.</li>
+                    <ul><li>Times that do not match with a name will be ignored. Names that do not have a time will be marked as NS.</li></ul>
+                    <div class="responsive">
+                    <details>
+                        <summary style="padding-bottom: 1em;"><b>The <men>Download Alert</men> pop-up.</b> (<i>Click to expand image.</i>)</summary>
+                        <div class="img">
+                            <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/downloadalert.jpg" style="height: 18em;" />
+                            <div class="desc">The <men>Download Alert</men> pop-up.</div>
+                        </div>
+                    </details>
+            </div>
                 </ul>
             </ul>
 
@@ -474,7 +493,7 @@
                         <li>The next 3 characters of the file name (<code>EEE</code>) is a three-digit number from 001 to 999. These characters represent the Event Number of the race.</li>
                         <li>The next 2 characters of the file name (<code>HH</code>) is a two-digit number from 01 to 99. These characters represent the Heat Number of the race.</li>
                         <li>The next 1 character of the file name (<code>X</code>) is a letter (T, P, S, F) representing the type of race that is swum (i.e. Timed Finals, Prelims, Semifinals, Finals.)</li>
-                        <li>The last 4 characters of the file name (<code>RRRR</code>) is a four-digit number from 0001 to 9999. These characters represent the Race Number, and can be used to manually pull the file to any heat using the <but>Race #</but> button.</li>
+                        <li>The last 4 characters of the file name (<code>RRRR</code>) is a four-digit number from 0001 to 9999. These characters represent the <b>Race Number</b>, and can be used to manually pull the file to any heat using the <but>Race #</but> button.</li>
                     </ul>
 
                     Each <code>*.qaq</code> file is actually a Semicolon-Separated Values file. Here's an example of what that might look like for an individual 200m event in a 25m, 8-lane pool:
@@ -972,7 +991,7 @@
                 <li>Select a Relay Team from the <bmen style="color:#0000ff;">Relay Teams</bmen> menu.</li>
                 <li>Drag and drop OR double click the corresponding name from the <bmen style="color:#0000ff;">Eligible Athletes</bmen> menu to add it to the <bmen style="color:#0000ff;">Relay Order</bmen> menu.</li>
                 <ul>
-                    <li>If there is a younger swimmer "swimming up", you may need to check the <men>&#x2610; Show Swim-ups</men> checkbox.</li>
+                    <li>If there is a younger swimmer "swimming up" into an older Relay Age Group, you may need to check the <men>&#x2610; Show Swim-ups</men> checkbox.</li>
                 </ul>
                 <li>You can swap two swimmers by dragging and dropping names within the <bmen style="color:#0000ff;">Eligible Athletes</bmen> menu.</li>
                 <li>You can double-click a swimmer already in the <bmen style="color:#0000ff;">Eligible Athletes</bmen> menu to remove them.</li>
@@ -1100,7 +1119,7 @@
 
             <!-- #endregion Finals Scratches -->
 
-            <!-- #region Seeing -->
+            <!-- #region Seeding -->
 
             <br>
             <h2>Seeding, Re-Seeding, and Finals Seeding<a name="seeding"></a></h2>
@@ -1155,6 +1174,151 @@
                 </details>
             </div>
             <!-- #endregion Seeding-->
+
+            <!-- #region Pull By Race Number -->
+
+            <br>
+            <h2>Moved Swimmers & Combined Heats: Pulling By Race Number<a name="racenumber"></a></h2>
+            <h4>Alternatively known as: Swimming "Two Heats" in the Water at the Same Time</h4>
+
+            I know the title's a bit confusing, so here are some example scenarios where the following instructions apply:
+
+            <ul>
+                <li>The slowest heat of Girls 1500FR has 4 swimmers, and the slowest heat of Boys 1500FR has 3 swimmers, so these two heats swim together in the water to save time.</li>
+                <li>A Girl misses the Girls 100FL due to an Official's error and swims in Heat 1 of the Boys 100FL.</li>
+                <li>A Boy misses the Boys 100FL due to an Official's error and swims in Heat 1 of an 100FR event.</li>
+                <li>Para-Swimmers swim Integrated during Prelims, but their times need to go into a separate Para event so it can be seeded separately for Finals.</li>
+            </ul>
+
+            Think about it as <i>two heats</i> swimming in the <i>same pool</i> at the <i>same time</i>. Half of the pool is swimming Event 1, Heat 1, and half of the pool is swimming Event 2, Heat 1. The first half's times must be pulled into Event 1, and the second half's times must be pulled into Event 2.
+
+            <warning>
+                <b>&#x1f6c8; INFO:</b> In this section, we will refer to entered swimmers as <i>unmoved</i> or <i>moved</i>:
+                <ul>
+                    <li><i>Unmoved</i> swimmers are swimmers who swam where they were originally entered: i.e., they were originally entered in Event 1, Heat 1, and the Timing System recorded their time in Event 1, Heat 1.</li>
+                    <li><i>Moved</i> swimmers are swimmers who did <i>not</i> swim where they were originally entered: i.e., they were originally entered in Event 1, Heat 1, but the Timing System recorded their time in e.g. Event 2, Heat 1. Their times must be moved back into Event 1 in HyTek in order to be credited with the correct Race/Stroke/Distance swum.</li>
+                </ul>
+                In the following example, Event 1 is a Girls 100 IM event, and Event 2 is a Boys 100 IM event. Ashley was originally entered in Event 1, Heat 1, Lane 3, but due to an Official's error, missed her race. Since there were no more empty lanes in Event 1, she instead swam with the Boys in Event 2, Heat 1, Lane 7.
+            </warning>
+
+
+            <b>Step 1: Move all swimmers into the right places.</b> <br>
+            
+            <ul>
+                <li>Navigate to Event 1 in the <bmen style="color:#0000ff">EVENT LIST</bmen>. Use the <but>Adjust : F8</but> button open the <men>Adjust</men> menu, then move the <i>moved swimmer</i> into a <i>new heat</i> with <i>only</i> the <i>moved swimmers</i>. Use the <men>Add Heat</men> button at the top  of the <men>Adjust</men> menu as needed.</li>
+                <ul>
+                    <li>If Event 2, Heat 1 had boys in lanes 3/4/5 and Ashley in lane 7, then create a new heat in Event 1 with only Ashley in Lane 7.</li>
+                    <li>If Event 2, Heat 1 had boys in lanes 3/4/5, and Ashley and Charlie in lane 7 and 8, then create a new heat in Event 1 with Ashley in lane 7 and Charlie in Lane 8.</li>
+    
+                </ul>
+            </ul>
+
+            <b>Step 2: Pull Times for the Swimmers who <i>weren't</i> moved.</b>
+
+            <ul>
+                <li>Navigate to Event 2 in the <bmen style="color:#0000ff">EVENT LIST</bmen>, then navigate to Heat <bbut>1</bbut> in the Heats bar. Pull times for Event 2, Heat 1 as normal using the <bbut style="background-color: #ffe0c0">[Name] : F3</bbut> or <bbut style="background-color: #c0c0ff">[Name] : Ctrl-F3</bbut> buttons.</li>
+                <li>When the <men>Download Alert</men> pop-up appears, sanity-check the times under the <men style="color:#0000ff">Pad Time</men> column. Write down the Race Number in the <men style="color:#ff0000">Received Race #</men> line, then click <but>Accept</but>.</li>
+                <ul><li>Times that do not match with a name will be ignored. Names that do not have a time will be marked as NS.</li></ul>
+                <div class="responsive">
+                    <details open>
+                        <summary style="padding-bottom: 1em;"><b>The <men>Download Alert</men> pop-up.</b> (<i>Click to collapse image.</i>)</summary>
+                        <div class="img">
+                            <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/downloadalert_racenumber.jpg" style="height: 18em;" />
+                            <div class="desc">The <men>Download Alert</men> pop-up.</div>
+                        </div>
+                    </details>
+                </div>
+            </ul>
+
+            <b>Step 3: Pull Times for the Swimmers who <i>were</i> moved.</b>
+            <ul>
+                <li>Navigate to Event 1 in the <bmen style="color:#0000ff">EVENT LIST</bmen>, then click the <bbut style="background-color: #ffe0c0">Race # : F2</bbut> or <bbut style="background-color: #c0c0ff">Race # : Ctrl-F2</bbut> button for the corresponding Timing Interface.</li>
+                <li>When the <bmen style="color:#940000">Enter Race Number</bmen>pop-up appears, type in the Race Number you wrote down from <b>Step 2</b>, then click <but>OK</but>.</li>
+                
+                <div class="responsive">
+                    <details open>
+                        <summary style="padding-bottom: 1em;"><b>Pulling by Race Number.</b> (<i>Click to collapse image.</i>)</summary>
+                        <div class="img">
+                            <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/racenumber.jpg" style="height: 18em;" />
+                            <div class="desc">Pulling by Race Number.</div>
+                        </div>
+                    </details>
+                </div>
+
+                                <li>When the <men>Download Alert</men> pop-up appears, sanity-check the times under the <men style="color:#0000ff">Pad Time</men> column. Write down the Race Number in the <men style="color:#ff0000">Received Race #</men> line, then click <but>Accept</but>.</li>
+                <ul><li>Times that do not match with a name will be ignored. Names that do not have a time will be marked as NS.</li></ul>
+                <li>If you see a <men>Warning: The Times Data [...]</men> pop-up, click <but>Yes</but>.</li>
+
+                <div class="responsive">
+                    <details open>
+                        <summary style="padding-bottom: 1em;"><b>The Times Already Pulled pop-up.</b> (<i>Click to collapse image.</i>)</summary>
+                        <div class="img">
+                            <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/timesalreadypulled.jpg" style="height: 18em;" />
+                            <div class="desc">The Times Already Pulled pop-up.</div>
+                        </div>
+                    </details>
+                </div>
+
+                <li>Congratulations, your times are now in the correct event!</li>
+            </ul>
+
+            <div class="gif">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Putting a swimmer into a new, empty heat using the <but>Adjust</but> Menu.</b> <a name="gif_adjust_newheat"></a> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/adjust_newheat.gif" style="height: 18em;" />
+                        <div class="desc">GIF: Putting a swimmer into a new, empty heat using the <but>Adjust</but> Menu.</div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="gif">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Pulling by Race Number.</b> <a name="gif_racenumber"></a> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/racenumber.gif" style="height: 18em;" />
+                        <div class="desc">GIF: Pulling by Race Number.</div>
+                    </div>
+                </details>
+            </div>
+
+            <blockquote>
+                <details>
+                    <summary><b>&#x1f6c8; Swimming Two Events of Different Distances at the Same Time: Quantum-AQ Specific Instructions</b> <i>(click to expand)</i><a
+                            name="quantum_differentdistances"></a>
+                    </summary>
+                    <br>
+                    Although there are several ways to record results for two events of different distanecs swimming in the water at the same time (incrementing lap counts / copying heat results in the Quantum-AQ), the following is the easiest and most fail-safe method. <br>
+                    <i>The following example assumes Lanes 1-6 are swimming a 1500m FR and lanes 7-8 are swimming an 800m FR.</i><br><br>
+                    <b>Step 1: Quantum Operator</b>
+                    <ul>
+                        <li>Open the <i>longer</i> event, i.e., Event 11 (1500m FR).</li>
+                        <li>After each of Lane 7 and Lane 8 finish their 800 FR, click the corresponsing Lane Module <men style="background:#90ee90">7</men>/<men style="background:#90ee90">8</men>, then <men>Y : DisArm touchpad</men> (or use the <code>[LaneX] + Y</code> hotkey) to disarm the touchpad.</li>
+                        <li>Next, click the corresponsing Lane Module <men style="background:#90ee90">7</men>/<men style="background:#90ee90">8</men>, then <men>Edit Finish Time</men>. When the pop-up appears, manually type the Finish Time (no colons (:) or decimal points (.) necessary)</li>
+                        <ul>
+                            <li><i>This is because HyTek will populate the Finish Time using the LAST time(s) in the QAQ file, but splits are populated from the BEGINNING.</i></li>
+                            <li><i>Note: Advanced users can use the <men>Events</men> menu to "Prop" the Finish Touchpad Time and Backup Button Times into the Finish Split.</i></li>
+                        </ul>
+                        <li>Once all swimmers are finished, Officialize the race as normal.</li>
+                    </ul>
+                    <b>Step 2: HyTek Operator</b>
+                    <ul>
+                        <li>Pull times for the <i>longer</i> event (e.g. 1500m FR) as normal using the <bbut style="background-color: #ffe0c0">[Name] : F3</bbut> or <bbut style="background-color: #c0c0ff">[Name] : Ctrl-F3</bbut> buttons.</li>
+                        <li>Pull times for the <i>shorter</i> event (e.g. 800m FR) using the Race Number method above.</li>
+                        <li>If necessary, manually type the Backup Button / Plunger times into the corresponding cells. Ask the Quantum Operator to write them down for you if needed.</li>
+                    </ul>
+                </details>
+            </blockquote>
+
+
+            <!-- #endregion Pull By Race Number-->
+
+            <!-- #endregion Running a Meet-->
+
+            <!-- #region Paperwork-->
+
+            <a href="#top">Jump to Top</a><a name="bottom"></a><br><br>
+
         </div>
     </div>
 
