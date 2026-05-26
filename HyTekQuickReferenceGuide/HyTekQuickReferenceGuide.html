@@ -19,115 +19,121 @@
             <hr />
             <h0>Contents <a name="contents"></a></h0>
             <hr />
+            <b><a href="#gettingstarted">Getting Started</a></b>
             <ul>
-                <li><b><a href="#gettingstarted">Getting Started</a></b></li>
+                <li><a href="#mm-intro">Introduction to Hy-Tek Swim Meet Manager</a></li>
                 <ul>
-                    <li><a href="#mm-intro">Introduction to Hy-Tek Swim Meet Manager</a></li>
-                    <ul>
-                        <li>Database Management</li>
-                        <li>Taking Backups & Restoring Backups</li>
-                        <li>Repairing/Compacting Database</li>
-                        <li>Screens, Menus, & Best Practices</li>
-                    </ul>
-                    <li><a href="#dqcodes">Setting Up Custom DQ Codes</a></li>
-                    <li><a href="#timing">Setting Up Timing Interfaces</a></li>
-                    <li><a href="#pushtoqaq">Pushing Events & Names to Quantum-AQ</a></li>
-                    <ul>
-                        <li><i><a href="#gif_pushingtoqaq">&#127902; GIF: Pushing Event Schedule to Quantum</a></i></li>
-                    </ul>
+                    <li>Database Management</li>
+                    <li>Taking Backups & Restoring Backups</li>
+                    <li>Repairing/Compacting Database</li>
+                    <li>Screens, Menus, & Best Practices</li>
                 </ul>
-                <li><b><a href="#running-a-meet">Running a Meet: The <men>Run</men> Screen</a></b></li>
+                <li><a href="#dqcodes">Setting Up Custom DQ Codes</a></li>
+                <li><a href="#timing">Setting Up Timing Interfaces</a></li>
+                <li><a href="#pushtoqaq">Pushing Events & Names to Quantum-AQ</a></li>
                 <ul>
-                    <li><a href="#pullingtimes">Pulling Times</a></li>
-                    <li><a href="#manualtimes">Manually Entering Times</a></li>
-                    <ul>
-                        <li><a href="#gif_manualtimes">&#127902; GIF: Manually Entering Times</a></li>
-                        <li><a href="#qaq">About <code>*.qaq</code> Files</a></li>
-                    </ul>
-                    <li><a href="#adjust">The <but>Adjust</but> Menu: Scratches, Deck Entries, & Changes</a></li>
-                    <ul>
-                        <li><i><a href="#scratches">Scratches</a></i></li>
-                        <li><i><a href="#changes">Adding & Moving Swimmers</a></i></li>
-                        <li><i><a href="#gif_dc_scr">&#127902; GIF: Scratching a Swimmer: Double Click</a></i></li>
-                        <li><i><a href="#gif_dc_add">&#127902; GIF: Adding a Swimmer: Double Click</a></i></li>
-                        <li><i><a href="#gif_dragndrop">&#127902; GIF: Adding a Swimmer: Drag & Drop</a></i></li>
-                    </ul>
-                    <li><a href="#calc">The <but>Calc</but> Menu: Seeing Colours & Adjusting Times</a></li>
-                    <ul>
-                        <li><i><a href="#colours">Colour Coding in the <men>Run</men> Screen</a></i></li>
-                        <li><i><a href="#gif_calc">&#127902; GIF: The Calc menu</a></i></li>
-                    </ul>
-                    <li><a href="#dq">Processing DQs</a></li>
-                    <ul>
-                        <li><i><a href="#gif_dq">&#127902; GIF: Processing a DQ</a></i></li>
-                        <li><i><a href="#gif_dq_relay">&#127902; GIF: Processing a Relay Stroke/Turn DQ</a></i></li>
-                    </ul>
-                    <li><a href="#os">Official Splits</a></li>
-                    <ul>
-                        <li><i><a href="#create_os">&#127902; Creating a new Official Split Event.</a></i></li>
-                        <li><i><a href="#add_to_session">&#127902; Adding a Official Split Event to a Session.</a></i></li>
-                        <li><i><a href="#addswimmer_os">&#127902; Adding Swimmers & Results to an Official Split Event</a></i></li>
-                        <li><i><a href="#gif_os">&#127902; GIF: Adding a new Official Split Event.</a></i></li>
-                        <li><i><a href="#gif_os2">&#127902; GIF: Adding Swimmers & Times to an Official Split Event</a></i></li>
-                    </ul>
-                    <li><a href="#relnames">Relay Names</a></li>
-                    <ul>
-                        <li><i><a href="#gif_relnames">&#127902; GIF: Adding Relay Names.</a></i></li>
-                        <li><i><a href="#gif_relnames2">&#127902; GIF: Changing Relay Names.</a></i></li>
-                    </ul>
-                    <li><a href="#swimoffs">Swim-offs</a></li>
-                    <ul>
-                        <li><i><a href="#gif_swimoff_setup">&#127902; GIF: Setting Up Swim-Offs.</a></i></li>
-                        <li><i><a href="#gif_swimoff_jd">&#127902; GIF: Tie-Breaking After a Swim-Off.</a></i></li>
-                    </ul>
-                    <li><a href="#finals-scratches">Finals Scratches</a></li>
-                    <ul>
-                        <li><i><a href="#gif_finals_scr">&#127902; GIF: Scratching Swimmers from Finals.</a></i></li>
-                    </ul>
-                    <li><a href="#seeding">Seeding, Re-Seeding, and Finals Seeding</a></li>
-                    <ul>
-                        <li><a href="#gif_seeding">&#127902; GIF: Using the <men>Seeding</men> Menu.</a></li>
-                    </ul>
-                    <li><a href="#racenumber">Moved Swimmers & Combined Heats: Pulling By Race Number</a></li>
-                    <ul>
-                        <li><i><a href="#gif_adjust_newheat">&#127902; GIF: Putting a swimmer into a new, empty heat.</a></i></li>
-                        <li><i><a href="#gif_racenumber">&#127902; GIF: Pulling by Race Number.</a></i></li>
-                        <li><i><a href="#quantum_differentdistances">Combining Events of Different Distances: How-To Using Quantum and HyTek</a></i></li>
-                    </ul>
+                    <li><i><a href="#gif_pushingtoqaq">&#127902; GIF: Pushing Event Schedule to Quantum</a></i></li>
                 </ul>
-                </ul>
-
-                <b>The Following Items are Work In Progress:</b>
-                <ul>
-                <li><b><a href="">Paperwork</a></b></li>
-                <ul>
-                    <li><a href="">Preferences for List & Score</a></li>
-                    <li><a href="">Session Report</a></li>
-                    <li><a href="">Heat Sheet ("Meet Program")</a></li>
-                    <li><a href="">Results: List & Score</a></li>
-                    <li><a href="">DQ Report</a></li>
-                    <li><a href="">Score Report</a></li>
-                </ul>
-                <li><b><a href="">Other Features</a></b></li>
-                <ul>
-                    <li><a href="">Web Live Results</a></li>
-                    <li><a href="">Meet Mobile</a></li>
-                    <li><a href="">Para Points</a></li>
-                </ul>
-                <li><b><a href="">Troubleshooting Common Issues</a></b></li>
-                <ul>
-                    <li><a href="">"No results found matching this Event and Heat for current QAQF meet selected!"</a></li>
-                    <li><a href="">[<i>Multi-User/Networked</i>] For the same event(s), I can see results (Done) on one computer, but not (Seeded) on another.</a></li>
-                    <li><a href="">[<i>Multi-User/Networked</i>] "Event X is temporarily locked by USER. This event cannot be seeded at this time."</a></li>
-                </ul>
-                <li><b><a href="">Setting Up a Meet from Scratch</a></b></li>
-
-                <!--
-                <li><b><a href=""></a></b></li>
-                <li><a href=""></a></li>
-                <li><i><a href=""></a></i></li>
-                -->
             </ul>
+            <b><a href="#running-a-meet">Running a Meet: The <men>Run</men> Screen</a></b>
+            <ul>
+                <li><a href="#pullingtimes">Pulling Times</a></li>
+                <li><a href="#manualtimes">Manually Entering Times</a></li>
+                <ul>
+                    <li><a href="#gif_manualtimes">&#127902; GIF: Manually Entering Times</a></li>
+                    <li><a href="#qaq">About <code>*.qaq</code> Files</a></li>
+                </ul>
+                <li><a href="#adjust">The <but>Adjust</but> Menu: Scratches, Deck Entries, & Changes</a></li>
+                <ul>
+                    <li><i><a href="#scratches">Scratches</a></i></li>
+                    <li><i><a href="#changes">Adding & Moving Swimmers</a></i></li>
+                    <li><i><a href="#gif_dc_scr">&#127902; GIF: Scratching a Swimmer: Double Click</a></i></li>
+                    <li><i><a href="#gif_dc_add">&#127902; GIF: Adding a Swimmer: Double Click</a></i></li>
+                    <li><i><a href="#gif_dragndrop">&#127902; GIF: Adding a Swimmer: Drag & Drop</a></i></li>
+                </ul>
+                <li><a href="#calc">The <but>Calc</but> Menu: Seeing Colours & Adjusting Times</a></li>
+                <ul>
+                    <li><i><a href="#colours">Colour Coding in the <men>Run</men> Screen</a></i></li>
+                    <li><i><a href="#gif_calc">&#127902; GIF: The Calc menu</a></i></li>
+                </ul>
+                <li><a href="#dq">Processing DQs</a></li>
+                <ul>
+                    <li><i><a href="#gif_dq">&#127902; GIF: Processing a DQ</a></i></li>
+                    <li><i><a href="#gif_dq_relay">&#127902; GIF: Processing a Relay Stroke/Turn DQ</a></i></li>
+                </ul>
+                <li><a href="#os">Official Splits</a></li>
+                <ul>
+                    <li><i><a href="#create_os">&#127902; Creating a new Official Split Event.</a></i></li>
+                    <li><i><a href="#add_to_session">&#127902; Adding a Official Split Event to a Session.</a></i></li>
+                    <li><i><a href="#addswimmer_os">&#127902; Adding Swimmers & Results to an Official Split Event</a></i></li>
+                    <li><i><a href="#gif_os">&#127902; GIF: Adding a new Official Split Event.</a></i></li>
+                    <li><i><a href="#gif_os2">&#127902; GIF: Adding Swimmers & Times to an Official Split Event</a></i></li>
+                </ul>
+                <li><a href="#relnames">Relay Names</a></li>
+                <ul>
+                    <li><i><a href="#gif_relnames">&#127902; GIF: Adding Relay Names.</a></i></li>
+                    <li><i><a href="#gif_relnames2">&#127902; GIF: Changing Relay Names.</a></i></li>
+                    <li><a href="#relays"></a>Adding a Relay Team Entry [WIP]</li>
+                </ul>
+                <li><a href="#swimoffs">Swim-offs</a></li>
+                <ul>
+                    <li><i><a href="#gif_swimoff_setup">&#127902; GIF: Setting Up Swim-Offs.</a></i></li>
+                    <li><i><a href="#gif_swimoff_jd">&#127902; GIF: Tie-Breaking After a Swim-Off.</a></i></li>
+                </ul>
+                <li><a href="#finals-scratches">Finals Scratches</a></li>
+                <ul>
+                    <li><i><a href="#gif_finals_scr">&#127902; GIF: Scratching Swimmers from Finals.</a></i></li>
+                </ul>
+                <li><a href="#seeding">Seeding, Re-Seeding, and Finals Seeding</a></li>
+                <ul>
+                    <li><a href="#gif_seeding">&#127902; GIF: Using the <men>Seeding</men> Menu.</a></li>
+                </ul>
+                <li><a href="#racenumber">Moved Swimmers & Combined Heats: Pulling By Race Number</a></li>
+                <ul>
+                    <li><i><a href="#gif_adjust_newheat">&#127902; GIF: Putting a swimmer into a new, empty heat.</a></i></li>
+                    <li><i><a href="#gif_racenumber">&#127902; GIF: Pulling by Race Number.</a></i></li>
+                    <li><i><a href="#quantum_differentdistances">Combining Events of Different Distances: How-To on Quantum and HyTek</a></i></li>
+                </ul>
+            </ul>
+            <b><a href="#reports">Paperwork: the <men>Reports</men> Menu</a></b>
+            <ul>
+                <li><a href="#sessionreport">Session Reports</a></li>
+                <li><a href="#meetprogram">Heat Sheets ("Meet Programs")</a></li>
+                <li><a href="#psychsheet">Psych Sheets</a></li>
+                <li><a href="#results">Results & Scoring</a></li>
+                <ul>
+                    <li><i><a href="#results_reports">Results using the <men>Reports</men> Menu</a></i></li>
+                    <li><i><a href="#results_list">Results using the <but>List</but> Button</a></i></li>
+                    <li><i><a href="#scores_score">Scoring using the <bbut style="background-color:#90ee90">Score</bbut> Button</i></a></li>
+                    <ul>
+                        <li><i><a href="#gif_score">&#127902; GIF: Scoring using the <bbut style="background-color:#90ee90">Score</bbut> button.</a></i></li>
+                    </ul>
+                    <li><i><a href="#results_list_score">Modifying Results Settings using <men>Results for List and Score</men></i></a></li>
+                    <li><i><a href="#results_preferences">Report Preferences</i></a></li>
+                </ul>
+                <li><a href="#dqreport">DQ Report</a></li>
+                <li><a href="#lanetimersheets">Lane/Timer Sheets</a></li>
+                <li><a href="#feererport">Fee Reports</a></li>
+                <li><a href="#scorereport">Score Report</a></li>
+                <li><a href="#printreport">Printing & Exporting Reports</a></li>
+            </ul>
+
+            <b>The Following Items are Work In Progress:</b>
+            <b><a href="">Other Features</a></b>
+            <ul>
+                <li><a href="">Web Live Results</a></li>
+                <li><a href="">Meet Mobile</a></li>
+                <li><a href="">Para Codes of Exception</a></li>
+                <li><a href="">Para Points</a></li>
+                <li><a href="">Combining Results for Flighted Meets</a></li>
+            </ul>
+            <b><a href="">Troubleshooting Common Issues</a></b>
+            <ul>
+                <li><a href="">"No results found matching this Event and Heat for current QAQF meet selected!"</a></li>
+                <li><a href="">[<i>Multi-User/Networked</i>] For the same event(s), I can see results (Done) on one computer, but not (Seeded) on another.</a></li>
+                <li><a href="">[<i>Multi-User/Networked</i>] "Event X is temporarily locked by USER. This event cannot be seeded at this time."</a></li>
+            </ul>
+            <b><a href="">Setting Up a Meet from Scratch</a></b>
         </div>
 
         <div class="main">
@@ -328,7 +334,7 @@
                     <summary style="padding-bottom: 1em;"><b>Configuring Quantum-AQ Timing Console communication.</b> (<i>Click to collapse image.</i>)</summary>
                     <div class="img">
                         <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/timingconsoleselection.jpg" style="height: 18em;" />
-                        <div class="desc">Configuring Quantum-AQ Timing Console communication..</div>
+                        <div class="desc">Configuring Quantum-AQ Timing Console communication.</div>
                     </div>
                 </details>
             </div>
@@ -428,7 +434,7 @@
             <h2>Pulling Times <a name="pullingtimes"></a></h2>
 
             <ul>
-                <li>From the <men>Run</men> screen, select your desired Event from the Events list, then select your desired Heat from the Heats bar.</li>
+                <li>From the <men>Run</men> screen, select your desired Event from the <bmen style="color:#0000ff">EVENT LIST</bmen>, then select your desired Heat from the Heats bar.</li>
                 <li>Click the orange button labelled <bbut style="background-color: #ffe0c0">[Name] : F3</bbut> or the blue button labelled <bbut style="background-color: #c0c0ff">[Name] : Ctrl-F3</bbut> (or the corresponding hotkeys) to pull times from the corresponding timing system.</li>
                 <ul>
                     <li><b>Note:</b> the directory that each button pulls times from is configured in the <a href="#timing">Setting Up Timing Interfaces</a> section.</li>
@@ -459,7 +465,7 @@
             <h2>Manually Entering Times <a name="manualtimes"></a></h2>
 
             <ul>
-                <li>From the <men>Run</men> screen, select your desired Event from the Events list, then select your desired Heat from the Heats bar.</li>
+                <li>From the <men>Run</men> screen, select your desired Event from the <bmen style="color:#0000ff">EVENT LIST</bmen>, then select your desired Heat from the Heats bar.</li>
                 <li>Click corresponding cell for <bmen style="color:#0000ff">Prelims Time</bmen>/<bmen style="color:#0000ff">Finals Time</bmen>, <men>Backup 1</men>, <men>Backup 2</men>, or <men>Backup 3</men>. Type in the time manually (you don't need to enter any colons ":" or decimal points ".").</li>
             </ul>
 
@@ -811,16 +817,25 @@
 
             <ol>
                 <li>First, verify that the DQ slip has been processed correctly: all necessary fields have been completed, and informed information is completed (Announced/Coach Told).</li>
-                <li>In the Events Viewer, click your Event, then go to the correct heat.</li>
+                <li>In the <bmen style="color:#0000ff">EVENT LIST</bmen>, click your Event, then go to the correct heat.</li>
                 <li>Check that the <b>name, club, event, heat, and lane</b> of the swimmer in the software matches the information on the DQ slip.</li>
                 <li>Check the checkbox <men style="background-color: white;">&#x2610;</men> under the <men>DQ</men> column, corresponding to the correct swimmer.</li>
                 <li>If desired, enter a DQ code by clicking the box under the <men>DQcode</men> column, then selecting corresponding code from the dropdown list.</li>
                 <ul>
                     <li>More information about setting up DQ codes can be found in the <a href="#dqcodes">Setting Up DQ Codes</a> section.</li>
                     <li><b>For Relay DQs involving a non-takeover infraction</b> committed by a swimmer (i.e. a Stroke or Turn infraction), select one of <code>6A</code>, <code>6B</code>, <code>6C</code>, or <code>6D</code>, as appropriate. Click to the side to complete the selection, then when the popup appears, select the code corresponding to the infraction the swimmer committed.</li>
+                    <li><b>For Relay DQs</b>, ensure you remove any intermediate splits that were recorded after an infraction occurred. i.e., if the 2nd swimmer committed a stroke infraction, take out splits 2 and 3; if the 3rd swimmer commmitted an infraction, take out split 3. </li>
+                    <ul>
+                        <li>To remove splits, navigate to the <bmen style="color:#0000ff">Splits</bmen> window in the top right of the <men>Run</men> screen. Ensure you are viewing <bmen style="color:#0000ff">Cumulative Splits</bmen> (if not, click the <but>Display Cumulative Splits</but> button in the top right). Click the corresponding split, then press <code>Backspace</code> or <code>Delete</code> on your keyboard to delete.</li>
+                    </ul>
                 </ul>
-                <li>Move to the next heat (or click the Next Heat arrow). In the Events viewer, the number under the <men>DQ</men> column for the event should increment by 1.</li>
+                <li>Move to the next heat (or click the Next Heat arrow). In the <bmen style="color:#0000ff">EVENT LIST</bmen>, the number under the <men>DQ</men> column for the event should increment by 1.</li>
             </ol>
+
+            <warning>
+                <b>&#9888; Note for Canadian teams:</b> If a relay infraction occurred <i>after the first swimmer finished their official split</i>, ensure you create a separate Official Split / Time Trial Event to record the first swimmer's split. This is because if a relay team gets DQ'ed, the first swimmer's Official Split time may not be properly extracted and awarded to the swimmer automatically when results are uploaded to Swimming Canada, unless it is recorded in a separate event. For more information, see <a href="#os">Official Splits</a>.
+            </warning>
+
 
             <div class="gif">
                 <details open>
@@ -1016,6 +1031,9 @@
                     </div>
                 </details>
             </div>
+
+            <br>
+            <h2>Adding a Relay: The <men>Relays</men> Menu<a name="relays"></a></a></h2>
 
             <br>
             <br>
@@ -1233,7 +1251,7 @@
             <b>Step 3: Pull Times for the Swimmers who <i>were</i> moved.</b>
             <ul>
                 <li>Navigate to Event 1 in the <bmen style="color:#0000ff">EVENT LIST</bmen>, then click the <bbut style="background-color: #ffe0c0">Race # : F2</bbut> or <bbut style="background-color: #c0c0ff">Race # : Ctrl-F2</bbut> button for the corresponding Timing Interface.</li>
-                <li>When the <bmen style="color:#940000">Enter Race Number</bmen>pop-up appears, type in the Race Number you wrote down from <b>Step 2</b>, then click <but>OK</but>.</li>
+                <li>When the <bmen style="color:#940000">Enter Race Number</bmen> pop-up appears, type in the Race Number you wrote down from <b>Step 2</b>, then click <but>OK</but>.</li>
                 
                 <div class="responsive">
                     <details open>
@@ -1317,12 +1335,483 @@
 
             <!-- #region Paperwork-->
 
+            <hr />
+            <h1>Paperwork: The <men>Reports</men> Menu<a name="reports"></a></h1>
+            <hr />
+
+            Most paperwork ("Reports") that you may need to generate and/or print are produced from the <men>Reports</men> menu, which can be accessed from both the Home screen and the <men>Run</men> screen. The most common reports that you may need to generate include:
+            <ul>
+                <li>Session Reports</li>
+                <li>Heat Sheets ("Meet Program")</li>
+                <li>Psych Sheets</li>
+                <li>Results</li>
+                <li>Lane/Timer Sheets</li>
+                <li>Score Summaries</li>
+                <li>High Point Report (via "")</li>
+                <li>Fee Reports (via "Team Reports")</li>
+                <li>Positive Check-In Sheet ("Meet Check-In")</li>
+            </ul>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Reports</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/reports.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Reports</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+            Results can also be generated using the <but>List : Ctrl-L</but> button at the middle of the <men>Run</men> screen. At meets/sessions where Scoring is being used, use the <bbut style="background-color:#c0ffc0">Score : Ctrl-S</bbut> button to calculate rank-based scores and generate a Results report.
+
+            <!-- #region Session Reports -->
+            <br>
+            <br>
+            <h2>Session Reports <a name="sessionreport"></a></h2>
+
+            Session Reports can be generated from the <men>Reports</men> menu > <men>Sessions</men>.
+
+            When the <men>Sessions Report</men> pop-up appears, select which sessions you would like to generate a report for in the <bmen style="color:#0000ff">Session List</bmen> using the <men style="background-color:#ffffff">&#x2610;</men> checkboxes. <br><br>
+
+            Click <men>Create Report</men> to generate your report. When the preview opens, press the Printer icon at the top row next to the "Print directly" and "Copies" boxes to print directly, or use the two blue icons just under the top row to Export or Print (see <a href="#printpreview">Print/Export Results</a>).<br><br>
+
+            There are <b>three options</b> that you should always keep <men style="background-color:#ffffff">&#x2611;</men> checked:
+            <ul>
+                <li><b>Include event start times:</b> Includes the predicted/calculated Start Time for each event.</li>
+                <li><b>Include heat and event entries:</b> Includes the number of Heats and Entries for each event.</li>
+                <li><b>Include * type entries:</b> Generally doesn't make a difference. However, ensures that entries with a Special (*) indicator are counted in Heat and Entry counts.</li>
+            </ul>
+
+            An the <men>Sessions Report</men> bottom half of the pop-up, there are <b>three options</b> that you may want to modulate based on your preferences:
+            <ul>
+                <li><b>Include Team List:</b> Includes the number of swimmers in each session by Team. Useful for determining team splits for split warm-ups.</li>
+                <li><b>Separate page each session:</b> Puts each selected session on a new page.</li>
+                <li><b>Each event run in two pools:</b> Enable if session is Double-Ended Short Course by Odd/Event Heats. (Do NOT use for Long Course Chase — instead, use the Chase Interval option when setting up Sessions.)</li>
+            </ul>
+
+            All other options should generally be left un-checked.
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Session Report</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/sessionreports.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Sessions Report</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- #endregion Session Reports-->
+
+            <!-- #region Meet Programs -->
+            <br>
+            <br>
+            <h2>Heat Sheets / Meet Programs <a name="meetprogram"></a></h2>
+            Also known as Start Lists in other programs (e.g. Splash Meet Manager), Heat Sheets are called "Meet Programs" in HyTek Meet Manager. Meet Programs can be generated from the <men>Reports</men> menu > <men>Meet Program</men>. <br><br>
+
+            When the <men>Meet Program</men> pop-up appears, select which session your events are in using the <bmen style="color:#0000ff">Session List</bmen>, then use the <bmen style="color:#0000ff">EVENT LIST for Meet Program</bmen> to select events you want to include. 
+
+            <tip>
+                <b>&#x1F4A1; Tip:</b> Click the <men>&curarr;</men> or <men>Select All</men> button in the top left to select all events currently visible (i.e., from the selected session) in the <men style="color:#0000ff"><b>EVENT LIST</b></men>, and use the <men>&cularr;</men> or <men>De-Select</men> button to de-select all currently selected events.
+            </tip>
+
+            Click <men>Create Report</men> to generate your report. When the preview opens, press the Printer icon at the top row next to the "Print directly" and "Copies" boxes to print directly, or use the two blue icons just under the top row to Export or Print (see <a href="#printpreview">Print/Export Results</a>).<br><br>
+
+            At the bottom of the <men>Meet Program</men> pop-up, there are three tabs where you can customize your report. See the images below for more information on how to include common elements. <br><br>
+
+            Generally, the following fields should be checked under the <but style="color:#940000">Include in Meet Program</but> tab:
+            <ul>
+                <li><b>Entry Times:</b> includes Seed Times (or Prelims Times, for Finals events) in the Meet Program.</li>
+                <li><b>Empty Lanes:</b> keeps empty lanes in Meet Program. If unchecked, empty lanes are not shown.</li>
+                <li>[Finals] <b>Qualifying Alternates:</b> includes Alternates for Finals Events.</li>
+            </ul>
+
+            The following fields are commonly customized under the under the <but style="color:#940000">Include in Meet Program</but> tab:
+            <ul>
+                <li><b>Heat Start Times:</b> [recommended] shows estimated start time of each heat. Exclude if not accurate (e.g. double-ended by odd/even heats with all Relays running in one tank).</li>
+                <li><b>Relay Athlete Names:</b> how many relay athletes to show on the Meet Program. Generally: set to 0 if Relay Names not yet processed; set to 4 is Relay Names have been processed.</li>
+                <li><b>Line For Results:</b> [aesthetic - recommended for Meet Programs] shows a line next to the Seed Time.</li>
+                <li><b>Records:</b> (if set up) shows Records at the top of each event.</li>
+                <li><b>Time Standards:</b> (if set up) shows Time Standards at the top of each event.</li>
+                <li><b>Logos In Footer:</b> (if set up) shows logos (e.g. sponsors, meet organizers) at the bottom of each page.</li>
+
+            </ul>
+
+            The following fields are commonly customized under the under the <but style="color:#940000">Columns / Format</but> tab:
+            <ul>
+                <li><men style="color:#940000">Columns</men>: Double/Single (Single Column for announcers)</li>
+            </ul>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Meet Program</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/meetprogram.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Meet Program</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Customizable elements for Meet Programs.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/meetprogram_elements.jpg" style="height: 18em;" />
+                        <div class="desc">Customizable elements for Meet Programs.</div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- #endregion Meet Programs -->
+
+            <!-- #region Psych Sheets -->
+
+            <br>
+            <br>
+            <h2>Psych Sheets <a name="psychsheet"></a></h2>
+            Also known as Entry Lists in other programs (e.g. Splash Meet Manager), Psych Sheets can be generated from the <men>Reports</men> menu > <men>Psych Sheet</men>. <br><br>
+
+            When the <men>Psych Sheets</men> pop-up appears, select which session your events are in using the <bmen style="color:#0000ff">Session List</bmen>, then use the <bmen style="color:#0000ff">EVENT LIST for Psych Sheets</bmen> to select events you want to include.
+
+            <tip>
+                <b>&#x1F4A1; Tip:</b> Click the <men>&curarr;</men> or <men>Select All</men> button in the top left to select all events currently visible (i.e., from the selected session) in the <men style="color:#0000ff"><b>EVENT LIST</b></men>, and use the <men>&cularr;</men> or <men>De-Select</men> button to de-select all currently selected events.
+            </tip>
+
+            At the bottom of the <men>Psych Sheets</men> pop-up, there are three tabs where you can customize your report. See the images below for more information on how to include common elements. <br><br>
+
+            Click <men>Create Report</men> to generate your report. When the preview opens, press the Printer icon at the top row next to the "Print directly" and "Copies" boxes to print directly, or use the two blue icons just under the top row to Export or Print (see <a href="#printpreview">Print/Export Results</a>).<br><br>
+
+            Generally, the following fields should be checked under the <but style="color:#940000">Include in Meet Program</but> tab:
+            <ul>
+                <li><b>Entry Times:</b> includes Seed Times (or Prelims Times, for Finals events) in the Meet Program.</li>
+            </ul>
+
+            The following fields are commonly customized under the under the <but style="color:#940000">Include in Meet Program</but> tab:
+            <ul>
+                <li><b>Relay Athlete Names:</b> how many relay athletes to show on Psych Sheet. Generally: set to 0 if Relay Names not yet processed; set to 4 is Relay Names have been processed.</li>
+                <li><b>Line For Results:</b> [aesthetic - not recommended for Psych Sheets] shows a line next to the Seed Time.</li>
+                <li><b>Scratches:</b> Includes athletes that are marked as Scratched in the Psych Sheet.</li>
+                <li><b>Records:</b> (if set up) shows Records at the top of each event.</li>
+                <li><b>Time Standards:</b> (if set up) shows Time Standards at the top of each event.</li>
+                <li><b>Events With No Entries:</b> shows a header for events with no entries. If unchecked, events with no entries are skipped.</li>
+                <li><b>Logos In Footer:</b> (if set up) shows logos (e.g. sponsors, meet organizers) at the bottom of each page.</li>
+
+            </ul>
+
+            The following fields are commonly customized under the under the <but style="color:#940000">Columns / Format</but> tab:
+            <ul>
+                <li><men style="color:#940000">Columns</men>: Double/Single</li>
+                <li><b>Psych Multi-Age Split:</b> If checked, </li>
+            </ul>
+
+            You can also use the <but style="color:#940000">Filters / Sort Order</but> tab to filter entries.
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Psych Sheets</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/psychsheet.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Psych Sheets</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Customizable elements for Psych Sheets.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/psychsheet_elements.jpg" style="height: 18em;" />
+                        <div class="desc">Customizable elements for Psych Sheets.</div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- #endregion Psych Sheets -->
+
+            <!-- #region Results, List, & Score-->
+
+            <br>
+            <br>
+            <h2>Results <a name="results"></a></h2>
+
+            <br>
+            <h3>Results using the <men>Reports</men> Menu<a name="results_reports"></a></h3>
+
+            Results can be generated from the <men>Reports</men> menu > <men>Results</men>. <br><br>
+            
+            When the <men>Results</men> pop-up appears, select which session your events are in using the <bmen style="color:#0000ff">Session List</bmen>, then use the <bmen style="color:#0000ff">EVENT LIST</bmen> to select events you want to include.
+
+            <tip>
+                <b>&#x1F4A1; Tip:</b> Click the <men>&curarr;</men> or <men>Select All</men> button in the top left to select all events currently visible (i.e., from the selected session) in the <men style="color:#0000ff"><b>EVENT LIST</b></men>, and use the <men>&cularr;</men> or <men>De-Select</men> button to de-select all currently selected events.
+            </tip>
+
+            At the bottom of the <men>Results</men> pop-up, there are three tabs where you can customize your report. See the images below for more information on how to include common elements. <br><br>
+
+            Click <men>Create Report</men> to generate your report. When the preview opens, press the Printer icon at the top row next to the "Print directly" and "Copies" boxes to print directly, or use the two blue icons just under the top row to Export or Print (see <a href="#printpreview">Print/Export Results</a>).<br><br>
+
+            Generally, the following fields should be checked under the <but style="color:#940000">Include in Results</but> tab:
+            <ul>
+                <li><b>Entry Times:</b> Includes the swimmer's Seed Time (or Prelims time, for Finals results)</li>
+            </ul>
+
+            The following fields should NOT be checked under the <but style="color:#940000">Include in Results</but> tab:
+            <ul>
+                <li><b>DQ Results:</b> <i>checking</i> this field will report the swimmer's time, in spite of a DQ. This field should be UN-checked, pursuant to AQUA rule SW 11.4.</li>
+            </ul>
+
+            The following fields are commonly customized under the <but style="color:#940000">Include in Results</but> tab:
+            <ul>
+                <li><b>No Shows:</b> checking this field reports swimmers marked as No Show at the bottom of the results. Un-checking this field will hide them.</li>
+                <li><b>Scratches:</b> checking this field reports swimmers marked as Scratch at the bottom of the results. Un-checking this field will hide them.</li>
+                <li><b>DQ Codes:</b> checking this field will show DQ reasons based on entered DQ codes. Required for Masters competitions pursuant to AQUA Masters Swimming Rule 2.4.2 / Swimming Canada Part VIII, Rule 3.3.8. See <a href="#dqcodes">Setting Up Custom DQ Codes</a> and <a href="#dq">Processing DQs</a> for more information.</li>
+            </ul>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Results</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/results.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Results</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Customizable elements for Psych Sheets.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/results_elements.jpg" style="height: 18em;" />
+                        <div class="desc">Customizable elements for Results.</div>
+                    </div>
+                </details>
+            </div>
+            
+            <br>
+            <h3>Results using the <but>List</but> Button<a name="results_list"></a></h3>
+
+            You can generate Results for one event at a time while inside the <men>Run</men> screen using the <but>List : Ctrl-L</but> button.
+            <ul>
+                <li>Navigate to your event of interest in the <bmen style="color:#0000ff">EVENT LIST</bmen>.</li>
+                <li>Click the <but>List : Ctrl-L</but> button to generate the Results List.</li>
+            </ul>
+            See <a href="results_list_score">Results for List and Score</a> for information on how to customize Results List format.
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <but>List</but> button.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/run_list.jpg" style="height: 18em;" />
+                        <div class="desc">The <but>List</but> button.</div>
+                    </div>
+                </details>
+            </div>
+
+            <br>
+            <h3>Scoring using the <bbut style="background-color:#90ee90">Score</bbut> Button<a name="scores_score"></a></h3>
+
+            If Scoring is set up, you must use the <bbut style="background-color:#90ee90">Score</bbut> button to calculate point scoring. 
+            <ul>
+                <li>Navigate to your event of interest in the <bmen style="color:#0000ff">EVENT LIST</bmen>.</li>
+                <li>After all heats are finished, click the <bbut style="background-color:#90ee90">Score</bbut> button to calculate scores and generate a Results List with scores.</li>
+            </ul>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Results List with Scoring.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/score_elements.jpg" style="height: 18em;" />
+                        <div class="desc">Results List with Scoring.</div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="gif">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>&#127902; GIF: Scoring using the <bbut style="background-color:#90ee90">Score</bbut> button.</b> <a name="gif_score"></a> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/score.gif" style="height: 18em;" />
+                        <div class="desc">GIF: Scoring using the <bbut style="background-color:#90ee90">Score</bbut> button.</div>
+                    </div>
+                </details>
+            </div>
+
+            <br>
+            <h3>Modifying Results Settings using <men>Results for List and Score</men><a name="results_list_score"></a></h3>
+
+            Changes to the format of Results generated using the <but>List : Ctrl-L</but> or <bbut style="background-color:#90ee90">Score : Ctrl-S</bbut> buttons can be made in the <men>Results for List and Score</men> menu. To access it, navigate to <men>Preferences</men> > <men>Results for List and Score</men>. See <a href="results_reports">Results Using the <men>Reports</men> Menu</a> for an explanation of common fields.
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Results for List and Score</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/results_listandscore.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Results for List and Score</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+            <br>
+            <h3>Report Preferences<a name="reportpreferences"></a></h3>
+
+            Master Report Preferences can be modified in the <men>Report Preferences</men> menu. Review the checkboxes to change elements as necessary. Commonly customized options include:
+            <ul>
+                <li><men style="color:#940000">Report Formats</men> > <b>Show 2nd club with primary team:</b> If an athlete is registered with two clubs, show both clubs. Commonly used for Para Exception Codes (see <a href="#para_exceptions">Para Codes of Exception</a>).</li>
+                <li><men style="color:#940000">Footer</men> > Add Logos for Meet Program/Results Footers</li>
+                <li><men style="color:#940000">Printer Options</men> > Default Report Printer</li>
+                <li><men style="color:#940000">Printer Options</men> > <b>Print Directly for Reports:</b> Automatically prints reports if the <but>List : Ctrl-L</but>, <bbut style="background-color:#90ee90">Score : Ctrl-S</bbut>, or <men>Create Report</men> buttons are pressed, without any preview.</li>
+                <li><men style="color:#940000">Printer Options</men> > <b>Number of Copies</b> to print by default for each report.</li>
+            </ul>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Report Preferences</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/results_preferences.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Report Preferences</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+
+
+            <!-- #endregion Results, List, & Score-->
+
+            <!-- #region DQ Reports -->
+
+            <br>
+            <br>
+            <h2>DQ Reports <a name="dqreport"></a></h2>
+
+            A DQ Report is simply a type of Results report that only shows disqualifications. <br><br>
+
+            Navigate to <men>Reports</men> > <men>Results</men>. When the <men>Results</men> pop-up appears, select which session your events are in using the <bmen style="color:#0000ff">Session List</bmen>, then click the <men>&curarr;</men> or <men>Select All</men> button in the top left to select all events in the session. <br><br>
+            
+            Check the following boxes in the <but style="color:#940000">Columns / Formrat</but> tab, and ensure all other boxes are unchecked:
+            <ul>
+                <li><b>Results by Heat</b></li>
+                <li><b>Include Lane if by Heat</b></li>
+                <li><b>DQs Only</b></li>
+            </ul>
+
+            In the <but style="color:#940000">Include in Results</but> tab, Ensure the <b>DQ Results</b> box is NOT checked.
+
+            If using DQ Codes, in the <but style="color:#940000">Include in Results</but> tab check the <b>DQ Codes</b> box.
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Generating a DQ Report.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/dqreport.jpg" style="height: 18em;" />
+                        <div class="desc">Generating a DQ Report.</div>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- #endregion DQ Reports -->
+
+            <!-- #region Lane Timer Sheets -->
+
+            <br>
+            <br>
+            <h2>Lane Timer Sheets<a name="lanetimersheets"></a></h2>
+
+            Navigate to <men>Reports</men> > <men>Lane/Timer Sheets</men>. When the <men>Lane/Timer Sheets</men> pop-up appears, select which session your events are in using the <bmen style="color:#0000ff">Session List</bmen>, then select all events you want to print sheets for. Click the <men>&curarr;</men> or <men>Select All</men> button in the top left to select all events in the session. <br><br>
+            
+            <ul>
+                <li>If running Double-Ended by Odd/Even Heats (e.g. Long Course Chase), you may want to print Odd/Even Heats Only.</li>
+                <li>If at a Ten-Lane Pool, you may need to change the <men>Lanes :</men> to 0-9 from 1-10.</li>
+                <li>If some events are Double-Ended/Chase but other events are not, you will have to generate one set of Lane/Timer Sheets for the Double-Ended (Odd/Even Heats Only) events, then one set of sheets for All heats.</li>
+            </ul>
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>The <men>Lane/Timer Sheets</men> menu.</b> (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/lanetimersheets.jpg" style="height: 18em;" />
+                        <div class="desc">The <men>Lane/Timer Sheets</men> menu.</div>
+                    </div>
+                </details>
+            </div>
+
+
+            <!-- #endregion Lane Timer Sheets -->
+
+            <!-- #region Score Report -->
+
+            <br>
+            <br>
+            <h2>Score Reports<a name="scorereport"></a></h2>
+
+            Score reports are commonly used for Top Scoring Team Awards, Top Para-Point Scoring Awards, and High Point Awards. <br><br>
+
+            Navigate to <men>Reports</men> > <men>Scores</men>. When the <men>Scores</men> pop-up appears, select the relevante events (typically, all events) using the <bmen style="color:#0000ff">EVENT LIST</bmen>. Use the <men>&curarr;</men> or <men>Select All</men> button in the top left to select all events in the session. <br><br>
+
+            In the <but style="color:#940000">Format</but> tab, select Individual or Team Point calculation, Gender choices, Age Criteria (if defined), and Point System according to how the meet is set up. <br><br>
+
+            Under the <but style="color:#940000">Grouping / Options</but> tab, you can limit the number of athletes or teams to show, and group by Region/LSC if applicable.
+
+            <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Generating Score Reports.</b></summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/scorereport.jpg" style="height: 18em;" />
+                        <div class="desc">Generating Score Reports.</div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- #endregion Score Report -->
+
+            <!-- #region Fee Report -->
+
+            <br>
+            <br>
+            <h2>Fee Reports<a name="feereport"></a></h2>
+
+            To generate a Fee Report for each Team's entry fees, navigate to <men>Reports</men> > <men>Teams</men>. When the <men>Team Reports</men> pop-up appears, adjust options as necessary and click <men>Create Report</men>.
+
+             <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Fee Reports.</b></summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/feereport.jpg" style="height: 18em;" />
+                        <div class="desc">Fee Reports.</div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- #endregion Fee Report -->
+
+            <!-- #region Printing & Exporting Results -->
+
+            <br>
+            <br>
+            <h2>Printing & Exporting Results<a name="printreport"></a></h2>
+
+            When you click <men>Create Report</men>, a preview should appear (if not, see <a href="#reportpreferences">Report Preferences</a>).
+
+            Use the Printer button <img title="" src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/print_direct.jpg" alt="[Printer Icon]" style="height:1.25em;border-radius:0.25em"> at the top to Print Directly, using the Printer defined in the "Print directly using ..." textbox and number of copies defined at the top left, or use the Save to Disk or Print <img title="" src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/print_export.jpg" alt="[Disk and Printer double-icon]" style="height:1.25em;border-radius:0.25em"> buttons to Export (left) or Print (right) using the system dialogues.
+
+             <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Printing or Exporting Reports.</b></summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/hytek/img/report_preview.jpg" style="height: 18em;" />
+                        <div class="desc">Printing or Exporting Reports.</div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- #endregion Printing & Exporting Results -->
+
+            <!-- #endregion Paperwork-->
+
             <a href="#top">Jump to Top</a><a name="bottom"></a><br><br>
 
         </div>
     </div>
 
-    <!-- #region Image Click-To-Enlarge Javascript -->
+    <!-- #region Click-To-Enlarge-Image Javascript -->
     <script>
         // Get the modal
         var modal = document.getElementById('myModal');
