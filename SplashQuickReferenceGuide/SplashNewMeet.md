@@ -220,6 +220,34 @@ Follow these instructions if you want to, for example, give every athlete in the
 
 # 3. Creating Time Standards 
 
+From the <img title="" src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/ev.png" alt="[ev]" style="height:1.25em;transform:translate(0em, 0.25em);border-radius:0.25em"> **Events** module, navigate to `Edit` > `Edit Timestandards...`
+
+<br>
+<span align="center">
+<img title="" src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/edit_timestandards.png" alt="" style="zoom:50%;">
+</span>
+<br>
+<br>
+
+When the `Edit time standards` dialogue appears, click `Add` to add a new set of time standards.
+- Create a **Name** and **Code** (typically 1-4 letters) for the standard.
+- Set the **Age** for the time standard (`-1` to `-1` for Open)
+- Select the **Type** of standard:
+  - *Maximum time standard*: marks swimmers if they are **slower** than the standard (e.g., qualification standard). Can be used to reject entries or calculate fines.
+  - *Minimum time standard*: marks swimmers if they are **faster** than the standard (de-qualifying standard). Can be used to reject entries.
+  - *Default time standard*: marks swimmers if they have achieve the time (e.g. achieved a Provincial cut). Not used for entry rejection or fines.
+  - *Level time standard*: Used to group athletes whose entries are at a "similar level."
+  - Tip: think "Maximum" = longest time; "Minimum" = shortest time.
+- Enter the Time Standard time for each gender & course. 
+- Repeat for each age group and time standard.
+
+<br>
+<span align="center">
+<img title="" src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/edit_stds.png" alt="" style="zoom:50%;">
+</span>
+<br>
+<br>
+
 <br>
 
 ---
