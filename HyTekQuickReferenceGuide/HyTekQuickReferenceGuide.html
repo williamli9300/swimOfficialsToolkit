@@ -17,7 +17,7 @@
     <nav id="sidebar">
         <ul>
             <li>
-                <span class="logo"><a href="#top">HyTek QRG</a> <a name="contents"></a></span>
+                <span class="logo"><a href="#top">HyTek Quick Reference Guide</a> <a name="contents"></a></span>
                 <button onclick=toggleSidebar() id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M11,18L5,12l6-6l1.4,1.4L7.83,12l4.58,4.6L11,18Zm6.6,0l-6-6l6-6L19,7.4L14.43,12L19,16.6L17.6,18Z" /></svg>
                 </button>
@@ -325,6 +325,7 @@
     </nav>
 
     <main>
+        <main-body>
         <!-- #region Head --->
         <hr />
         <a name="top"></a>
@@ -348,7 +349,7 @@
         </info>
         <tip>
             <b>&#x1F4A1; Tip:</b> Use <code>Ctrl + F</code> or <code>Cmd + F</code> to search for a key word, or use the
-            <b>Contents</b> menu on the left to find what you're looking for.
+            <b>Contents</b> menu on the left (or bottom on mobile) to find what you're looking for.
         </tip>
         <tip>
             <b>&#x1F4A1; Tip:</b> A sample HyTek Meet Database and Quantum QAQ files are available for download and
@@ -356,6 +357,12 @@
         </tip>
         <a href="#bottom">Jump To Bottom</a>
         <br>
+
+        <div id="myModal" class="modal">
+            <span class="closeimg">×</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
         <!-- #endregion Head --->
 
         <!-- #region Getting Started --->
@@ -1088,7 +1095,7 @@
         <br>
 
         <h3><a name="colours"></a>Colour Coding for Lanes & Backups</h3>
-        <table style="font-size:0.8em">
+        <table style="font-size:0.8em; background-color:#f2f2f2; color:#222;">
             <tr>
                 <th>Colour</th>
                 <th>Touchpad Time</th>
@@ -1130,7 +1137,7 @@
                 <td style="background-color:#ffff00; color: #222; text-align: right;">----</td>
                 <td style="background-color:#ffff00; color: #222; ">Average of backups is more than 0.30s <i>faster</i> than Touchpad
                     time</td>
-                <td style="background-color:#ffff00;">"Soft Touch": plungers are OK, Touchpad time was late.</td>
+                <td style="background-color:#ffff00; color: #222;">"Soft Touch": plungers are OK, Touchpad time was late.</td>
             </tr>
             <tr>
                 <td style="background-color:#c0ffc0; color: #222;"><b>Green&nbsp;(g)&nbsp;Row</b></td>
@@ -1154,7 +1161,7 @@
                 <td style="background-color:#c0ffff; color: #222; text-align: right;">----</td>
                 <td style="background-color:#c0ffff; color: #222;"> Average of backups is more than 0.30s <i>slower</i> than Touchpad
                     time</td>
-                <td style="background-color:#c0ffff;">Either: (1) someone triggered the touchpad before the swimmer
+                <td style="background-color:#c0ffff; color: #222;">Either: (1) someone triggered the touchpad before the swimmer
                     touched the wall; <b> <br> (2) both Timekeepers fell asleep and forgot to hit the Plungers until it
                         was too late; or, <br> (3) No backup times were recorded. </b></td>
             </tr>
@@ -1169,12 +1176,6 @@
             necessary, to identify possible equipment malfunction, and assign times based on valid/functional watch
             times.
         </warning>
-
-        <div id="myModal" class="modal">
-            <span class="close">×</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
-        </div>
 
         <div class="gif">
             <details open>
@@ -2549,6 +2550,7 @@
         <!-- #endregion Additional -->
 
         <a href="#top">Jump to Top</a><a name="bottom"></a><br><br>
+    </main-body>
     </main>
 
     <!-- #region Click-To-Enlarge-Image Javascript -->
@@ -2557,7 +2559,7 @@
         var modal = document.getElementById('myModal');
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("closeimg")[0];
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {

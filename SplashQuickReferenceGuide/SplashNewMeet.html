@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Creating a New Meet in Splash Meet Manager</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-light.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/powershell.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script type="text/javascript" src="./src/navbar.js" defer></script>
+</head>
+
+<body>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo"><a href="#top">Splash: Building a New Meet </a> <a name="contents"></a></span>
+                <button onclick=toggleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M11,18L5,12l6-6l1.4,1.4L7.83,12l4.58,4.6L11,18Zm6.6,0l-6-6l6-6L19,7.4L14.43,12L19,16.6L17.6,18Z" /></svg>
+                </button>
+            </li>
+            <li><hr class="navline"/></li>
+            <li>
+                <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                    <a href="#newdb"><span><b>1. Creating a New Meet Database</b></span></a>
+                    <button class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                    </button>
+                </span>
+                <ul class="sub-menu">
+                    <div>
+                        <li class="non-dropdown"><a href="#newmeetfile">1.1 Creating a New Meet File</a></li>
+                        <li class="non-dropdown"><a href="#meetinfo">1.2 Configuring General Meet Information</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                    <a href="#meetscaffold"><span><b>2. Creating a Meet Scaffold</b></span></a>
+                    <button class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                    </button>
+                </span>
+                <ul class="sub-menu">
+                    <div>
+                        <li class="non-dropdown"><a href="#sessions">2.1 Creating Sessions</a></li>
+                        <li class="non-dropdown"><a href="#ptfevents">2.2 Creating Timed Final or Prelims Events</a></li>
+                        <li>
+                            <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                                <a href="#agegroups"><span>2.3 Creating Age Groups</span></a>
+                                <button class="dropdown-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                                </button>
+                            </span>
+                            <ul class="sub-menu">
+                                <div>
+                                    <li class="non-dropdown"><a href="#createagegroups"><i>2.3.1 Creating Age Groups for an Event</i></a></li>
+                                    <li class="non-dropdown"><a href="#copyagegroups"><i>2.3.2 Copying Age Groups to Other Events</i></a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="non-dropdown"><a href="#createfinals">2.4 Creating Finals Events</a></li>
+                        <li>
+                            <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                                <a href="#fastestheats"><span>2.5 Creating Fastest Heats Timed Final Events</span></a>
+                                <button class="dropdown-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                                </button>
+                            </span>
+                            <ul class="sub-menu">
+                                <div>
+                                    <li class="non-dropdown"><a href="#fastestheats-agegroup"><i>2.5.2 Fastest Heat for Each Age Group</i></a></li>
+                                    <li class="non-dropdown"><a href="#fastestheats-overall"><i>2.5.2 Fastest Overall Heat</i></a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                                <a href="#specialevents"><span><b>2.6 Special Events: Multi-Round Eliminators & Distance Official Split Events</b></span></a>
+                                <button class="dropdown-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                                </button>
+                            </span>
+                            <ul class="sub-menu">
+                                <div>
+                                    <li class="non-dropdown"><a href="#eliminators"><i>2.6.1 Multi-Round Eliminator</i></a></li>
+                                    <li class="non-dropdown"><a href="#distance-os"><i>2.6.2 Copying Entries to Different Event (e.g. Distance Official Split Event)</i></a></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li class="non-dropdown" style="padding-top: 0.2em; padding-bottom: 0.3em;"><a href="#tstds"><b>3. Creating Time Standards</b></a></li>
+            <li class="non-dropdown" style="padding-top: 0.2em; padding-bottom: 0.3em;"><a href="#invite"><b>4. Exporting the Meet Invitation File</b></a></li>
+            <li>
+                <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                    <a href="#entries"><span><b>5. Processing Entries</b></span></a>
+                    <button class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                    </button>
+                </span>
+                <ul class="sub-menu">
+                    <div>
+                        <li class="importentries"><a href="#sessions">5.1 Importing Entries</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                    <a href="#seeding"><span><b>6. Seeding the Meet</b></span></a>
+                    <button class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                    </button>
+                </span>
+                <ul class="sub-menu">
+                    <div>
+                        <li class="#"><a href="#sessions">6.1 Seeding</a></li>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <main-body>
+        <!-- #region Head --->
+        <hr />
+        <a name="top"></a>
+        <h1 class="h0">
+            <a href="https://williamli9300.github.io/swimOfficialsToolkit/SplashQuickReferenceGuide/SplashNewMeet.html">
+                Splash Meet Manager 11: Creating a New Meet From Scratch
+            </a>
+        </h1>
+        <hr />
+        <p>
+            <b>By Will Li | Version 0.0.1 [DRAFT] | 10 November 2026 <br></b>
+            <a href="https://github.com/williamli9300/swimOfficialsToolkit/tree/v0.2.0/">
+                Repository Link (branch v0.2.0)
+            </a> | <a href="https://github.com/williamli9300/swimOfficialsToolkit/commits/v0.2.0/">Changelog</a><br>
+            <b>Find more resources at: <a href="https://williamli9300.github.io/">https://williamli9300.github.io/</a></b>
+        </p>
+        <p>This guide is meant as a quick reference guide for the software operation of Splash Meet Manager 11. This
+            guide is not a replacement for the thorough knowledge of the rules and roles of the Meet Manager. Always 
+            refer to your meet package and rulebook for relevant information.</p>
+        <info>
+            <b>&#x1f6c8; INFO:</b> You can click on any image to enlarge it. <br>
+        </info>
+        <tip>
+            <b>&#x1F4A1; Tip:</b> Use <code>Ctrl + F</code> or <code>Cmd + F</code> to search for a key word, or use the
+            <b>Contents</b> menu on the left or bottom to find what you're looking for.
+        </tip>
+        <tip>
+            <b>&#x1F4A1; Tip:</b> A sample HyTek Meet Database and Quantum QAQ files are available for download and
+            practice at the following link: [Coming Soon!]
+        </tip>
+        <a href="#bottom">Jump To Bottom</a>
+        <br>
+
+        <div id="myModal" class="modal">
+            <span class="closeimg">×</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+        <hr/>
+        <!-- #endregion Head --->
+
+        <h1 id="newdb">1. Creating a New Meet Database</h1>
+        <br>
+        <h2 id="newmeetfile">1.1 Creating a New Meet File</h2>
+        <p>Before dealing with any details, we need to create a new meet database file (i.e., an <code>*.mdb</code> file). </p>  
+            <ul>
+                <li>Navigate to <men>File</men> &gt; <men>📄 New Meet...</men></li>
+                <li>When the <b>Create New Meet Wizard</b> pops up, fill in the required information, then click <but>Finish</but>.</li>
+            </ul>
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Splash's "Create New Meet" Wizard.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/newmeetwizard.png"
+                        style="height: 18em;" />
+                    <div class="desc">Splash's "Create New Meet" Wizard.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        
+        <h2 id="meetinfo">1.2 Configuring General Meet Information</h2>
+        <p>When the new meet is created, Splash will open to the <ev>Events</ev> module. Before moving forward, let’s fill out some of the <b>General meet info</b> on the right side of the screen. Read each field name and adjust according to the Meet Package and general preferences. A few important ones are mentioned below.</p>
+        <ul>
+            <li><b>General</b>
+                <ul>
+                    <li><b>Number:</b> Take note of this field. This is where the Sanction Number will go once the meet is sanctioned by Swimming Canada / your PSO.</li>
+                    <li><b>Point Scoring:</b> This is where you select the point system that will convert <em>times to points</em>, e.g. AQUA (formerly FINA) points. <b>This is not the same as point scoring based on ranking.</b> See <a href="#points-rank">Point Scoring (Rank)</a> for point scoring based on ranking.</li>
+                </ul>
+            </li>
+        <li><b>Facility</b>
+        <ul>
+        <li>This is where you will fill out your pool’s address.</li>
+        </ul></li>
+        <li><b>International (swimrankings.net)</b>
+        <ul>
+        <li>This is how the meet will appear on <a href="https://swimrankings.net/">swimrankings.net</a>.</li>
+        </ul></li>
+        <li><b>Age calculation and display</b>
+        <ul>
+        <li><b>Age Calculation:</b> At most meets, we will use <men>Age calculated to exact date of meet</men>.</li>
+        <li><b>Base date for calculation:</b> refer to meet package, typically first day of meet.</li>
+        <li><b>Age display:</b> Generally, use <men>as calculated age</men>.</li>
+        </ul></li>
+        <li><b>Fees and fines</b>
+        <ul>
+        <li>Information in this section is used to calculate entry fees <b>per team, per swimmer, and/or per relay</b>. Per-event entry fees are set elsewhere. Set the <b>Currency</b>, then set:</li>
+        <li><b>Global entry fee per club:</b> Use if each club has to play a flat club fee.</li>
+        <li><b>Global entry fee per athlete:</b> Use for once-per-athlete “Splash fees”.</li>
+        <li><b>Global entry fee per athlete (based on sessions):</b> Each athlete pays this amount for each session they are entered in.</li>
+        <li><b>Global entry fee per relay team:</b> Use for relay entry fees.</li>
+        <li><b>Late entry fees:</b> You can use these to calculate deck entry fees by marking entries as “Late”, but this feature is typically not used.</li>
+        </ul></li>
+        <li><b>Qualification and Seeding</b>
+        <ul>
+        <li><b>Qualification results from/until:</b> Use if a qualification period is specified.</li>
+        <li><b>Course Order (Hy-Tek):</b> Allow entry times from different courses (if standards exist for different courses), enforce entry times of a certain course, or convert entry times for <b>qualification/entry time validation</b>.</li>
+        <li><b>Conversion entry times:</b> whether to convert entry times for <b>display</b> purposes.</li>
+        </ul></li>
+        <li><b>Swimming Pool and Timing</b>
+        <ul>
+        <li>Verify the pool set-up, lane numbers, and how many sets of touchpads.</li>
+        </ul></li>
+        <li><b>Others</b>
+        <ul>
+        <li><b>Maximum entries per athlete:</b> cap the number of entries per athlete based on the meet package.</li>
+        <li><b>Entry Deadline:</b> Set according to the meet package</li>
+        </ul></li>
+        <li><b>Organizer</b>
+        <ul>
+        <li>Add organizer information as necessary.</li>
+        </ul></li>
+        </ul>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>The General Meet Info menu.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/generalmeetinfo.png"
+                        style="height: 18em;" />
+                    <div class="desc">The General Meet Info menu.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        <br>
+        <hr />
+
+        <h1 id="meetscaffold">2. Creating a Meet Scaffold (Sessions, Events, &amp; Age Groups)</h1>
+        <br>
+        <h2 id="sessions">2.1 Creating Sessions</h2>
+        <p>On the left side of the screen, the top-level row is the <b>Meet</b>, which will house <b>Sessions</b> under it, and then <b>Events</b> under the <b>Sessions</b>. Clicking the <b>Meet</b> will pull up the <code>General meet info</code> menu on the right side of the screen.</p>
+        <ul>
+        <li><p>Right-click the <b>Meet</b> name to <men>Add Session</men>.</p></li>
+        <li><p>Click the session you’ve just added to pull up the <men>Session</men> information menu on the right side of the screen, and edit the information as necessary. Fields to fill out include:</p>
+        <ul>
+        <li><b>Number</b> (session #)</li>
+        <li><b>Date</b> of session</li>
+        <li><b>Name</b> of session</li>
+        <li><b>Start time first event</b></li>
+        <li><b>Begin/End warmup</b>.</li>
+        </ul></li>
+        <li><p>Repeat for all sessions.</p></li>
+        </ul>
+       
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Adding a Session to the meet.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/sessions.png"
+                        style="height: 18em;" />
+                    <div class="desc">Adding a Session to the meet.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        
+        <h2 id="ptfevents">2.2 Creating Timed Final or Prelims Events</h2>
+        <p>Now, time to create your events!</p>
+        <ul>
+        <li><p>First, right-click the first session to <men>Add Timed Final / Prelim Event</men>. (Tip: Only add one event at a time. You’ll see why soon.) On the right side of the screen, set the following information for your first event:</p>
+        <ul>
+        <li><b>Number</b> (event #)</li>
+        <li><b>Swim style</b></li>
+        <li><b>Gender</b></li>
+        <li><b>Fee per entry</b></li>
+        </ul></li>
+        <li><p>Now, right-click the session and click <men>Add Timed Final / Prelim Event</men> to add another event. The Event <b>Number</b> will auto-increment by one, and the other three fields you adjusted will stay the same. Change these to the correct values as necessary.</p></li>
+        <li><p>Repeat for all prelims events in your session.</p></li>
+        </ul>
+        
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Adding a Timed Final or Prelims Event to the session.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/events.png"
+                        style="height: 18em;" />
+                    <div class="desc">Adding a Timed Final or Prelims Event to the session.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        
+        <h2 id="agegroups">2.3 Creating Age Groups for an Event</h2>
+        <br>
+        <h3 id="createagegroups">2.3.1 Creating Age Groups for an Event</h3>
+        <p>Now, time to create age groups for each event.</p>
+        <ul>
+        <li>First, right click the first event to <men>Add Agegroup</men>.</li>
+        <li>In the menu on the right-hand side, fill out the following information:
+        <ul>
+        <li><b>Age from:</b> minimum age - use <code>0</code> if the age group should be “X &amp; Under”.</li>
+        <li><b>Age to:</b> maximum age - use <code>-1</code> if the age group should be “X &amp; Over”.</li>
+        <li><b>Gender</b> should already be set based on the event’s gender.</li>
+        </ul></li>
+        </ul>
+        <p><b>For Multi Age Group Events (e.g. 12&amp;U, 13-14, 15&amp;O) and Single Age Group Events (e.g. Relays)</b>, create one Age Group using the Right Click &gt; <men>Add Agegroup</men> method for each age group in the meet package.</p>
+        <p><b>For Open Events</b>, create an age group with <b>Age from</b> and <b>Age to</b> both set to <code>-1</code>.</p>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Adding Age Groups to an event.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/agegroups.png"
+                        style="height: 18em;" />
+                    <div class="desc">Adding Age Groups to an event.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        
+        <h3 id="copyagrgroups">2.3.2 Copying Age Groups to Other Events</h3>
+        <p>Once you’ve created the age groups for one event, you can copy them by clicking the source event and selecting <men>Copy Agegroups</men>, then right-clicking the target/destination event and selecting <men>Paste agegroups</men>.</p>
+        
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Copying Age Groups to another event.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/copypaste_agegroups.png"
+                        style="height: 18em;" />
+                    <div class="desc">Copying Age Groups to another event.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        
+        <h2 id="createfinals">2.4 Creating Finals Events</h2>
+        <ul>
+        <li>To create a Finals event, right-click the Prelim event, then select <men>Add Final Event</men>.</li>
+        <li>The Final event will appear in the same session as the Prelim event. Drag-and-drop it into the correct session.</li>
+        </ul>
+        <br>
+        <p>Tip: Create all Finals events for one session first, then drag them from the Prelims session to the Finals session. </p>
+        <ul>
+            <li>Starting from the bottom when you Right Click &gt; <men>Add Final Event</men> will make it so that the next event you want to click won’t “run away”.</li>
+            <li>When dragging-and-dropping into a Finals session, start with the <em>last</em> event of the session (e.g. Event 9 before Event 8): when you drag-and-drop one event onto another, it will place it <em>above</em> that event (e.g., dropping Event 8 onto Event 9 will place Event 8 <em>before</em> Event 9.)</li>
+        </ul>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Creating Finals for a corresponding Prelims event.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/heatsfinals.png"
+                        style="height: 18em;" />
+                    <div class="desc">Creating Finals for a corresponding Prelims event.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+        
+        <h2 id="fastestheats">2.5 Creating a Fastest Heats Timed Final Event</h2>
+        <p>Read the following options carefully to make sure you follow the correct steps.</p>
+        <br>
+        <h3 id="fastestheats-agegroup">2.5.1 Fastest Heat for Each Age Group</h3>
+        <p>Follow these instructions to create a Fastest Heat for one or more age groups in a timed final event that is otherwise seeded by fast-to-slow or slow-to-fast (i.e., fastest 15&amp;O swim together at the end, etc.)</p>
+        <ul>
+        <li>Right-click the Prelim/Timed Final event, then click <men>Add Fastest Heat Event</men>.</li>
+        <li>In the menu on the right-hand side, define the number of fastest heats to “pull out” for each age group.</li>
+        </ul>
+        <br>
+        <h3 id="fastestheats-overall">2.5.2 Fastest Overall Heat in Multi Age Event</h3>
+        <p>Follow these instructions if you want the fastest heat of swimmers, irrespective of age, to swim together (e.g. in a timed-final only meet, if you want the fastest swimmers to swim in Finals).</p>
+        <ul>
+        <li>Right-click the Prelim/Timed Final event, then click <men>Add Separate Heat Event</men>.</li>
+        <li>After seeding entries, you will be able to select which heat will swim as the “separate heat”.</li>
+        </ul>
+        <br>
+        <h2 id="specialevents">2.6 Special Events: Multi-Round Eliminator &amp; Copying Entries to Different Event (Distance Official Split)</h2>
+        <p>For both of the following cases, you should NOT create the events until after all entries have been received (or at least until the Entry File has been published), in order to avoid teams mistakenly entering their swimmers into “placeholder” events.</p>
+        <p>Read the following options carefully to make sure you follow the correct steps.</p>
+        <br>
+        <h3 id="eliminators">2.6.1 Multi-Round Eliminators</h3>
+        <p>Follow these instructions if you want to create an Eliminator event, where, for example, (a) all swimmers swim in prelims; (b) top 8 swimmers in each age group swim in A finals; (c) top 4 swimmers race against each other in a “round of 4”; and (d) top 2 swimmers from the “round of 4” compete for a “crown” or “prize” or other.</p>
+        <ul>
+        <li>Create the Prelims and Final events for the Eliminator event as normal.</li>
+        <li>After all entries have been submitted, right click the Final event, then select <men>Add Time Trial Event</men>. Configure the Time Trial event as necessary (e.g., new Event <b>Number</b>), then drag the Time Trial event into the correct session.
+        <ul>
+        <li>Tip: You can use the <b>Event Sponsor</b> field to add remarks/comments to be included on reports (e.g. Eliminator - Top 4).</li>
+        </ul></li>
+        <li>Repeat the above step for the Round of 2.</li>
+        <li>Configure the Time Trial event with a new Event Number, and create the correct age groups.</li>
+        <li>After the Finals event for the Eliminator has been completed, the Administration Desk can manually add entries.
+        <ul>
+        <li>Navigate to the <en>Entries</en> module.</li>
+        <li>At the top of the screen, select <men>Entries by Event</men>. Use the <men>&#x2610; Group Entries by Heat</men> checkbox on the top right of the screen to make seeding by heat easier.</li>
+        <li>Find the Time Trial event, then right click the middle of the screen to <men>Add Entry</men>.</li>
+        <li>Find the Top 4 athletes from the Finals event and seed them into the Round of 4.</li>
+        <li>After the Round of 4 has been completed, repeat for the Round of 2.</li>
+        </ul></li>
+        </ul>
+        <br>
+        <h3 id="distance-os">2.6.2 Distance Official Split</h3>
+        <p>Follow these instructions if you want to, for example, give every athlete in the 1500 FR an 800 split.</p>
+        <ul>
+        <li>Create the 1500m Timed Finals events as normal.</li>
+        <li>After all entries have been submitted, right click the 1500m Timed Final event, then select <men>Add Time Trial Event</men>. Configure the Time Trial event as necessary (e.g. new Event <b>Number</b>, correct Swim Style).</li>
+        <li>After the 1500m has been seeded, navigate to <men>Transfer</men> &gt; <men>Export Entries</men>. <b>Ensure that</b> <men>&#x2610; Include heat / lane numbers for seeded events</men> <b>is checked</b>, then export the entries to an <code>*.lxf</code> file.</li>
+        <li>Navigate to <men>Transfer</men> &gt; <men>Import Entries</men>. Once the <men>Import entries</men> dialogue appears:
+        <ul>
+        <li>Click <but>Load File</but> to load the <code>*.lxf</code> file.</li>
+        <li>In the <men>Clubs</men> tab, click the <sel>Select All</sel> button to select all clubs. (This means that you will not ignore any club’s entries when you click Import.)</li>
+        <li>Navigate to the <men>Events</men> tab, then click the <dsel>Deselect All</dsel> button to deselect all events.</li>
+        <li>Manually select your 1500m events.</li>
+        <li>In the <men>Import to event</men> column, select the respective 800m events.</li>
+        <li>Ensure all three <men>&#x2610; Delete all XXX of selected club first</men> options are <b>UNchecked</b>.</li>
+        <li>Set the two drop-downs to <men>Add/replace entries of selected clubs/events</men> and <men>Ignore judges</men>.</li>
+        <li>Ensure that <men>&#x2610; Import / apply seeding if exists (heat and lane numbers)</men> is <b>CHECKED</b>.</li>
+        </ul></li>
+        <li>Click <but>Import</but>.</li>
+        </ul>
+        <p><br></p>
+        <hr />
+        <h1 id="tstds">3. Creating Time Standards</h1>
+        <p>From the <ev>Events</ev> module, navigate to <men>Edit</men> &gt; <men>Edit Timestandards...</men></p>
+     
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>The Edit > Edit Time Standards menu...</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/edit_timestandards.png"
+                        style="height: 18em;" />
+                    <div class="desc">The Edit > Edit Time Standards menu...</div>
+                </div>
+            </details>
+        </div>
+        
+        <p>When the <men>Edit time standards</men> dialogue appears, click <but>Add</but> to add a new set of time standards.</p>
+        <ul>
+            <li>Create a <b>Name</b> and <b>Code</b> (typically 1-4 letters) for the standard.</li>
+            <li>Set the <b>Age</b> for the time standard (<code>-1</code> to <code>-1</code> for Open)</li>
+            <li>Select the <b>Type</b> of standard: 
+                <ul>
+                    <li><em>Maximum time standard</em>: marks swimmers if they are <b>slower</b> than the standard (e.g., qualification standard). Can be used to reject entries or calculate fines.</li>
+                    <li><em>Minimum time standard</em>: marks swimmers if they are <b>faster</b> than the standard (de-qualifying standard). Can be used to reject entries.</li>
+                    <li><em>Default time standard</em>: marks swimmers if they have achieve the time (e.g. achieved a Provincial cut). Not used for entry rejection or fines.</li>
+                    <li><em>Level time standard</em>: Used to group athletes whose entries are at a “similar level.”</li>
+                    <li>Tip: think “Maximum” = longest time; “Minimum” = shortest time.</li>
+                </ul>
+            </li>
+            <li>Enter the Time Standard time for each gender &amp; course.</li>
+            <li>Repeat for each age group and time standard.</li>
+        </ul>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Editing Time Standards.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/edit_stds.png"
+                        style="height: 18em;" />
+                    <div class="desc">Editing Time Standards.</div>
+                </div>
+            </details>
+        </div>
+        <hr />
+        <h1 id="invite">4. Exporting the Meet Invitation File</h1>
+
+        <hr />
+        <h1 id="entries">5. Processing Entries</h1>
+        <hr/>
+
+        <h1 id="seeding">6. Seeding the Meet</h1>
+        <hr />
+        
+
+        <a href="#top">Jump to Top</a><a name="bottom"></a><br><br>
+        </main-body>
+    </main>
+
+    <!-- #region Click-To-Enlarge-Image Javascript -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("closeimg")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        var modalcontent = document.getElementsByClassName("modal-content");
+
+        modal.onclick = function (e) {
+            if (e.target.tagName != 'IMG' && window.getComputedStyle(e.target).cursor != 'text') {
+                modal.style.display = "none";
+            }
+        }
+
+        document.onkeydown = function (e) {
+            e = e || window.event;
+            var escape = false;
+            if ("key" in e) {
+                escape = (e.key === "Escape" || e.key === "Esc");
+            } else {
+                escape = (e.keyCode == 27);
+            }
+            if (escape) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Get all images and insert the clicked image inside the modal
+        // Get the content of the image description and insert it inside the modal image caption
+        var images = document.getElementsByTagName('img');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var i;
+        for (i = 0; i < images.length; i++) {
+            images[i].onclick = function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                captionText.innerHTML = this.nextElementSibling.innerHTML;
+            }
+        }   
+    </script>
+</body>
+
+</html>
