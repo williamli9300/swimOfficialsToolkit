@@ -1,16 +1,18 @@
 :root{
-    --base-clr: #1D1D2B;
-    --base-clr-light: #303046;
-    --line-clr: #ab88ff;
+    --base-clr: rgb(24, 27, 37);
+    --base-clr-light: #252837;
+    --line-clr: #B6A9FF;
     --hover-clr: #1d1d2b;
-    --text-clr: #F0F0F5;
-    --accent-clr: #ab88ff;
+    --text-clr: #fafafa;
+    --accent-clr: #B6A9FF;
     --secondary-text-clr: #ebebeb;
+    --secondary-accent-clr: hsl(249, 50%, 40%);
 }
 
 *{
     margin: 0;
     padding: 0;
+    font-family: "Segoe UI", "San Francisco", "Helvetica Neue", "Arial", sans-serif;
 }
 
 html {
@@ -436,6 +438,9 @@ info {
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
+  a{
+    color: var(--secondary-accent-clr);
+  }
 }
 
 warning {
