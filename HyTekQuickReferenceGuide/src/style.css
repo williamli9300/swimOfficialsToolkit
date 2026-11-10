@@ -15,7 +15,6 @@
 html {
     line-height: 1.25rem;
     font-family: "Segoe UI", "San Francisco", "Helvetica Neue", "Arial", sans-serif;
-
 }
 
 body {
@@ -54,6 +53,7 @@ main {
     
     ul {
         list-style: none;
+        padding-left: 1em;
     }
 
     > ul > li:first-child{
@@ -214,6 +214,7 @@ main {
     }
     main{
       max-width: 100dvw;
+      padding-left: 1em;
     }
 
     .h0{
@@ -233,9 +234,12 @@ main {
         max-width: 100dvw;
         min-width: 100dvw;
         padding: 0;
+        margin-left: 0em;
         position: fixed;
         top: unset;
         bottom: 0;
+        border-right: none;
+        border-top: 2px solid var(--line-clr);
 
         span, 
         .dropdown-btn-grp, 
@@ -243,6 +247,11 @@ main {
         .sub-menu,
         .navline{
             display: none;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0em;
         }
 
         > ul > li:first-child{
@@ -256,8 +265,15 @@ main {
     #sidebar.close{
         min-width: 100dvw;
         max-width: 100dvw;
-        height: 100dvh;
+        height: 60dvh;
         padding: 0em;
+        margin-left: 0em;
+        border-right: 2px solid var(--line-clr);
+
+        ul {
+            list-style: none;
+            padding-left: -1em;
+        }
 
         > ul > li:first-child{
             display: flex;
@@ -272,7 +288,7 @@ main {
         .navline{
             margin-left: 0.75em;
             display: flex;
-            flex-grow: 1;
+            flex-grow: 0;
         }
         .logo{
             display:flex;
