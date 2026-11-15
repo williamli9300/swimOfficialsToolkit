@@ -1,1 +1,12 @@
-../../HyTekQuickReferenceGuide/src/navbar.js
+const toggleButton = document.getElementById('toggle-btn')
+const sidebar = document.getElementById('sidebar')
+
+function toggleSubMenu(button){
+    button.nextElementSibling.classList.toggle('show')
+    button.classList.toggle('rotate')
+}
+
+function toggleSidebar(){
+    sidebar.classList.toggle('close')
+    toggleButton.classList.toggle('rotate')
+}

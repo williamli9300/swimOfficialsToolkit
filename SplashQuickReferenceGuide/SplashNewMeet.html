@@ -94,8 +94,19 @@
                     </div>
                 </ul>
             </li>
-            <li class="non-dropdown" style="padding-top: 0.2em; padding-bottom: 0.3em;"><a href="#tstds"><b>3. Creating Time Standards</b></a></li>
-            <li class="non-dropdown" style="padding-top: 0.2em; padding-bottom: 0.3em;"><a href="#invite"><b>4. Exporting the Meet Invitation File</b></a></li>
+            <li>
+                <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
+                    <a href="#tstds"><span><b>3. Creating Time Standards</b></span></a>
+                    <button class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#1f1f1f"><path d="M12,15.4l-6-6L7.4,8L12,12.6L16.6,8L18,9.4l-6,6Z" /></svg>
+                    </button>
+                </span>
+                <ul class="sub-menu">
+                    <div>
+                        <li class="non-dropdown"><a href="#csu-ev3">3.1 Checking EV3 Files in CSU</a></li>
+                    </div>
+                </ul>
+            </li>
             <li>
                 <span onclick=toggleSubMenu(this) class="dropdown-btn-grp">
                     <a href="#entries"><span><b>5. Processing Entries</b></span></a>
@@ -256,7 +267,7 @@
         <h1 id="meetscaffold">2. Creating a Meet Scaffold (Sessions, Events, &amp; Age Groups)</h1>
         <br>
         <h2 id="sessions">2.1 Creating Sessions</h2>
-        <p>On the left side of the screen, the top-level row is the <b>Meet</b>, which will house <b>Sessions</b> under it, and then <b>Events</b> under the <b>Sessions</b>. Clicking the <b>Meet</b> will pull up the <code>General meet info</code> menu on the right side of the screen.</p>
+        <p>On the left side of the screen, the top-level row is the <b>Meet</b>, which will house <b>Sessions</b> under it, and then <b>Events</b> under the <b>Sessions</b>. Clicking the <b>Meet</b> will pull up the <men>General meet info</men> menu on the right side of the screen.</p>
         <ul>
         <li><p>Right-click the <b>Meet</b> name to <men>Add Session</men>.</p></li>
         <li><p>Click the session you’ve just added to pull up the <men>Session</men> information menu on the right side of the screen, and edit the information as necessary. Fields to fill out include:</p>
@@ -485,8 +496,80 @@
                 </div>
             </details>
         </div>
+        <br>
+
+        <p>Tip: To check your work, use the Canadian Swimming Utilities (CSU)'s EV3 Viewer tool, available for REMS Administrator accounts. See <a href="#csu-ev3">Checking EV3 Files in CSU</a>.</p>
         <hr />
         <h1 id="invite">4. Exporting the Meet Invitation File</h1>
+
+        <h2>3.1 Exporting an EV3 or LXF File</h2>
+
+        <p>To export a meet events/invitation file in Hy-Tek (<code>*.ev3</code>) or Splash Lenex (<code>*.lxf</code>) file:</p>
+        <ul>
+            <li>From the <ev>Events</ev> module, navigate to <men>Transfer</men> in the top menu bar.</li>
+            <li>Click <men>Export Invitation...</men></li>
+            <li>When the pop-up appears, select your desired format from the dropdown menu (e.g. <men>Hy-Tek Format</men> or <men>SPLASH Lenex 3.0</men></li>
+            <li>Click the folder icon to select a destination to save your Invitation file.</li>
+            <li>Remember to name your file properly:
+            <ul>
+                <li>If you selected <men>Hy-Tek Format</men>, remember to give your filename the <code>.ev3</code> extension (ending).</li>
+                <li>If you selected <men>SPLASH Lenex 3.0</men>, remember to give your filename the <code>.lxf</code> extension (ending).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>Exporting a Meet Events / Invitation file.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/exportinvitation.png"
+                        style="height: 18em;" />
+                    <div class="desc">Exporting a Meet Events / Invitation file.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+
+        <h2>3.2 Using CSU to Check Your EV3 File</h2>
+
+        <p>If you have a REMS Administrator (COA, Meet Manager etc.) account, you can access the Canadian Swimming Utilities (CSU) Administrator Portal at <a href="https://admin.csu.swimming.ca/">https://admin.csu.swimming.ca/</a>.</p>
+
+        <ul>
+            <li>Once you are logged in, navigate to Meets > EV3 File Viewer.</li>
+        </ul>
+
+        <div class="responsive">
+            <details open>
+                <summary style="padding-bottom: 1em;"><b>The CSU Administrator EV3 File Viewer.</b>
+                    (<i>Click to collapse image.</i>)</summary>
+                <div class="img">
+                    <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/csu_meets.png"
+                        style="height: 18em;" />
+                    <div class="desc">The CSU Administrator EV3 File Viewer.</div>
+                </div>
+            </details>
+        </div>
+        <br>
+
+        <ul>
+            <li>Drag-and-drop an EV3 file into the window, or click to select a file to upload.</li>
+            <li>Verify the event schedule and time standards are what you expect.</li>
+        </ul>
+
+        <br>
+        <div class="responsive">
+                <details open>
+                    <summary style="padding-bottom: 1em;"><b>Checking Schedules & Standards with the CSU EV3 File Viewer.</b>
+                        (<i>Click to collapse image.</i>)</summary>
+                    <div class="img">
+                        <img src="https://meetresults.ca/williamli9300/swimOfficialsToolkit/splash/img/csu_ev3.png"
+                            style="height: 18em;" />
+                        <div class="desc">Checking Schedules & Standards with the CSU EV3 File Viewer.</div>
+                    </div>
+                </details>
+            </div>
+            <br>
 
         <hr />
         <h1 id="entries">5. Processing Entries</h1>
